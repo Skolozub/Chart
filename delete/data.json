@@ -1,0 +1,282 @@
+{
+  "success": true,
+  "body": {
+    "chart": {
+      "type": "exponential",
+      "suggestions": ["sug1", "sug2"],
+      "period": {
+        "startDate": "2020-10-13",
+        "endDate": "2028-10-13",
+        "maxDate": "2069-10-13"
+      },
+      "points": [
+        {
+          "negative": [
+            {
+              "date": "2020-10-13",
+              "sum": [
+                {
+                  "amount": "0",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2021-10-13",
+              "sum": [
+                {
+                  "amount": "750000",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2022-10-13",
+              "sum": [
+                {
+                  "amount": "1500000",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2023-10-13",
+              "sum": [
+                {
+                  "amount": "3000000",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2024-10-13",
+              "sum": [
+                {
+                  "amount": "4500000",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2025-10-13",
+              "sum": [
+                {
+                  "amount": "9000000",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "970",
+                  "currency": "EUR"
+                }
+              ]
+            }
+          ],
+          "neutral": [
+            {
+              "date": "2020-10-13",
+              "sum": [
+                {
+                  "amount": "0",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2025-10-13",
+              "sum": [
+                {
+                  "amount": "77000",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "1100",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "1000",
+                  "currency": "EUR"
+                }
+              ]
+            }
+          ],
+          "positive": [
+            {
+              "date": "2020-10-13",
+              "sum": [
+                {
+                  "amount": "10000",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2022-10-13",
+              "sum": [
+                {
+                  "amount": "20500",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2022-10-13",
+              "sum": [
+                {
+                  "amount": "10500",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2023-10-13",
+              "sum": [
+                {
+                  "amount": "40900",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2024-10-13",
+              "sum": [
+                {
+                  "amount": "55200",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "0",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "0",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2025-10-13",
+              "sum": [
+                {
+                  "amount": "84000",
+                  "currency": "RUB"
+                },
+                {
+                  "amount": "1200",
+                  "currency": "USD"
+                },
+                {
+                  "amount": "1100",
+                  "currency": "EUR"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "goals": [
+        {
+          "code": "202",
+          "age": "35 лет",
+          "succeed": {
+            "neutral": false,
+            "positive": true,
+            "negative": false
+          }
+        },
+        {
+          "code": "201",
+          "age": "44 годика",
+          "succeed": {
+            "neutral": true,
+            "positive": true,
+            "negative": true
+          }
+        }
+      ]
+    }
+  }
+}
