@@ -5,6 +5,7 @@ import icons from "./svg";
 import { getGoals, mergeIcons } from "./utils";
 import mainpageJSON from "./data/person-mainpage.json";
 import chartmainJSON from "./data/person-chartmain.json";
+import { FullWidthWrapper } from "./full-width-wrapper";
 
 export default function App() {
   const [type, setType] = useState("negative");
@@ -74,7 +75,15 @@ export default function App() {
         </div>
       </div>
 
-      <Chart chartData={chartData} goalsData={goals} />
+      <FullWidthWrapper>
+        {(rect) => (
+          <Chart
+            chartData={chartData}
+            goalsData={goals}
+            svgWidth={rect.width}
+          />
+        )}
+      </FullWidthWrapper>
     </>
   );
 }
