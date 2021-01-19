@@ -4,50 +4,65 @@ import { CHART } from "../constants";
 
 // draw left and right chart lines
 export const drawChartBorders = (parentNode, width, height) => {
-  // added left line
-  const leftLineCoords = [
-    [CHART.MARGIN.LEFT, CHART.MARGIN.TOP],
-    [CHART.MARGIN.LEFT, height + CHART.MARGIN.TOP + 10]
+  const drawLine = d3.line();
+
+  const drawBorder = (data, postfix) => {
+    const path = parentNode
+      .selectAll(`path.chart-border-${postfix}`)
+      .data([data]);
+
+    // draw
+    path.attr("d", drawLine);
+
+    // update
+    path
+      .enter()
+      .append("path")
+      .attr("d", drawLine)
+      .attr("class", `chart-border-${postfix}`)
+      .attr("stroke", CHART.BORDER.COLOR);
+
+    // remove
+    path.exit().remove();
+  };
+
+  const leftBorderCoords = [
+    [0, 0],
+    [0, height + CHART.BORDER.BOTTOM_SEGMENT]
   ];
 
-  parentNode
-    .append("path")
-    .attr("class", "left-chart-border")
-    .attr("d", d3.line()(leftLineCoords))
-    .attr("stroke", CHART.BORDER.COLOR);
-
-  // added right line
-  const rightLineCoords = [
-    [width + CHART.MARGIN.LEFT, CHART.MARGIN.TOP],
-    [
-      width + CHART.MARGIN.LEFT,
-      height + CHART.MARGIN.TOP + CHART.BORDER.BOTTOM_SEGMENT
-    ]
+  const rightBorderCoords = [
+    [width, 0],
+    [width, height + CHART.BORDER.BOTTOM_SEGMENT]
   ];
 
-  parentNode
-    .append("path")
-    .attr("class", "right-chart-border")
-    .attr("d", d3.line()(rightLineCoords))
-    .attr("stroke", CHART.BORDER.COLOR);
+  drawBorder(leftBorderCoords, "left");
+  drawBorder(rightBorderCoords, "right");
 };
 
-export const drawChartLine = (parentNode, data, x, y) => {
+export const drawChartPath = (parentNode, data, x, y) => {
   const drawLine = d3
     .line()
     .x((d) => x(d.date))
     .y((d) => y(d.value))
     .curve(CHART.CURVE_TYPE.EXPONENTIAL);
 
-  const path = parentNode
+  const path = parentNode.selectAll("path.chart-path").data([data]);
+
+  // draw
+  path.attr("d", drawLine);
+
+  // update
+  const updatedPath = path
+    .enter()
     .append("path")
-    .attr("class", "chart-path")
-    .data([data])
     .attr("d", drawLine)
+    .attr("class", "chart-path")
     .attr("stroke", CHART.LINE_COLOR)
     .attr("fill", "none");
 
-  const totalLength = path.node().getTotalLength();
+  // animate
+  const totalLength = path.merge(updatedPath).node().getTotalLength();
 
   path
     .attr("stroke-dasharray", `${totalLength} ${totalLength}`)
@@ -55,4 +70,7 @@ export const drawChartLine = (parentNode, data, x, y) => {
     .transition()
     .duration(CHART.DURATION)
     .attr("stroke-dashoffset", 0);
+
+  // remove
+  path.exit().remove();
 };

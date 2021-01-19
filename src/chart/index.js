@@ -3,7 +3,7 @@ import * as d3 from "d3";
 
 import { AXIS, CHART, SVG } from "../constants";
 import { drawBottomAxis, drawRightAxis } from "./axis";
-import { drawChartBorders, drawChartLine } from "./chart";
+import { drawChartBorders, drawChartPath } from "./chart";
 import { drawGoals } from "./goals";
 
 export const Chart = ({
@@ -12,32 +12,14 @@ export const Chart = ({
   svgWidth = SVG.WIDTH,
   svgHeight = SVG.HEIGHT
 }) => {
-  const chartArea = useRef(null);
+  const svgRef = useRef(null);
+  const chartWidth = svgWidth - CHART.MARGIN.LEFT - CHART.MARGIN.RIGHT;
+  const chartHeight = svgHeight - CHART.MARGIN.TOP - CHART.MARGIN.BOTTOM;
+  const chartTransform = `translate(${CHART.MARGIN.LEFT}, ${CHART.MARGIN.TOP})`;
 
   useEffect(() => {
-    const svg = d3
-      .select(chartArea.current)
-      .attr("width", svgWidth)
-      .attr("height", svgHeight)
-      .style("background", SVG.BACKGROUND_COLOR);
-
-    // redraw chart
-    svg.selectAll("*").remove();
-
-    const chartWidth = svgWidth - CHART.MARGIN.LEFT - CHART.MARGIN.RIGHT;
-    const chartHeight = svgHeight - CHART.MARGIN.TOP - CHART.MARGIN.BOTTOM;
-
-    const chartNode = svg
-      .append("g")
-      .attr("class", "chart")
-      .attr("width", chartWidth)
-      .attr("height", chartHeight)
-      .attr(
-        "transform",
-        `translate(${CHART.MARGIN.LEFT}, ${CHART.MARGIN.TOP})`
-      );
-
-    drawChartBorders(svg, chartWidth, chartHeight);
+    const svg = d3.select(svgRef.current);
+    const chartNode = svg.select(".chart");
 
     // --------------- Chart scales ---------------
     // scale data by x
@@ -53,15 +35,29 @@ export const Chart = ({
 
     const y = d3.scaleLinear().domain([0, yMax]).range([chartHeight, 0]);
 
-    // ------------------- Axis -------------------
     drawRightAxis(chartNode, y, chartWidth);
-    drawBottomAxis(chartNode, x, chartHeight);
+    // drawBottomAxis(chartNode, x, chartHeight);
 
-    // ---------------- Chart line ----------------
-    drawChartLine(chartNode, chartData, x, y);
+    drawChartBorders(chartNode, chartWidth, chartHeight);
+    drawChartPath(chartNode, chartData, x, y);
 
-    drawGoals(chartNode, goalsData, x, y, chartWidth, chartHeight);
-  }, [chartData, goalsData, svgWidth, svgHeight]);
+    // drawGoals(chartNode, goalsData, x, y, chartWidth, chartHeight);
+  }, [chartData, goalsData, chartWidth, chartHeight]);
 
-  return <svg ref={chartArea}></svg>;
+  return (
+    <svg
+      ref={svgRef}
+      width={svgWidth}
+      height={svgHeight}
+      style={{ background: SVG.BACKGROUND_COLOR }}
+    >
+      <g
+        className="chart"
+        width={chartWidth}
+        height={chartHeight}
+        transform={chartTransform}
+      ></g>
+      <g className="goals"></g>
+    </svg>
+  );
 };

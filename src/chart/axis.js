@@ -3,36 +3,39 @@ import * as d3 from "d3";
 import { AXIS } from "../constants";
 import { formatAmount } from "./utils";
 
-export const drawRightAxis = (parentNode, y, width) => {
-  // create axis group
-  const axisGroup = parentNode
-    .append("g")
-    .attr("class", "rightAxis")
-    .attr("transform", `translate(${width}, 0)`);
+export const drawRightAxis = (parentNode, yScale, width) => {
+  const yAxisCall = d3
+    .axisRight(yScale)
+    .tickFormat((d) => formatAmount(d))
+    .ticks(AXIS.Y.COUNT)
+    .tickPadding(AXIS.Y.PADDING)
+    .tickSize(-width);
 
-  // create right axis
-  const axis = axisGroup.call(
-    d3
-      .axisRight(y)
-      .tickFormat((d) => formatAmount(d))
-      .ticks(AXIS.Y.COUNT)
-      .tickPadding(AXIS.Y.PADDING)
-      .tickSizeOuter(0)
-  );
+  const yAxis = parentNode.selectAll("g.y.axis").data([width]);
+
+  yAxis.transition().duration(500).call(yAxisCall);
+
+  // update
+  const updatedYAxis = yAxis
+    .enter()
+    .append("g")
+    .attr("class", "y axis")
+    .call(yAxisCall);
+
+  parentNode
+    .selectAll("g.y.axis .tick line")
+    .attr("stroke", AXIS.Y.LINES_COLOR)
+    .attr("transform", "translate(0, 0)")
+    .style("stroke-dasharray", `${AXIS.Y.DASH_WIDTH}, ${AXIS.Y.DASH_GAP}`);
+
+  yAxis.merge(updatedYAxis).attr("transform", `translate(${width}, 0)`);
 
   // remove domain line
-  axis.select(".domain").remove();
-
-  // change tick lines
-  axis
-    .selectAll(".tick line")
-    .attr("stroke", AXIS.Y.LINES_COLOR)
-    .attr("x2", `${width}`)
-    .attr("transform", `translate(${-width}, 0)`)
-    .style("stroke-dasharray", `${AXIS.Y.DASH_WIDTH},${AXIS.Y.DASH_GAP}`);
+  yAxis.merge(updatedYAxis).select(".domain").remove();
 
   // change ticks text style
-  axis
+  yAxis
+    .merge(updatedYAxis)
     .selectAll(".tick text")
     .attr("text-anchor", "end")
     .attr("font-size", AXIS.FONT_SIZE)
