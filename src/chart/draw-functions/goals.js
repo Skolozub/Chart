@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 
-import { CHART, GOAL } from "../constants";
-import { formatAmount, getBB } from "./utils";
+import { CHART, GOAL } from "../../constants";
+import { formatAmount, getBB } from "../utils";
 
 export const drawGoals = (parentNode, data, x, y, width, height) => {
   const goalsGroup = parentNode.append("g").attr("class", "goals-group");
