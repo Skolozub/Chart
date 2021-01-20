@@ -78,6 +78,8 @@ export const GOAL = {
     VALUE: {
       TEXT: "Вам будет",
       MARGIN: 10,
+      FONT_SIZE: 14,
+      PADDING: 5,
       BACKGROUND_COLOR: "#FFFFFF",
       COLOR: "#068441"
     },
