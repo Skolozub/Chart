@@ -19,12 +19,17 @@ export const DrawGoals = ({
     >
       {data.map((goal) => (
         <g className="x-goal" key={goal.code}>
-          <DrawXGoal goal={goal} chartWidth={chartWidth} yScale={yScale} />{" "}
+          <DrawYGoal
+            goal={goal}
+            chartWidth={chartWidth}
+            chartHeight={chartHeight}
+            yScale={yScale}
+          />
         </g>
       ))}
       {data.map((goal) => (
         <g className="y-goal" key={goal.code}>
-          <DrawYGoal
+          <DrawXGoal
             goal={goal}
             chartWidth={chartWidth}
             chartHeight={chartHeight}

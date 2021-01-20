@@ -100,7 +100,7 @@ export const GOAL = {
     },
 
     RADIUS: 24,
-    MARGIN: 7,
+    MARGIN: -3,
     TRIANGLE: {
       WIDTH: 9,
       HEIGHT: 5,
@@ -110,6 +110,6 @@ export const GOAL = {
       WIDTH: 36,
       HEIGHT: 36
     },
-    DURATION: 500
+    DURATION: "0.3s"
   }
 };

@@ -263,7 +263,7 @@
           "age": "35 лет",
           "succeed": {
             "neutral": true,
-            "positive": true,
+            "positive": false,
             "negative": true
           }
         },
@@ -272,7 +272,7 @@
           "age": "37 лет",
           "succeed": {
             "neutral": false,
-            "positive": true,
+            "positive": false,
             "negative": false
           }
         }

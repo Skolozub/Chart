@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useRef } from "react";
-import { line, select } from "d3";
+import React, { useMemo, useRef } from "react";
+import { line } from "d3";
 import { CHART } from "../constants";
 
 export const DrawChart = ({
@@ -20,17 +20,17 @@ export const DrawChart = ({
     return drawLine(data);
   }, [data, xScale, yScale]);
 
-  useEffect(() => {
-    const chartNode = select(chartRef.current);
-    // animate chart draw
-    const totalLength = chartNode.node().getTotalLength();
-    chartNode
-      .attr("stroke-dasharray", totalLength)
-      .attr("stroke-dashoffset", totalLength)
-      .transition()
-      .duration(CHART.DURATION)
-      .attr("stroke-dashoffset", 0);
-  });
+  // useEffect(() => {
+  //   const chartNode = select(chartRef.current);
+  //   // animate chart draw
+  //   const totalLength = chartNode.node().getTotalLength();
+  //   chartNode
+  //     .attr("stroke-dasharray", totalLength)
+  //     .attr("stroke-dashoffset", totalLength)
+  //     .transition()
+  //     .duration(CHART.DURATION)
+  //     .attr("stroke-dashoffset", 0);
+  // });
 
   const leftBorderPath = useMemo(() => {
     const coords = [

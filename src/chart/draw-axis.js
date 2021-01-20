@@ -16,6 +16,10 @@ export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
 
     // draw x axis
     xAxis.transition().duration(500).call(xAxisCall);
+  }, [xScale]);
+
+  useEffect(() => {
+    const xAxis = select(xAxisRef.current);
 
     // add styles to domain line
     xAxis
@@ -35,7 +39,7 @@ export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
       .selectAll(".tick text")
       .attr("fill", AXIS.FONT_COLOR)
       .attr("font-size", AXIS.FONT_SIZE);
-  }, [xScale]);
+  }, []);
 
   useEffect(() => {
     const yAxisCall = axisRight(yScale)
@@ -66,6 +70,8 @@ export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
     // remove domain line
     yAxis.select(".domain").remove();
   }, [chartWidth, yScale]);
+
+  useEffect(() => {}, []);
 
   return (
     <g className="axis">
