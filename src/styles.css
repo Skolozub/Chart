@@ -1,15 +1,22 @@
 /* .amount-rect {
   transition: 0.5s;
-}
+} */
 
-
-.amount-text text {
+/* .amount-text text {
   opacity: 1;
   transition: 0.5s;
   animation: fadeIn 0.5s linear;
-}
+} */
 
-@keyframes fadeIn {
+/* .label {
+  animation: fadeIn 0.5s linear;
+} */
+
+/* .label .triangle {
+  transition: 0.3s;
+} */
+
+/* @keyframes fadeIn {
   from {
     opacity: 0;
   }
