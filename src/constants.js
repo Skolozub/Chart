@@ -10,7 +10,7 @@ export const AXIS = {
   FONT_SIZE: 16,
   FONT_COLOR: "#888888",
   Y: {
-    PADDING: 85,
+    PADDING: -8,
     COUNT: 5,
     DASH_WIDTH: 1,
     DASH_GAP: 10,

@@ -5,28 +5,28 @@ import { formatAmount } from "./utils";
 
 export const DrawAmountLabel = ({ amount, chartWidth, yScale }) => {
   const textRef = useRef(null);
-  const [bBox, setBBox] = useState(null);
+  const [textBBox, setTextBBox] = useState(null);
 
   useEffect(() => {
     const text = select(textRef.current);
-    setBBox(text.node().getBBox());
+    setTextBBox(text.node().getBBox());
   }, [amount]);
 
   const xText = useMemo(
     () =>
       chartWidth +
       CHART.MARGIN.RIGHT -
-      (bBox?.width || 0) -
+      (textBBox?.width || 0) -
       GOAL.AMOUNT.VALUE.PADDING.RIGHT,
-    [bBox, chartWidth]
+    [textBBox, chartWidth]
   );
 
   const widthRect = useMemo(
     () =>
-      (bBox?.width || 0) +
+      (textBBox?.width || 0) +
       GOAL.AMOUNT.VALUE.PADDING.LEFT +
       GOAL.AMOUNT.VALUE.PADDING.RIGHT,
-    [bBox]
+    [textBBox]
   );
 
   const xRect = useMemo(

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { axisBottom, axisRight, select } from "d3";
-import { AXIS } from "../constants";
+import { AXIS, CHART } from "../constants";
 import { formatAmount } from "./utils";
 
 export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
@@ -10,7 +10,7 @@ export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
   useEffect(() => {
     const xAxisCall = axisBottom(xScale)
       .tickPadding(AXIS.X.PADDING)
-      .tickSizeOuter(0);
+      .tickSize(0);
 
     const xAxis = select(xAxisRef.current);
 
@@ -35,9 +35,6 @@ export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
       .selectAll(".tick text")
       .attr("fill", AXIS.FONT_COLOR)
       .attr("font-size", AXIS.FONT_SIZE);
-
-    // remove lines from ticks
-    xAxis.selectAll(".tick line").remove();
   }, [xScale]);
 
   useEffect(() => {
@@ -45,7 +42,7 @@ export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
       .tickFormat((d) => formatAmount(d))
       .ticks(AXIS.Y.COUNT)
       .tickPadding(AXIS.Y.PADDING)
-      .tickSize(-chartWidth);
+      .tickSize(chartWidth);
 
     const yAxis = select(yAxisRef.current);
 
@@ -56,13 +53,13 @@ export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
     yAxis
       .selectAll(".tick line")
       .attr("stroke", AXIS.Y.LINES_COLOR)
-      .attr("transform", "translate(0, 0)")
       .style("stroke-dasharray", `${AXIS.Y.DASH_WIDTH}, ${AXIS.Y.DASH_GAP}`);
 
     // change ticks text style
     yAxis
       .selectAll(".tick text")
       .attr("text-anchor", "end")
+      .attr("transform", `translate(${CHART.MARGIN.RIGHT}, 0)`)
       .attr("font-size", AXIS.FONT_SIZE)
       .attr("fill", AXIS.FONT_COLOR);
 
@@ -72,11 +69,7 @@ export const DrawAxis = ({ chartWidth, chartHeight, xScale, yScale }) => {
 
   return (
     <g className="axis">
-      <g
-        ref={yAxisRef}
-        className="y"
-        transform={`translate(${chartWidth}, 0)`}
-      ></g>
+      <g ref={yAxisRef} className="y"></g>
       <g
         ref={xAxisRef}
         className="x"
