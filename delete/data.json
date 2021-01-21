@@ -280,14 +280,3 @@
     }
   }
 }
-
-
-{
-  "code": "201",
-  "age": "35 лет",
-  "succeed": {
-    "neutral": true,
-    "positive": false,
-    "negative": true
-  }
-},

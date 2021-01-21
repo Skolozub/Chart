@@ -1,11 +1,10 @@
-import React, { useRef, useMemo, useState } from "react";
+import React, { useRef, useMemo } from "react";
 import { extent, max, scaleLinear, scaleTime } from "d3";
 import { AXIS, CHART, SVG } from "../constants";
 import { DrawGoals } from "./draw-goals";
 import { DrawAxis } from "./draw-axis";
 import { DrawChart } from "./draw-chart";
 import { DrawYouHere } from "./draw-you-here";
-import { Tooltip } from "../tooltip";
 
 export const Chart = ({
   chartData,
@@ -36,10 +35,6 @@ export const Chart = ({
     () => scaleLinear().domain([0, yScaleMax]).range([chartHeight, 0]),
     [yScaleMax, chartHeight]
   );
-
-  // ---------- tooltip
-
-  const [isShow, setIsShow] = useState(false);
 
   return (
     <div>
@@ -77,7 +72,6 @@ export const Chart = ({
           yScale={yScale}
           onGoalClick={onGoalClick}
         />
-
         <DrawYouHere
           chartWidth={chartWidth}
           chartHeight={chartHeight}
@@ -87,7 +81,6 @@ export const Chart = ({
 
         {/* <DrawTimeLine chartWidth={chartWidth} chartHeight={chartHeight} /> */}
       </svg>
-      <Tooltip setIsShow={setIsShow} />
     </div>
   );
 };
