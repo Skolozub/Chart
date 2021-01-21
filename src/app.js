@@ -58,7 +58,10 @@ export default function App() {
           isActive: isActive !== undefined ? isActive : !it.isActive
         };
       }
-      return it;
+      return {
+        ...it,
+        isActive: false
+      };
     });
 
     setGoals(nextGoals);
@@ -89,7 +92,144 @@ export default function App() {
           </div>
         </div>
       </div>
-
+      <h3 style={{ marginBottom: 10 }}>Options</h3>
+      <div style={{ display: "flex", marginBottom: 20 }}>
+        <div style={{ marginRight: 40 }}>
+          <h4 style={{ margin: "0 0 10px 0" }}>Amount</h4>
+          <div style={{ display: "flex" }}>
+            <input
+              type="text"
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+            />
+            <button onClick={() => changeAmountsHandler(1)}>up</button>
+            <button onClick={() => changeAmountsHandler(-1)}>down</button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ margin: "0 0 10px 0" }}>Type</h4>
+          <div style={{ display: "flex" }}>
+            <button onClick={() => setType("negative")}>negative</button>
+            <button onClick={() => setType("positive")}>positive</button>
+            <button onClick={() => setType("neutral")}>neutral</button>
+          </div>
+        </div>
+      </div>
+      <h3 style={{ marginBottom: 10 }}>Options</h3>
+      <div style={{ display: "flex", marginBottom: 20 }}>
+        <div style={{ marginRight: 40 }}>
+          <h4 style={{ margin: "0 0 10px 0" }}>Amount</h4>
+          <div style={{ display: "flex" }}>
+            <input
+              type="text"
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+            />
+            <button onClick={() => changeAmountsHandler(1)}>up</button>
+            <button onClick={() => changeAmountsHandler(-1)}>down</button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ margin: "0 0 10px 0" }}>Type</h4>
+          <div style={{ display: "flex" }}>
+            <button onClick={() => setType("negative")}>negative</button>
+            <button onClick={() => setType("positive")}>positive</button>
+            <button onClick={() => setType("neutral")}>neutral</button>
+          </div>
+        </div>
+      </div>
+      <h3 style={{ marginBottom: 10 }}>Options</h3>
+      <div style={{ display: "flex", marginBottom: 20 }}>
+        <div style={{ marginRight: 40 }}>
+          <h4 style={{ margin: "0 0 10px 0" }}>Amount</h4>
+          <div style={{ display: "flex" }}>
+            <input
+              type="text"
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+            />
+            <button onClick={() => changeAmountsHandler(1)}>up</button>
+            <button onClick={() => changeAmountsHandler(-1)}>down</button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ margin: "0 0 10px 0" }}>Type</h4>
+          <div style={{ display: "flex" }}>
+            <button onClick={() => setType("negative")}>negative</button>
+            <button onClick={() => setType("positive")}>positive</button>
+            <button onClick={() => setType("neutral")}>neutral</button>
+          </div>
+        </div>
+      </div>
+      <h3 style={{ marginBottom: 10 }}>Options</h3>
+      <div style={{ display: "flex", marginBottom: 20 }}>
+        <div style={{ marginRight: 40 }}>
+          <h4 style={{ margin: "0 0 10px 0" }}>Amount</h4>
+          <div style={{ display: "flex" }}>
+            <input
+              type="text"
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+            />
+            <button onClick={() => changeAmountsHandler(1)}>up</button>
+            <button onClick={() => changeAmountsHandler(-1)}>down</button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ margin: "0 0 10px 0" }}>Type</h4>
+          <div style={{ display: "flex" }}>
+            <button onClick={() => setType("negative")}>negative</button>
+            <button onClick={() => setType("positive")}>positive</button>
+            <button onClick={() => setType("neutral")}>neutral</button>
+          </div>
+        </div>
+      </div>
+      <h3 style={{ marginBottom: 10 }}>Options</h3>
+      <div style={{ display: "flex", marginBottom: 20 }}>
+        <div style={{ marginRight: 40 }}>
+          <h4 style={{ margin: "0 0 10px 0" }}>Amount</h4>
+          <div style={{ display: "flex" }}>
+            <input
+              type="text"
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+            />
+            <button onClick={() => changeAmountsHandler(1)}>up</button>
+            <button onClick={() => changeAmountsHandler(-1)}>down</button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ margin: "0 0 10px 0" }}>Type</h4>
+          <div style={{ display: "flex" }}>
+            <button onClick={() => setType("negative")}>negative</button>
+            <button onClick={() => setType("positive")}>positive</button>
+            <button onClick={() => setType("neutral")}>neutral</button>
+          </div>
+        </div>
+      </div>
+      <h3 style={{ marginBottom: 10 }}>Options</h3>
+      <div style={{ display: "flex", marginBottom: 20 }}>
+        <div style={{ marginRight: 40 }}>
+          <h4 style={{ margin: "0 0 10px 0" }}>Amount</h4>
+          <div style={{ display: "flex" }}>
+            <input
+              type="text"
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+            />
+            <button onClick={() => changeAmountsHandler(1)}>up</button>
+            <button onClick={() => changeAmountsHandler(-1)}>down</button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ margin: "0 0 10px 0" }}>Type</h4>
+          <div style={{ display: "flex" }}>
+            <button onClick={() => setType("negative")}>negative</button>
+            <button onClick={() => setType("positive")}>positive</button>
+            <button onClick={() => setType("neutral")}>neutral</button>
+          </div>
+        </div>
+      </div>
       <FullWidthWrapper>
         {(rect) => (
           <Chart

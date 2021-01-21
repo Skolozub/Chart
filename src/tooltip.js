@@ -1,11 +1,13 @@
 import React from "react";
-import "./style.css";
+import ReactDOM from "react-dom";
+import * as S from "./tooltip.style";
 
-export const Tooltip = ({ setIsShow }) => {
-  return (
-    <div className="tooltip" onClick={() => setIsShow(false)}>
-      <div className="title">Вы не достигаете цель в срок</div>
-      <div className="text">Попробуйте применить советы ниже</div>
-    </div>
+export const Tooltip = ({ left, top }) => {
+  return ReactDOM.createPortal(
+    <S.Container left={left} top={top}>
+      <S.Title>Вы не достигаете цель в срок</S.Title>
+      <S.Description>Попробуйте применить советы ниже</S.Description>
+    </S.Container>,
+    document.querySelector("body")
   );
 };

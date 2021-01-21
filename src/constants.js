@@ -113,3 +113,10 @@ export const GOAL = {
     DURATION: "0.3s"
   }
 };
+
+export const TOOLTIPS = {
+  TYPES: {
+    SUCCEED: "succeed",
+    UNSUCCEED: "unsucceed"
+  }
+};
