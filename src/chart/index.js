@@ -1,16 +1,18 @@
-import React, { useRef, useMemo } from "react";
+import React, { useRef, useMemo, useState } from "react";
 import { extent, max, scaleLinear, scaleTime } from "d3";
 import { AXIS, CHART, SVG } from "../constants";
 import { DrawGoals } from "./draw-goals";
 import { DrawAxis } from "./draw-axis";
 import { DrawChart } from "./draw-chart";
 import { DrawYouHere } from "./draw-you-here";
+import { Tooltip } from "../tooltip";
 
 export const Chart = ({
   chartData,
   goalsData,
   svgWidth = SVG.WIDTH,
-  svgHeight = SVG.HEIGHT
+  svgHeight = SVG.HEIGHT,
+  onGoalClick
 }) => {
   const svgRef = useRef(null);
 
@@ -35,49 +37,57 @@ export const Chart = ({
     [yScaleMax, chartHeight]
   );
 
+  // ---------- tooltip
+
+  const [isShow, setIsShow] = useState(false);
+
   return (
-    <svg
-      ref={svgRef}
-      width={svgWidth}
-      height={svgHeight}
-      style={{ background: SVG.BACKGROUND_COLOR }}
-    >
-      <g
-        className="chart-group"
-        width={chartWidth}
-        height={chartHeight}
-        transform={`translate(${CHART.MARGIN.LEFT}, ${CHART.MARGIN.TOP})`}
+    <div>
+      <svg
+        ref={svgRef}
+        width={svgWidth}
+        height={svgHeight}
+        style={{ background: SVG.BACKGROUND_COLOR }}
       >
-        <DrawAxis
+        <g
+          className="chart-group"
+          width={chartWidth}
+          height={chartHeight}
+          transform={`translate(${CHART.MARGIN.LEFT}, ${CHART.MARGIN.TOP})`}
+        >
+          <DrawAxis
+            chartWidth={chartWidth}
+            chartHeight={chartHeight}
+            xScale={xScale}
+            yScale={yScale}
+          />
+          <DrawChart
+            data={chartData}
+            chartWidth={chartWidth}
+            chartHeight={chartHeight}
+            xScale={xScale}
+            yScale={yScale}
+          />
+        </g>
+        <DrawGoals
+          data={goalsData}
+          chartWidth={chartWidth}
+          chartHeight={chartHeight}
+          xScale={xScale}
+          yScale={yScale}
+          onGoalClick={onGoalClick}
+        />
+
+        <DrawYouHere
           chartWidth={chartWidth}
           chartHeight={chartHeight}
           xScale={xScale}
           yScale={yScale}
         />
-        <DrawChart
-          data={chartData}
-          chartWidth={chartWidth}
-          chartHeight={chartHeight}
-          xScale={xScale}
-          yScale={yScale}
-        />
-      </g>
-      <DrawGoals
-        data={goalsData}
-        chartWidth={chartWidth}
-        chartHeight={chartHeight}
-        xScale={xScale}
-        yScale={yScale}
-      />
 
-      <DrawYouHere
-        chartWidth={chartWidth}
-        chartHeight={chartHeight}
-        xScale={xScale}
-        yScale={yScale}
-      />
-
-      {/* <DrawTimeLine chartWidth={chartWidth} chartHeight={chartHeight} /> */}
-    </svg>
+        {/* <DrawTimeLine chartWidth={chartWidth} chartHeight={chartHeight} /> */}
+      </svg>
+      <Tooltip setIsShow={setIsShow} />
+    </div>
   );
 };

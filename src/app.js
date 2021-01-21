@@ -6,6 +6,7 @@ import { getGoals, mergeIcons } from "./utils";
 import mainpageJSON from "./data/person-mainpage.json";
 import chartmainJSON from "./data/person-chartmain.json";
 import { FullWidthWrapper } from "./full-width-wrapper";
+import { Tooltip } from "./tooltip";
 
 export default function App() {
   const [type, setType] = useState("negative");
@@ -49,6 +50,20 @@ export default function App() {
     setGoals(nextGoals);
   };
 
+  const setActiveGoalHandler = (code, isActive) => {
+    const nextGoals = goals.map((it) => {
+      if (it.code === code) {
+        return {
+          ...it,
+          isActive: isActive !== undefined ? isActive : !it.isActive
+        };
+      }
+      return it;
+    });
+
+    setGoals(nextGoals);
+  };
+
   return (
     <>
       <h3 style={{ marginBottom: 10 }}>Options</h3>
@@ -81,6 +96,7 @@ export default function App() {
             chartData={chartData}
             goalsData={goals}
             svgWidth={rect.width}
+            onGoalClick={setActiveGoalHandler}
           />
         )}
       </FullWidthWrapper>

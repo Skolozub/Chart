@@ -19,7 +19,8 @@ export const getGoals = (goalsMain, goalsChart, type, currency = "RUB") => {
         getAmountByCurrency(currentGoalMain.amount, currency)
       ),
       age: goalChart.age,
-      succeed: goalChart.succeed[type]
+      succeed: goalChart.succeed[type],
+      isActive: false
     };
   });
 };

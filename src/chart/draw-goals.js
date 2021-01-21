@@ -8,7 +8,8 @@ export const DrawGoals = ({
   chartWidth,
   chartHeight,
   xScale,
-  yScale
+  yScale,
+  onGoalClick
 }) => {
   return (
     <g
@@ -35,6 +36,7 @@ export const DrawGoals = ({
             chartHeight={chartHeight}
             xScale={xScale}
             yScale={yScale}
+            onGoalClick={onGoalClick}
           />
         </g>
       ))}

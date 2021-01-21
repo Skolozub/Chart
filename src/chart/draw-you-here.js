@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useRef } from "react";
-import { line, select } from "d3";
+import React from "react";
 import { CHART } from "../constants";
 
 import avatar from "../assets/ava.png";
@@ -12,13 +11,6 @@ export const DrawYouHere = ({
   xScale,
   yScale
 }) => {
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    const imageSelection = select(imageRef.current);
-    imageSelection.attr("xlink:href", avatar);
-  }, []);
-
   return (
     <g
       className="you-here-group"
@@ -50,7 +42,7 @@ export const DrawYouHere = ({
         {/* <circle fill={"#068441"} r={10.5} cx={12.5} cy={12.5} /> */}
         <image
           className="avatar"
-          ref={imageRef}
+          xlinkHref={avatar}
           width={21}
           height={21}
           x={1.5}
