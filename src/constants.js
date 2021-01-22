@@ -120,3 +120,5 @@ export const TOOLTIPS = {
     UNSUCCEED: "unsucceed"
   }
 };
+
+export const HALF = 2;
