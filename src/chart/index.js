@@ -78,8 +78,6 @@ export const Chart = ({
           xScale={xScale}
           yScale={yScale}
         />
-
-        {/* <DrawTimeLine chartWidth={chartWidth} chartHeight={chartHeight} /> */}
       </svg>
     </div>
   );

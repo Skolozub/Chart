@@ -1,9 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { line, select } from "d3";
-import { CHART, GOAL, TOOLTIPS } from "../constants";
+import { CHART, GOAL } from "../constants";
 
-import { useBoundingClientRect } from "../useBoundingClientRect";
-import { Tooltip } from "../tooltip";
+import { DrawTooltip } from "./draw-tooltip";
 
 export const DrawXGoal = ({
   goal,
@@ -39,8 +38,9 @@ export const DrawXGoal = ({
 const DrawLabel = ({ goal, xScale, yScale, textBBox, onGoalClick }) => {
   const labelDrawData = useMemo(() => {
     // circle center coordinate
+    const circleXCenter = xScale(goal.date);
     const circleYCenter = yScale(goal.amount.value);
-    const textYAge = textBBox?.y || 0;
+    const textYAge = textBBox ? textBBox.y : 0;
 
     // label y bottom coordinate
     const labelYBottom =
@@ -58,6 +58,7 @@ const DrawLabel = ({ goal, xScale, yScale, textBBox, onGoalClick }) => {
     // recalculate circle y center coordinate
     if (labelYBottom > textYAge || labelYTop < 0) {
       return {
+        circleXCenter,
         circleYCenter:
           textYAge -
           GOAL.LABEL.RADIUS -
@@ -67,8 +68,8 @@ const DrawLabel = ({ goal, xScale, yScale, textBBox, onGoalClick }) => {
       };
     }
 
-    return { circleYCenter, isTriangleVisible: false };
-  }, [goal.amount.value, textBBox, yScale]);
+    return { circleXCenter, circleYCenter, isTriangleVisible: false };
+  }, [goal.amount.value, goal.date, textBBox, xScale, yScale]);
 
   const trianglePath = useMemo(() => {
     const { circleYCenter, isTriangleVisible } = labelDrawData;
@@ -100,55 +101,89 @@ const DrawLabel = ({ goal, xScale, yScale, textBBox, onGoalClick }) => {
 
   const bgColorActive =
     GOAL.LABEL.BACKGROUNDS_COLOR[goal.succeed ? "SUCCEED" : "UNSUCCEED"];
-  const bgColor = bgColorActive;
-  // const bgColor = goal.isActive
-  //   ? bgColorActive
-  //   : GOAL.LABEL.BACKGROUNDS_COLOR.SUCCEED;
+  const bgColor = goal.isActive
+    ? bgColorActive
+    : GOAL.LABEL.BACKGROUNDS_COLOR.SUCCEED;
 
-  const [xTooltip, setXTooltip] = useState(-999);
-  const [yTooltip, setYTooltip] = useState(-999);
+  // ----------
+  // const circleRef = useRef(null);
+  // const [xTooltip, setXTooltip] = useState(null);
+  // const [yTooltip, setYTooltip] = useState(null);
 
-  const setTooltipCoordsHandler = (event) => {
-    const rect = event.currentTarget.getBoundingClientRect();
+  // const setTooltipCoordsHandler = (event) => {
+  //   const rect = event.currentTarget.getBoundingClientRect();
 
-    setXTooltip(rect.x + GOAL.LABEL.RADIUS - 266 / 2);
-    setYTooltip(rect.y - 76 - 10);
-  };
+  //   setXTooltip(rect.x + GOAL.LABEL.RADIUS - 266 / 2);
+  //   setYTooltip(rect.y - 76 - 10);
+  // };
+
+  // useEffect(() => {
+
+  //   const rect = circleRef.current.getBoundingClientRect();
+
+  //     setXTooltip(rect.x + GOAL.LABEL.RADIUS - 266 / 2);
+  //     setYTooltip(rect.y - 76 - 10);
+  // });
+
+  // const rect = useBoundingClientRect(circleRef);
+
+  // const x = (rect?.x || 0) + GOAL.LABEL.RADIUS - 266 / 2;
+  // const y = (rect?.y || 0) - 76 - 10;
+
+  // const resizeHandler = () => {
+  //   const rect = circleRef.current.getBoundingClientRect();
+  //   setXTooltip(labelDrawData.circleXCenter + GOAL.LABEL.RADIUS - 266 / 2);
+  //   setYTooltip(labelDrawData.circleYCenter - 76 - 10);
+  // };
+
+  // const throttledResizeHandler = useRef(throttle(resizeHandler, 50)).current;
+  // const throttledResizeHandler222 = useRef(resizeHandler).current;
+
+  // useEffect(() => {
+  //   if (!circleRef.current) {
+  //     return void 0;
+  //   }
+
+  //   window.addEventListener("resize", throttledResizeHandler222);
+
+  //   return () =>
+  //     window.removeEventListener("resize", throttledResizeHandler222);
+  // }, [circleRef, xTooltip, yTooltip, throttledResizeHandler222]);
+
+  const xLabel = labelDrawData.circleXCenter - 266 / 2;
+  const yLabel = labelDrawData.circleYCenter - GOAL.LABEL.RADIUS - 76 - 10;
 
   return (
     <>
-      <g
-        className="label"
-        onClick={() => {
-          onGoalClick(goal.code);
-        }}
-      >
-        <path
-          className="triangle"
-          d={trianglePath}
-          fill={bgColor}
-          style={{ transition: GOAL.LABEL.DURATION }}
-        />
-        <circle
-          className="circle"
-          r={GOAL.LABEL.RADIUS}
-          fill={bgColor}
-          cx={xScale(goal.date)}
-          cy={labelDrawData.circleYCenter}
-          style={{ transition: GOAL.LABEL.DURATION }}
-          onTransitionEnd={setTooltipCoordsHandler}
-        />
-        <image
-          className="icon"
-          xlinkHref={goal.icon}
-          width={GOAL.LABEL.ICON.WIDTH}
-          height={GOAL.LABEL.ICON.WIDTH}
-          x={xScale(goal.date) - GOAL.LABEL.ICON.WIDTH / 2}
-          y={labelDrawData.circleYCenter - GOAL.LABEL.ICON.HEIGHT / 2}
-          style={{ transition: GOAL.LABEL.DURATION }}
-        />
+      <g className="label" onClick={() => onGoalClick(goal.code)}>
+        <g>
+          <path
+            className="triangle"
+            d={trianglePath}
+            fill={bgColor}
+            style={{ transition: GOAL.LABEL.DURATION }}
+          />
+
+          <circle
+            className="circle"
+            r={GOAL.LABEL.RADIUS}
+            fill={bgColor}
+            cx={xScale(goal.date)}
+            cy={labelDrawData.circleYCenter}
+            style={{ transition: GOAL.LABEL.DURATION }}
+          />
+          <image
+            className="icon"
+            xlinkHref={goal.icon}
+            width={GOAL.LABEL.ICON.WIDTH}
+            height={GOAL.LABEL.ICON.WIDTH}
+            x={xScale(goal.date) - GOAL.LABEL.ICON.WIDTH / 2}
+            y={labelDrawData.circleYCenter - GOAL.LABEL.ICON.HEIGHT / 2}
+            style={{ transition: GOAL.LABEL.DURATION }}
+          />
+        </g>
+        <DrawTooltip x={xLabel} y={yLabel} isActive={goal.isActive} />
       </g>
-      {goal.isActive && <Tooltip left={xTooltip} top={yTooltip} />}
     </>
   );
 };
