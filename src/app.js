@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Chart } from "./chart";
 import icons from "./svg";
+import * as CONSTANTS from "./constants";
 
 import { getGoals, mergeIcons } from "./utils";
 import mainpageJSON from "./data/person-mainpage.json";
 import chartmainJSON from "./data/person-chartmain.json";
 import { FullWidthWrapper } from "./full-width-wrapper";
+import { PFPChart } from "./chart_2.0";
 
 export default function App() {
   const [type, setType] = useState("negative");
@@ -94,12 +96,22 @@ export default function App() {
 
       <FullWidthWrapper>
         {(rect) => (
-          <Chart
-            chartData={chartData}
-            goalsData={goals}
-            svgWidth={rect.width}
-            onGoalClick={setActiveGoalHandler}
-          />
+          <>
+            <PFPChart
+              data={{ chart: chartData, goals }}
+              width={rect.width}
+              height={undefined}
+              constants={CONSTANTS}
+              className="pfp-chart"
+            />
+            {/* <hr />
+            <Chart
+              chartData={chartData}
+              goalsData={goals}
+              svgWidth={rect.width}
+              onGoalClick={setActiveGoalHandler}
+            /> */}
+          </>
         )}
       </FullWidthWrapper>
     </>

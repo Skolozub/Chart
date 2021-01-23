@@ -5,8 +5,10 @@ export const useBoundingClientRect = (ref, throttleTime = 300) => {
   const [rect, setRect] = useState(null);
 
   const resizeHandler = () => {
-    const elementRect = ref.current.getBoundingClientRect();
-    setRect(elementRect);
+    if (ref.current) {
+      const elementRect = ref.current.getBoundingClientRect();
+      setRect(elementRect);
+    }
   };
 
   const throttledResizeHandler = useRef(throttle(resizeHandler, throttleTime))

@@ -32,24 +32,6 @@ export const DrawChart = ({
   //     .attr("stroke-dashoffset", 0);
   // });
 
-  const leftBorderPath = useMemo(() => {
-    const coords = [
-      [0, 0],
-      [0, chartHeight + CHART.BORDER.BOTTOM_SEGMENT]
-    ];
-
-    return line()(coords);
-  }, [chartHeight]);
-
-  const rightBorderPath = useMemo(() => {
-    const coords = [
-      [chartWidth, 0],
-      [chartWidth, chartHeight + CHART.BORDER.BOTTOM_SEGMENT]
-    ];
-
-    return line()(coords);
-  }, [chartWidth, chartHeight]);
-
   return (
     <g className="chart">
       <path
