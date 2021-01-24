@@ -3,10 +3,11 @@ import { PropsContext } from ".";
 import { AxisX } from "./axis/axis-x";
 import { AxisY } from "./axis/axis-y";
 import { Borders } from "./axis/borders";
+import { Goals } from "./goals";
 
 // TODO: delete on prod
 import { logger } from "../utils/logger";
-import { Goals } from "./goals";
+import { ChartLine } from "./chart-line";
 
 export const Chart = () => {
   const { svg, chart, className, CONSTANTS } = useContext(PropsContext);
@@ -30,6 +31,9 @@ export const Chart = () => {
         height={chart.height}
         transform={`translate(${CHART.MARGIN.LEFT}, ${CHART.MARGIN.TOP})`}
       >
+        <g className="chart">
+          <ChartLine />
+        </g>
         <g className="axis">
           <Borders />
           <AxisY />

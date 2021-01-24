@@ -6,9 +6,9 @@ import * as S from "./amount-label.style";
 // TODO: delete on prod
 import { logger } from "../../../utils/logger";
 
-export const AmountLabel = ({ goal, className, children }) => {
+export const AmountLabel = ({ goal, children }) => {
   const { chart, scale, portalRef, CONSTANTS } = useContext(PropsContext);
-  const { CHART, GOAL } = CONSTANTS;
+  const { CHART, AMOUNT } = CONSTANTS;
   const amountRef = useRef(null);
   const [top, setTop] = useState(null);
   const [left, setLeft] = useState(null);
@@ -23,17 +23,23 @@ export const AmountLabel = ({ goal, className, children }) => {
         chart.width +
         CHART.MARGIN.RIGHT -
         rect.width -
-        GOAL.AMOUNT.VALUE.MARGIN.RIGHT;
+        AMOUNT.VALUE.MARGIN.RIGHT;
 
       setTop(textTop);
       setLeft(textLeft);
     }
-  }, [scale, chart.width, goal.amount.value, CHART, GOAL]);
+  }, [scale, chart.width, goal.amount.value, CHART, AMOUNT]);
 
   logger.render("AmountLabel");
 
   return ReactDOM.createPortal(
-    <S.Container ref={amountRef} className="amount-label" left={left} top={top}>
+    <S.Container
+      ref={amountRef}
+      className="amount-label"
+      left={left}
+      top={top}
+      isActive={goal.isActive}
+    >
       <S.Text>{children}</S.Text>
     </S.Container>,
     portalRef

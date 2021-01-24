@@ -53,71 +53,97 @@ export const CHART = {
   DURATION: 1500
 };
 
-export const GOAL = {
-  AMOUNT: {
-    VALUE: {
-      HEIGHT: 20,
-      BORDER_RADIUS: 10,
-      MARGIN: {
-        RIGHT: 5
-      },
-      BACKGROUND_COLOR: "#08A652",
-      TEXT_COLOR: "#FFFFFF",
-      FONT_SIZE: 16
+export const AMOUNT = {
+  VALUE: {
+    HEIGHT: 20,
+    BORDER_RADIUS: 10,
+    MARGIN: {
+      RIGHT: 5
     },
+    BACKGROUND_COLOR: "#08A652",
+    TEXT_COLOR: "#FFFFFF",
+    FONT_SIZE: 16
+  },
 
-    LINE: {
-      COLOR: "#9cdbba",
-      DASH_WIDTH: 7,
-      DASH_GAP: 5
+  LINE: {
+    COLOR: "#9cdbba",
+    DASH_WIDTH: 7,
+    DASH_GAP: 5
+  }
+};
+
+export const AGE = {
+  VALUE: {
+    TEXT: "Вам будет",
+    MARGIN: 3,
+    FONT_SIZE: 14,
+    PADDING: 5,
+    BACKGROUND_COLOR: "#FFFFFF",
+    COLOR: "#068441"
+  },
+
+  LINE: {
+    HEIGHT: {
+      TOP: 3,
+      BOTTOM: 3
+    },
+    COLOR: "#068441"
+  }
+};
+
+export const BUBBLE_SIZES = {
+  SMALL: "small",
+  MEDIUM: "medium"
+};
+
+export const TAIL_TYPES = {
+  TOP: "top",
+  BOTTOM: "bottom"
+};
+
+export const GOALS_TYPES = {
+  SUCCEED: "succeed",
+  UNSUCCEED: "unsucceed"
+};
+
+export const BUBBLE = {
+  BACKGROUNDS_COLOR: {
+    [GOALS_TYPES.SUCCEED]: ["#08A652", "#8BD8AA"],
+    [GOALS_TYPES.UNSUCCEED]: ["#F6650A", "#FFB992"]
+  },
+
+  [BUBBLE_SIZES.SMALL]: {
+    RADIUS: 18,
+    TAIL: {
+      WIDTH: 10,
+      HEIGHT: 5,
+      MARGIN: -1
+    },
+    ICON: {
+      WIDTH: 27,
+      HEIGHT: 27
     }
   },
 
-  AGE: {
-    VALUE: {
-      TEXT: "Вам будет",
-      MARGIN: 3,
-      FONT_SIZE: 14,
-      PADDING: 5,
-      BACKGROUND_COLOR: "#FFFFFF",
-      COLOR: "#068441"
-    },
-
-    LINE: {
-      HEIGHT: {
-        TOP: 3,
-        BOTTOM: 3
-      },
-      COLOR: "#068441"
-    }
-  },
-
-  LABEL: {
-    BACKGROUNDS_COLOR: {
-      SUCCEED: "#08A652",
-      UNSUCCEED: "#F6650A"
-    },
-
+  [BUBBLE_SIZES.MEDIUM]: {
     RADIUS: 24,
-    MARGIN: -3,
-    TRIANGLE: {
-      WIDTH: 9,
+    TAIL: {
+      WIDTH: 10,
       HEIGHT: 5,
       MARGIN: -1
     },
     ICON: {
       WIDTH: 36,
       HEIGHT: 36
-    },
-    DURATION: "0.3s"
+    }
+  },
+
+  MARGIN: {
+    TOP: 0,
+    BOTTOM: 18
   }
 };
 
-export const TOOLTIPS = {
-  TYPES: {
-    SUCCEED: "succeed",
-    UNSUCCEED: "unsucceed"
-  }
-};
+export const TOOLTIPS = {};
 
 export const HALF = 2;

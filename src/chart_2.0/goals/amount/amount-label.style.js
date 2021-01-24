@@ -4,10 +4,12 @@ export const Container = styled.div`
   position: absolute;
   top: ${(props) => `${props.top}px`};
   left: ${(props) => `${props.left}px`};
+  opacity: ${(props) => (!props.top || !props.left ? 0 : 1)};
   align-items: center;
   padding: 2px 8px;
   background: #08a652;
   border-radius: 16px;
+  transition: opacity 0.3s;
 `;
 
 export const Text = styled.div`

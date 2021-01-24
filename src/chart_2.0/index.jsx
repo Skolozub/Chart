@@ -9,7 +9,14 @@ import { logger } from "../utils/logger";
 
 export const PropsContext = React.createContext();
 
-export const PFPChart = ({ data, width, height, className, constants }) => {
+export const PFPChart = ({
+  data,
+  width,
+  height,
+  className,
+  constants,
+  onGoalClick
+}) => {
   const [portalRef, setPortalRef] = useState(null);
   const CONSTANTS = constants || DEFAULT_CONSTANTS;
   const { SVG, CHART, AXIS } = CONSTANTS;
@@ -54,10 +61,11 @@ export const PFPChart = ({ data, width, height, className, constants }) => {
     scale,
     className,
     CONSTANTS,
-    portalRef
+    portalRef,
+    onGoalClick
   };
 
-  const drawControlRef = useCallback((node) => {
+  const getControlRef = useCallback((node) => {
     if (node) {
       setPortalRef(node);
     }
@@ -67,10 +75,7 @@ export const PFPChart = ({ data, width, height, className, constants }) => {
 
   return (
     <PropsContext.Provider value={props}>
-      <S.Container>
-        {portalRef && <Chart />}
-        <S.Portal ref={drawControlRef} className="portal"></S.Portal>
-      </S.Container>
+      <S.Container ref={getControlRef}>{portalRef && <Chart />}</S.Container>
     </PropsContext.Provider>
   );
 };

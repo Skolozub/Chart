@@ -65,6 +65,8 @@ export default function App() {
       };
     });
 
+    console.log(nextGoals);
+
     setGoals(nextGoals);
   };
 
@@ -103,6 +105,7 @@ export default function App() {
               height={undefined}
               constants={CONSTANTS}
               className="pfp-chart"
+              onGoalClick={setActiveGoalHandler}
             />
             {/* <hr />
             <Chart

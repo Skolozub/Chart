@@ -9,7 +9,7 @@ import { logger } from "../../../utils/logger";
 
 export const Amount = ({ goal }) => {
   const { chart, scale, CONSTANTS } = useContext(PropsContext);
-  const { CHART, AMOUNT } = CONSTANTS;
+  const { GOAL, CHART } = CONSTANTS;
 
   const yAmountCoord = useMemo(() => scale.y(goal.amount.value), [
     scale,
@@ -18,7 +18,7 @@ export const Amount = ({ goal }) => {
 
   const amountLinePath = useMemo(() => {
     const xAmountCoord =
-      chart.width + CHART.MARGIN.RIGHT - AMOUNT.VALUE.MARGIN.RIGHT;
+      chart.width + CHART.MARGIN.RIGHT - GOAL.AMOUNT.VALUE.MARGIN.RIGHT;
 
     const coords = [
       [0, yAmountCoord],
@@ -26,9 +26,9 @@ export const Amount = ({ goal }) => {
     ];
 
     return line()(coords);
-  }, [chart.width, yAmountCoord, CHART, AMOUNT]);
+  }, [chart.width, yAmountCoord, CHART, GOAL]);
 
-  if (!goal.isActive || yAmountCoord < 0 || yAmountCoord > chart.height) {
+  if (yAmountCoord < 0 || yAmountCoord > chart.height) {
     return null;
   }
 
@@ -39,8 +39,8 @@ export const Amount = ({ goal }) => {
       <path
         className="amount-line"
         d={amountLinePath}
-        stroke={AMOUNT.LINE.COLOR}
-        strokeDasharray={`${AMOUNT.LINE.DASH_WIDTH}, ${AMOUNT.LINE.DASH_GAP}`}
+        stroke={GOAL.AMOUNT.LINE.COLOR}
+        strokeDasharray={`${GOAL.AMOUNT.LINE.DASH_WIDTH}, ${GOAL.AMOUNT.LINE.DASH_GAP}`}
       />
       <AmountLabel goal={goal}>{formatAmount(goal.amount.value)}</AmountLabel>
     </>

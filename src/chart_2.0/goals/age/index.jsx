@@ -8,24 +8,24 @@ import { logger } from "../../../utils/logger";
 
 export const Age = ({ goal, isFirst }) => {
   const { chart, scale, CONSTANTS } = useContext(PropsContext);
-  const { GOAL } = CONSTANTS;
+  const { AGE } = CONSTANTS;
 
   const ageLinePath = useMemo(() => {
     const coords = [
-      [scale.x(goal.date), chart.height - GOAL.AGE.LINE.HEIGHT.TOP],
-      [scale.x(goal.date), chart.height + GOAL.AGE.LINE.HEIGHT.BOTTOM]
+      [scale.x(goal.date), chart.height - AGE.LINE.HEIGHT.TOP],
+      [scale.x(goal.date), chart.height + AGE.LINE.HEIGHT.BOTTOM]
     ];
 
     return line()(coords);
-  }, [goal.date, chart.height, scale, GOAL]);
+  }, [goal.date, chart.height, scale, AGE]);
 
   logger.render("Age");
 
   return (
     <>
-      <path className="age-line" d={ageLinePath} stroke={GOAL.AGE.LINE.COLOR} />
+      <path className="age-line" d={ageLinePath} stroke={AGE.LINE.COLOR} />
       <AgeText goal={goal}>
-        {`${isFirst ? GOAL.AGE.VALUE.TEXT : ""} ${goal.age}`}
+        {`${isFirst ? AGE.VALUE.TEXT : ""} ${goal.age}`}
       </AgeText>
     </>
   );
