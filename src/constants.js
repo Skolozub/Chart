@@ -141,7 +141,9 @@ export const BUBBLE = {
   MARGIN: {
     TOP: 0,
     BOTTOM: 18
-  }
+  },
+
+  DURATION: 300
 };
 
 export const TOOLTIPS = {};

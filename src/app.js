@@ -65,8 +65,6 @@ export default function App() {
       };
     });
 
-    console.log(nextGoals);
-
     setGoals(nextGoals);
   };
 

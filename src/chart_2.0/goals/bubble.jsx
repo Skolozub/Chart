@@ -151,7 +151,12 @@ export const Bubble = ({ goal, size }) => {
         ref={bubbleRef}
         onClick={() => onGoalClick(goal.code)}
       >
-        <path className="tail" d={tailPath} fill={bubbleColor} />
+        <path
+          className="tail"
+          d={tailPath}
+          fill={bubbleColor}
+          style={{ transition: `${BUBBLE.DURATION}ms` }}
+        />
 
         <circle
           className="circle"
@@ -159,6 +164,7 @@ export const Bubble = ({ goal, size }) => {
           fill={bubbleColor}
           cx={bubble.cx}
           cy={bubble.cy}
+          style={{ transition: `${BUBBLE.DURATION}ms` }}
         />
 
         {goal.icon && (
@@ -169,6 +175,7 @@ export const Bubble = ({ goal, size }) => {
             height={BUBBLE[size].ICON.HEIGHT}
             x={scale.x(goal.date) - BUBBLE[size].ICON.WIDTH / HALF}
             y={bubble.cy - BUBBLE[size].ICON.HEIGHT / HALF}
+            style={{ transition: `${BUBBLE.DURATION}ms` }}
           />
         )}
       </g>
