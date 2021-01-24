@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import { extent, max, scaleLinear, scaleTime } from "d3";
 import { Chart } from "./chart";
 import * as S from "./index.style";
@@ -10,8 +10,8 @@ import { logger } from "../utils/logger";
 export const PropsContext = React.createContext();
 
 export const PFPChart = ({ data, width, height, className, constants }) => {
+  const [portalRef, setPortalRef] = useState(null);
   const CONSTANTS = constants || DEFAULT_CONSTANTS;
-  const portalRef = useRef(null);
   const { SVG, CHART, AXIS } = CONSTANTS;
 
   const svg = {
@@ -57,13 +57,19 @@ export const PFPChart = ({ data, width, height, className, constants }) => {
     portalRef
   };
 
+  const drawControlRef = useCallback((node) => {
+    if (node) {
+      setPortalRef(node);
+    }
+  }, []);
+
   logger.render("PFPChart");
 
   return (
     <PropsContext.Provider value={props}>
       <S.Container>
-        <Chart />
-        <div ref={portalRef}></div>
+        {portalRef && <Chart />}
+        <S.Portal ref={drawControlRef} className="portal"></S.Portal>
       </S.Container>
     </PropsContext.Provider>
   );

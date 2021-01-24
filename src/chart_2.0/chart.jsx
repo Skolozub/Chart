@@ -6,6 +6,7 @@ import { Borders } from "./axis/borders";
 
 // TODO: delete on prod
 import { logger } from "../utils/logger";
+import { Goals } from "./goals";
 
 export const Chart = () => {
   const { svg, chart, className, CONSTANTS } = useContext(PropsContext);
@@ -33,6 +34,9 @@ export const Chart = () => {
           <Borders />
           <AxisY />
           <AxisX />
+        </g>
+        <g className="goals">
+          <Goals />
         </g>
       </g>
     </svg>

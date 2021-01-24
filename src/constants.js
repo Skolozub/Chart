@@ -58,9 +58,8 @@ export const GOAL = {
     VALUE: {
       HEIGHT: 20,
       BORDER_RADIUS: 10,
-      PADDING: {
-        RIGHT: 8,
-        LEFT: 8
+      MARGIN: {
+        RIGHT: 5
       },
       BACKGROUND_COLOR: "#08A652",
       TEXT_COLOR: "#FFFFFF",
@@ -77,7 +76,7 @@ export const GOAL = {
   AGE: {
     VALUE: {
       TEXT: "Вам будет",
-      MARGIN: 10,
+      MARGIN: 3,
       FONT_SIZE: 14,
       PADDING: 5,
       BACKGROUND_COLOR: "#FFFFFF",
