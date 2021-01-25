@@ -115,9 +115,8 @@ export const GOAL = {
 };
 
 export const TOOLTIPS = {
-  TYPES: {
-    SUCCEED: "succeed",
-    UNSUCCEED: "unsucceed"
+  MARGIN: {
+    BOTTOM: 8
   }
 };
 

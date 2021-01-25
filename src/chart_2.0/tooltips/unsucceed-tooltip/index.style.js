@@ -2,10 +2,11 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   position: absolute;
-  width: 266px;
-  height: 76px;
+  min-width: 266px;
+  min-height: 76px;
   top: ${(props) => props.top}px;
   left: ${(props) => props.left}px;
+  opacity: ${(props) => (!props.top || !props.left ? 0 : 1)};
   padding: 16px;
   transition: 0.3s;
   background: #ffffff;
@@ -13,6 +14,7 @@ export const Container = styled.div`
   box-shadow: 0px 1px 2px rgba(38, 38, 38, 0.04),
     0px 12px 24px rgba(38, 38, 38, 0.16);
   border-radius: 12px;
+  transition: opacity 0.3s;
 `;
 
 export const Title = styled.div`

@@ -46,7 +46,7 @@ export const CHART = {
   },
 
   CURVE_TYPE: {
-    EXPONENTIAL: d3.curveMonotoneX,
+    EXPONENTIAL: d3.curveBasis, //curveMonotoneX
     LINEAR: d3.curveLinear
   },
 
@@ -96,11 +96,6 @@ export const BUBBLE_SIZES = {
   MEDIUM: "medium"
 };
 
-export const TAIL_TYPES = {
-  TOP: "top",
-  BOTTOM: "bottom"
-};
-
 export const GOALS_TYPES = {
   SUCCEED: "succeed",
   UNSUCCEED: "unsucceed"
@@ -138,6 +133,11 @@ export const BUBBLE = {
     }
   },
 
+  TYPES: {
+    TOP: "top",
+    BOTTOM: "bottom"
+  },
+
   MARGIN: {
     TOP: 0,
     BOTTOM: 18
@@ -146,6 +146,34 @@ export const BUBBLE = {
   DURATION: 300
 };
 
-export const TOOLTIPS = {};
+export const CURRENT_AMOUNT = {
+  CIRCLE: {
+    INNER: {
+      RADIUS: 1,
+      BACKGROUND_COLOR: "#FFFFFF"
+    },
+    OUTER: {
+      RADIUS: 3,
+      BACKGROUND_COLOR: "#068441"
+    }
+  },
+  IMAGE: {
+    WIDTH: 22,
+    HEIGHT: 22
+  }
+};
+
+export const TOOLTIPS_TYPES = {
+  UNSUCCEED: "unsucceed"
+};
+
+export const TOOLTIPS = {
+  [TOOLTIPS_TYPES.UNSUCCEED]: {
+    MARGIN: {
+      TOP: 8,
+      BOTTOM: 8
+    }
+  }
+};
 
 export const HALF = 2;

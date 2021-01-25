@@ -1,5 +1,5 @@
-import { line } from "d3";
 import React, { useRef, useContext, useMemo } from "react";
+import { line } from "d3";
 import { PropsContext } from ".";
 
 // TODO: delete on prod
