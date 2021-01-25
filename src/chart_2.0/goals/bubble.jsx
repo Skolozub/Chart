@@ -7,15 +7,16 @@ import React, {
 } from "react";
 import { line, select } from "d3";
 import { PropsContext } from "../index";
+import { UnsucceedTooltip } from "../tooltips/unsucceed-tooltip";
 
 // TODO: delete on prod
 import { logger } from "../../utils/logger";
-// size: ["small", "medium"]
-// tailPosition: ["bottom", "top"]
 
-export const Bubble = ({ goal, size }) => {
-  const { chart, scale, onGoalClick, CONSTANTS } = useContext(PropsContext);
-  const { BUBBLE, GOALS_TYPES, TAIL_TYPES, HALF } = CONSTANTS;
+export const Bubble = ({ goal }) => {
+  const { chart, scale, CONSTANTS, onGoalClick } = useContext(PropsContext);
+  const { BUBBLE, GOALS_TYPES, BUBBLE_SIZES, HALF } = CONSTANTS;
+
+  const size = goal.isActive ? BUBBLE_SIZES.MEDIUM : BUBBLE_SIZES.SMALL;
 
   const bubble = useMemo(() => {
     // circle center coordinates
@@ -24,23 +25,24 @@ export const Bubble = ({ goal, size }) => {
 
     // bubble y top coordinate
     const yBubbleTop =
-      cy - BUBBLE[size].RADIUS - BUBBLE[size].TAIL.HEIGHT + BUBBLE.MARGIN.TOP;
+      cy - BUBBLE[size].RADIUS - BUBBLE.MARGIN.TOP - BUBBLE[size].TAIL.HEIGHT;
 
     // bubble y bottom coordinate
     const yBubbleBottom =
       cy +
       BUBBLE[size].RADIUS +
-      BUBBLE[size].TAIL.HEIGHT +
-      BUBBLE.MARGIN.BOTTOM;
+      BUBBLE.MARGIN.BOTTOM +
+      BUBBLE[size].TAIL.HEIGHT;
 
     // if bubble y top coordinate less then chart y top coordinate
     // recalculate circle y center coordinate
     if (yBubbleTop <= 0) {
       return {
+        size,
         cx,
         cy: BUBBLE[size].RADIUS + BUBBLE[size].TAIL.HEIGHT + BUBBLE.MARGIN.TOP,
         isTailVisible: true,
-        type: TAIL_TYPES.TOP
+        type: BUBBLE.TYPES.TOP
       };
     }
 
@@ -48,6 +50,7 @@ export const Bubble = ({ goal, size }) => {
     // recalculate circle y center coordinate
     if (yBubbleBottom >= chart.height) {
       return {
+        size,
         cx,
         cy:
           chart.height -
@@ -55,21 +58,21 @@ export const Bubble = ({ goal, size }) => {
           BUBBLE[size].TAIL.HEIGHT -
           BUBBLE.MARGIN.BOTTOM,
         isTailVisible: true,
-        type: TAIL_TYPES.BOTTOM
+        type: BUBBLE.TYPES.BOTTOM
       };
     }
 
-    return { cx, cy, isTailVisible: false, type: null };
-  }, [goal, scale, size, chart.height, BUBBLE, TAIL_TYPES]);
+    return { size, cx, cy, isTailVisible: false, type: null };
+  }, [goal, scale, size, chart.height, BUBBLE]);
 
   const tailPath = useMemo(() => {
     const { cy, type } = bubble;
 
     function getTailTypeMultiplier(tailType) {
-      if (tailType === TAIL_TYPES.TOP) {
+      if (tailType === BUBBLE.TYPES.TOP) {
         return -1;
       }
-      if (tailType === TAIL_TYPES.BOTTOM) {
+      if (tailType === BUBBLE.TYPES.BOTTOM) {
         return 1;
       }
       return 0;
@@ -100,7 +103,7 @@ export const Bubble = ({ goal, size }) => {
     ];
 
     return line()(tailCoords);
-  }, [bubble, goal.date, scale, size, BUBBLE, HALF, TAIL_TYPES]);
+  }, [bubble, goal.date, scale, size, BUBBLE, HALF]);
 
   const getBubbleColor = useCallback(
     (isActive) => {
@@ -180,9 +183,9 @@ export const Bubble = ({ goal, size }) => {
         )}
       </g>
 
-      {/* {!goal.succeed && goal.isActive&& (
-        <DrawTooltip x={xLabel} y={yLabel}  />
-      )} */}
+      {!goal.succeed && goal.isActive && (
+        <UnsucceedTooltip goal={goal} bubble={bubble} />
+      )}
     </>
   );
 };

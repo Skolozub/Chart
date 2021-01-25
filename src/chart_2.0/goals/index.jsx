@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { PropsContext } from "../index";
 import { Age } from "./age";
 import { Amount } from "./amount";
@@ -8,21 +8,19 @@ import { Bubble } from "./bubble";
 import { logger } from "../../utils/logger";
 
 export const Goals = () => {
-  const { data, CONSTANTS } = useContext(PropsContext);
-  const { BUBBLE_SIZES } = CONSTANTS;
+  const { data } = useContext(PropsContext);
 
   logger.render("Age");
 
   return (
     <>
       {data.goals.map((goal, index) => (
+        <Amount key={goal.code} goal={goal} />
+      ))}
+      {data.goals.map((goal, index) => (
         <g key={goal.code} className="goal">
-          <Amount goal={goal} />
           <Age goal={goal} isFirst={index === 0} />
-          <Bubble
-            goal={goal}
-            size={goal.isActive ? BUBBLE_SIZES.MEDIUM : BUBBLE_SIZES.SMALL}
-          />
+          <Bubble goal={goal} />
         </g>
       ))}
     </>
