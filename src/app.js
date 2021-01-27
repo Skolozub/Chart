@@ -77,7 +77,7 @@ export default function App() {
   };
 
   const changeRangeHandler = useCallback((startYear, endYear) => {
-    setStart(new Date(`${startYear}-01-01`).getTime());
+    setStart(new Date(`${startYear - 1}-12-31`).getTime());
     setEnd(new Date(`${endYear}-01-01`).getTime());
   }, []);
 

@@ -48,7 +48,7 @@ export const LOCALE = {
 export const COMMON = {
   HALF: 2,
   MONTHS_IN_YEAR: 12,
-  ONE_YEAR: 1
+  TWO_YEARS: 2
 };
 
 export const SVG = {
