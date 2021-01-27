@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Chart } from "./chart";
 import icons from "./svg";
 import * as CONSTANTS from "./constants";
 
