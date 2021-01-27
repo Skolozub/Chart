@@ -1,5 +1,56 @@
 import * as d3 from "d3";
 
+export const LOCALE = {
+  dateTime: "%A, %e %B %Y г. %X",
+  date: "%d.%m.%Y",
+  time: "%H:%M:%S",
+  periods: ["AM", "PM"],
+  days: [
+    "воскресенье",
+    "понедельник",
+    "вторник",
+    "среда",
+    "четверг",
+    "пятница",
+    "суббота"
+  ],
+  shortDays: ["вс", "пн", "вт", "ср", "чт", "пт", "сб"],
+  months: [
+    "января",
+    "февраля",
+    "марта",
+    "апреля",
+    "мая",
+    "июня",
+    "июля",
+    "августа",
+    "сентября",
+    "октября",
+    "ноября",
+    "декабря"
+  ],
+  shortMonths: [
+    "янв",
+    "фев",
+    "мар",
+    "апр",
+    "май",
+    "июн",
+    "июл",
+    "авг",
+    "сен",
+    "окт",
+    "ноя",
+    "дек"
+  ]
+};
+
+export const COMMON = {
+  HALF: 2,
+  MONTHS_IN_YEAR: 12,
+  ONE_YEAR: 1
+};
+
 export const SVG = {
   WIDTH: 960,
   HEIGHT: 400,
@@ -23,7 +74,8 @@ export const AXIS = {
     DOMAIN_STROKE_WIDTH: 2,
     DOMAIN_COLOR: "#eeeeee",
     DOTS_RADIUS: 1.5,
-    DOTS_COLOR: "#676767"
+    DOTS_COLOR: "#676767",
+    WIDTH_BETWEEN_TICKS: 52
   }
 };
 
@@ -46,7 +98,7 @@ export const CHART = {
   },
 
   CURVE_TYPE: {
-    EXPONENTIAL: d3.curveBasis, //curveMonotoneX
+    EXPONENTIAL: d3.curveMonotoneX, //curveBasis
     LINEAR: d3.curveLinear
   },
 
@@ -175,5 +227,3 @@ export const TOOLTIPS = {
     }
   }
 };
-
-export const HALF = 2;

@@ -126,8 +126,14 @@ export const Bubble = ({ goal }) => {
     [goal.succeed, BUBBLE, GOALS_TYPES]
   );
 
-  const bubbleColor = getBubbleColor(goal.isActive);
   const bubbleRef = useRef(null);
+  const bubbleColor = getBubbleColor(goal.isActive);
+
+  useEffect(() => {
+    const bubbleSelection = select(bubbleRef.current);
+
+    bubbleSelection.transition().duration(1000).style("opacity", 1);
+  }, []);
 
   useEffect(() => {
     const bubbleSelection = select(bubbleRef.current);
@@ -153,6 +159,7 @@ export const Bubble = ({ goal }) => {
         className="bubble"
         ref={bubbleRef}
         onClick={() => onGoalClick(goal.code)}
+        style={{ opacity: 0 }}
       >
         <path
           className="tail"

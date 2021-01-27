@@ -113,6 +113,363 @@
                   "currency": "EUR"
                 }
               ]
+            },
+            {
+              "date": "2025-10-13",
+              "amount": [
+                {
+                  "value": "3500000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2026-06-23",
+              "amount": [
+                {
+                  "value": "4000000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2027-03-15",
+              "amount": [
+                {
+                  "value": "5050800",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2028-05-18",
+              "amount": [
+                {
+                  "value": "7230500",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2028-05-18",
+              "amount": [
+                {
+                  "value": "4839000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2029-02-28",
+              "amount": [
+                {
+                  "value": "8930400",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2030-07-19",
+              "amount": [
+                {
+                  "value": "9900000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2031-10-13",
+              "amount": [
+                {
+                  "value": "10000000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2032-10-13",
+              "amount": [
+                {
+                  "value": "10800000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2032-10-13",
+              "amount": [
+                {
+                  "value": "200000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2033-10-13",
+              "amount": [
+                {
+                  "value": "400000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2034-10-13",
+              "amount": [
+                {
+                  "value": "700000",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2035-10-13",
+              "amount": [
+                {
+                  "value": "1240500",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2036-10-13",
+              "amount": [
+                {
+                  "value": "2345123",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2037-10-13",
+              "amount": [
+                {
+                  "value": "3451879",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2038-10-13",
+              "amount": [
+                {
+                  "value": "4328576",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2039-10-13",
+              "amount": [
+                {
+                  "value": "5828576",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2040-10-13",
+              "amount": [
+                {
+                  "value": "6738273",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2041-10-13",
+              "amount": [
+                {
+                  "value": "7646352",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2042-10-13",
+              "amount": [
+                {
+                  "value": "8646352",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
+            },
+            {
+              "date": "2043-10-13",
+              "amount": [
+                {
+                  "value": "9646352",
+                  "currency": "RUB"
+                },
+                {
+                  "value": "1000",
+                  "currency": "USD"
+                },
+                {
+                  "value": "970",
+                  "currency": "EUR"
+                }
+              ]
             }
           ],
           "neutral": [
@@ -287,6 +644,51 @@
         {
           "code": "202",
           "age": "37 лет",
+          "succeed": {
+            "neutral": false,
+            "positive": false,
+            "negative": false
+          }
+        },
+        {
+          "code": "203",
+          "age": "39 лет",
+          "succeed": {
+            "neutral": false,
+            "positive": false,
+            "negative": false
+          }
+        },
+        {
+          "code": "204",
+          "age": "44 лет",
+          "succeed": {
+            "neutral": false,
+            "positive": false,
+            "negative": true
+          }
+        },
+        {
+          "code": "207",
+          "age": "50 лет",
+          "succeed": {
+            "neutral": false,
+            "positive": false,
+            "negative": true
+          }
+        },
+        {
+          "code": "208",
+          "age": "56 лет",
+          "succeed": {
+            "neutral": false,
+            "positive": false,
+            "negative": true
+          }
+        },
+        {
+          "code": "209",
+          "age": "61 лет",
           "succeed": {
             "neutral": false,
             "positive": false,

@@ -1,5 +1,7 @@
 import birthday from "./birthday.svg";
 import phone from "./phone.svg";
 import home from "./home.svg";
+import car from "./car.svg";
+import plane from "./plane.svg";
 
-export default [phone, home, birthday];
+export default [phone, home, car, birthday, plane, car, phone];

@@ -29,6 +29,7 @@ export const ChartLine = () => {
       d={chartPath}
       stroke={CHART.LINE_COLOR}
       fill="none"
+      style={{ transition: "300ms" }}
     />
   );
 };

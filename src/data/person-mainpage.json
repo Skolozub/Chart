@@ -62,10 +62,180 @@
         "code": "202",
         "name": "Пуэрто-Рико",
         "image": "https://simpleicon.com/wp-content/uploads/rocket.svg",
+        "date": "2023-06-12",
+        "amount": [
+          {
+            "value": "4500000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "5714.00",
+            "currency": "USD"
+          },
+          {
+            "value": "4444.00",
+            "currency": "EUR"
+          }
+        ],
+        "accumulation": [
+          {
+            "value": "200000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "2857.00",
+            "currency": "USD"
+          },
+          {
+            "value": "2222.00",
+            "currency": "EUR"
+          }
+        ]
+      },
+      {
+        "code": "203",
+        "name": "Пуэрто-Рико",
+        "image": "https://simpleicon.com/wp-content/uploads/rocket.svg",
         "date": "2024-06-12",
         "amount": [
           {
             "value": "5600000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "5714.00",
+            "currency": "USD"
+          },
+          {
+            "value": "4444.00",
+            "currency": "EUR"
+          }
+        ],
+        "accumulation": [
+          {
+            "value": "200000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "2857.00",
+            "currency": "USD"
+          },
+          {
+            "value": "2222.00",
+            "currency": "EUR"
+          }
+        ]
+      },
+      {
+        "code": "204",
+        "name": "Пуэрто-Рико",
+        "image": "https://simpleicon.com/wp-content/uploads/rocket.svg",
+        "date": "2025-10-13",
+        "amount": [
+          {
+            "value": "9000000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "5714.00",
+            "currency": "USD"
+          },
+          {
+            "value": "4444.00",
+            "currency": "EUR"
+          }
+        ],
+        "accumulation": [
+          {
+            "value": "200000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "2857.00",
+            "currency": "USD"
+          },
+          {
+            "value": "2222.00",
+            "currency": "EUR"
+          }
+        ]
+      },
+      {
+        "code": "207",
+        "name": "Пуэрто-Рико",
+        "image": "https://simpleicon.com/wp-content/uploads/rocket.svg",
+        "date": "2028-05-18",
+        "amount": [
+          {
+            "value": "7230500.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "5714.00",
+            "currency": "USD"
+          },
+          {
+            "value": "4444.00",
+            "currency": "EUR"
+          }
+        ],
+        "accumulation": [
+          {
+            "value": "200000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "2857.00",
+            "currency": "USD"
+          },
+          {
+            "value": "2222.00",
+            "currency": "EUR"
+          }
+        ]
+      },
+      {
+        "code": "208",
+        "name": "Пуэрто-Рико",
+        "image": "https://simpleicon.com/wp-content/uploads/rocket.svg",
+        "date": "2032-10-13",
+        "amount": [
+          {
+            "value": "10800000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "5714.00",
+            "currency": "USD"
+          },
+          {
+            "value": "4444.00",
+            "currency": "EUR"
+          }
+        ],
+        "accumulation": [
+          {
+            "value": "200000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "2857.00",
+            "currency": "USD"
+          },
+          {
+            "value": "2222.00",
+            "currency": "EUR"
+          }
+        ]
+      },
+      {
+        "code": "209",
+        "name": "Пуэрто-Рико",
+        "image": "https://simpleicon.com/wp-content/uploads/rocket.svg",
+        "date": "2041-10-13",
+        "amount": [
+          {
+            "value": "10000000.00",
             "currency": "RUB"
           },
           {

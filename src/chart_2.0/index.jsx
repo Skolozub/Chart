@@ -1,5 +1,11 @@
 import React, { useCallback, useMemo, useRef, useState } from "react";
-import { extent, max, scaleLinear, scaleTime } from "d3";
+import {
+  extent,
+  max,
+  scaleLinear,
+  scaleTime,
+  timeFormatDefaultLocale
+} from "d3";
 import { Chart } from "./chart";
 import * as S from "./index.style";
 import * as DEFAULT_CONSTANTS from "./constants";
@@ -13,6 +19,7 @@ export const PFPChart = ({
   data,
   width,
   height,
+  xDomain,
   className,
   constants,
   onGoalClick
@@ -20,6 +27,9 @@ export const PFPChart = ({
   const [portalRef, setPortalRef] = useState(null);
   const CONSTANTS = constants || DEFAULT_CONSTANTS;
   const { SVG, CHART, AXIS } = CONSTANTS;
+
+  // set locale
+  timeFormatDefaultLocale(CONSTANTS.LOCALE);
 
   const svg = {
     width: width || SVG.HEIGHT,
@@ -34,10 +44,13 @@ export const PFPChart = ({
   const x = useMemo(
     () =>
       scaleTime()
-        .domain(extent(data.chart, (d) => d.date))
+        // .domain(extent(data.chart, (d) => d.date))
+        .domain(xDomain)
         .range([0, chart.width]),
-    [data.chart, chart.width]
+    [xDomain, chart.width]
   );
+  // const ex = extent(data.chart, (d) => d.date);
+  // console.log("extent", ex.map(Date));
 
   const yScaleMax = useMemo(() => {
     const yMax = max(data.chart, (d) => d.value);
@@ -59,6 +72,7 @@ export const PFPChart = ({
     svg,
     chart,
     scale,
+    xDomain,
     className,
     CONSTANTS,
     portalRef,

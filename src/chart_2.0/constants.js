@@ -1,5 +1,50 @@
 import * as d3 from "d3";
 
+export const LOCALE = {
+  dateTime: "%A, %e %B %Y г. %X",
+  date: "%d.%m.%Y",
+  time: "%H:%M:%S",
+  periods: ["AM", "PM"],
+  days: [
+    "воскресенье",
+    "понедельник",
+    "вторник",
+    "среда",
+    "четверг",
+    "пятница",
+    "суббота"
+  ],
+  shortDays: ["вс", "пн", "вт", "ср", "чт", "пт", "сб"],
+  months: [
+    "января",
+    "февраля",
+    "марта",
+    "апреля",
+    "мая",
+    "июня",
+    "июля",
+    "августа",
+    "сентября",
+    "октября",
+    "ноября",
+    "декабря"
+  ],
+  shortMonths: [
+    "янв",
+    "фев",
+    "мар",
+    "апр",
+    "май",
+    "июн",
+    "июл",
+    "авг",
+    "сен",
+    "окт",
+    "ноя",
+    "дек"
+  ]
+};
+
 export const SVG = {
   WIDTH: 960,
   HEIGHT: 400,
@@ -46,77 +91,133 @@ export const CHART = {
   },
 
   CURVE_TYPE: {
-    EXPONENTIAL: d3.curveMonotoneX,
+    EXPONENTIAL: d3.curveBasis, //curveMonotoneX
     LINEAR: d3.curveLinear
   },
 
   DURATION: 1500
 };
 
-export const GOAL = {
-  AMOUNT: {
-    VALUE: {
-      HEIGHT: 20,
-      BORDER_RADIUS: 10,
-      PADDING: {
-        RIGHT: 8,
-        LEFT: 8
-      },
-      BACKGROUND_COLOR: "#08A652",
-      TEXT_COLOR: "#FFFFFF",
-      FONT_SIZE: 16
+export const AMOUNT = {
+  VALUE: {
+    HEIGHT: 20,
+    BORDER_RADIUS: 10,
+    MARGIN: {
+      RIGHT: 5
     },
+    BACKGROUND_COLOR: "#08A652",
+    TEXT_COLOR: "#FFFFFF",
+    FONT_SIZE: 16
+  },
 
-    LINE: {
-      COLOR: "#9cdbba",
-      DASH_WIDTH: 7,
-      DASH_GAP: 5
+  LINE: {
+    COLOR: "#9cdbba",
+    DASH_WIDTH: 7,
+    DASH_GAP: 5
+  }
+};
+
+export const AGE = {
+  VALUE: {
+    TEXT: "Вам будет",
+    MARGIN: 3,
+    FONT_SIZE: 14,
+    PADDING: 5,
+    BACKGROUND_COLOR: "#FFFFFF",
+    COLOR: "#068441"
+  },
+
+  LINE: {
+    HEIGHT: {
+      TOP: 3,
+      BOTTOM: 3
+    },
+    COLOR: "#068441"
+  }
+};
+
+export const BUBBLE_SIZES = {
+  SMALL: "small",
+  MEDIUM: "medium"
+};
+
+export const GOALS_TYPES = {
+  SUCCEED: "succeed",
+  UNSUCCEED: "unsucceed"
+};
+
+export const BUBBLE = {
+  BACKGROUNDS_COLOR: {
+    [GOALS_TYPES.SUCCEED]: ["#08A652", "#8BD8AA"],
+    [GOALS_TYPES.UNSUCCEED]: ["#F6650A", "#FFB992"]
+  },
+
+  [BUBBLE_SIZES.SMALL]: {
+    RADIUS: 18,
+    TAIL: {
+      WIDTH: 10,
+      HEIGHT: 5,
+      MARGIN: -1
+    },
+    ICON: {
+      WIDTH: 27,
+      HEIGHT: 27
     }
   },
 
-  AGE: {
-    VALUE: {
-      TEXT: "Вам будет",
-      MARGIN: 10,
-      FONT_SIZE: 14,
-      PADDING: 5,
-      BACKGROUND_COLOR: "#FFFFFF",
-      COLOR: "#068441"
-    },
-
-    LINE: {
-      HEIGHT: {
-        TOP: 3,
-        BOTTOM: 3
-      },
-      COLOR: "#068441"
-    }
-  },
-
-  LABEL: {
-    BACKGROUNDS_COLOR: {
-      SUCCEED: "#08A652",
-      UNSUCCEED: "#F6650A"
-    },
-
+  [BUBBLE_SIZES.MEDIUM]: {
     RADIUS: 24,
-    MARGIN: -3,
-    TRIANGLE: {
-      WIDTH: 9,
+    TAIL: {
+      WIDTH: 10,
       HEIGHT: 5,
       MARGIN: -1
     },
     ICON: {
       WIDTH: 36,
       HEIGHT: 36
+    }
+  },
+
+  TYPES: {
+    TOP: "top",
+    BOTTOM: "bottom"
+  },
+
+  MARGIN: {
+    TOP: 0,
+    BOTTOM: 18
+  },
+
+  DURATION: 300
+};
+
+export const CURRENT_AMOUNT = {
+  CIRCLE: {
+    INNER: {
+      RADIUS: 1,
+      BACKGROUND_COLOR: "#FFFFFF"
     },
-    DURATION: "0.3s"
+    OUTER: {
+      RADIUS: 3,
+      BACKGROUND_COLOR: "#068441"
+    }
+  },
+  IMAGE: {
+    WIDTH: 22,
+    HEIGHT: 22
   }
 };
 
+export const TOOLTIPS_TYPES = {
+  UNSUCCEED: "unsucceed"
+};
+
 export const TOOLTIPS = {
-  MARGIN: {
-    BOTTOM: 8
+  [TOOLTIPS_TYPES.UNSUCCEED]: {
+    MARGIN: {
+      TOP: 8,
+      BOTTOM: 8
+    }
   }
 };
 

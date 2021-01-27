@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { PropsContext } from "../index";
-import { Age } from "./age";
 import { Amount } from "./amount";
+import { Age } from "./age";
 import { Bubble } from "./bubble";
 
 // TODO: delete on prod
@@ -14,7 +14,7 @@ export const Goals = () => {
 
   return (
     <>
-      {data.goals.map((goal, index) => (
+      {data.goals.map((goal) => (
         <Amount key={goal.code} goal={goal} />
       ))}
       {data.goals.map((goal, index) => (
