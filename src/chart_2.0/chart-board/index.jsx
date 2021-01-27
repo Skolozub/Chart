@@ -40,7 +40,6 @@ export const ChartBoard = () => {
   return (
     <>
       <rect
-        // onClick={(e) => console.log(e)}
         className="chart-board"
         ref={chartBoardRef}
         width={chart.width}

@@ -86,10 +86,6 @@ export default function App() {
       return it.date >= start && it.date <= end;
     });
 
-    console.log("end", end);
-
-    console.log("nextGoals", nextGoals);
-
     setGoals(nextGoals);
 
     // const nextPoints = chartInit.current.filter((it) => {
@@ -141,13 +137,6 @@ export default function App() {
               onGoalClick={setActiveGoalHandler}
               xDomain={[start, end]}
             />
-            {/* <hr />
-            <Chart
-              chartData={chartData}
-              goalsData={goals}
-              svgWidth={rect.width}
-              onGoalClick={setActiveGoalHandler}
-            /> */}
           </>
         )}
       </FullWidthWrapper>

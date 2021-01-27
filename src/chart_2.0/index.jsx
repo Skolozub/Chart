@@ -1,11 +1,5 @@
-import React, { useCallback, useMemo, useRef, useState } from "react";
-import {
-  extent,
-  max,
-  scaleLinear,
-  scaleTime,
-  timeFormatDefaultLocale
-} from "d3";
+import React, { useCallback, useMemo, useState } from "react";
+import { max, scaleLinear, scaleTime, timeFormatDefaultLocale } from "d3";
 import { Chart } from "./chart";
 import * as S from "./index.style";
 import * as DEFAULT_CONSTANTS from "./constants";
@@ -41,16 +35,10 @@ export const PFPChart = ({
     height: svg.height - CHART.MARGIN.TOP - CHART.MARGIN.BOTTOM
   };
 
-  const x = useMemo(
-    () =>
-      scaleTime()
-        // .domain(extent(data.chart, (d) => d.date))
-        .domain(xDomain)
-        .range([0, chart.width]),
-    [xDomain, chart.width]
-  );
-  // const ex = extent(data.chart, (d) => d.date);
-  // console.log("extent", ex.map(Date));
+  const x = useMemo(() => scaleTime().domain(xDomain).range([0, chart.width]), [
+    xDomain,
+    chart.width
+  ]);
 
   const yScaleMax = useMemo(() => {
     const yMax = max(data.chart, (d) => d.value);
