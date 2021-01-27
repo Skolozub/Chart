@@ -9,14 +9,14 @@ import { logger } from "../../utils/logger";
 
 export const AmountBalloon = ({ top, left }) => {
   const { portalRef, CONSTANTS } = useContext(PropsContext);
-  const { CURRENT_AMOUNT, HALF } = CONSTANTS;
+  const { CURRENT_AMOUNT, COMMON } = CONSTANTS;
 
   logger.render("AmountBalloon");
 
   return ReactDOM.createPortal(
     <S.Container
       className="amount-balloon"
-      left={left - CURRENT_AMOUNT.IMAGE.WIDTH / HALF}
+      left={left - CURRENT_AMOUNT.IMAGE.WIDTH / COMMON.HALF}
       top={top - CURRENT_AMOUNT.IMAGE.HEIGHT}
     >
       <S.Avatar

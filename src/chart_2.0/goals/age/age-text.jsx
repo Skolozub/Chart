@@ -8,7 +8,7 @@ import { logger } from "../../../utils/logger";
 
 export const AgeText = ({ goal, children }) => {
   const { chart, scale, portalRef, CONSTANTS } = useContext(PropsContext);
-  const { CHART, AGE, HALF } = CONSTANTS;
+  const { CHART, AGE, COMMON } = CONSTANTS;
   const textRef = useRef(null);
   const [top, setTop] = useState(null);
   const [left, setLeft] = useState(null);
@@ -19,12 +19,12 @@ export const AgeText = ({ goal, children }) => {
       const textTop =
         CHART.MARGIN.TOP + chart.height - rect.height - AGE.VALUE.MARGIN;
       const textLeft =
-        CHART.MARGIN.LEFT + scale.x(goal.date) - rect.width / HALF;
+        CHART.MARGIN.LEFT + scale.x(goal.date) - rect.width / COMMON.HALF;
 
       setTop(textTop);
       setLeft(textLeft);
     }
-  }, [scale, chart.height, goal.date, CHART, AGE, HALF]);
+  }, [scale, chart.height, goal.date, CHART, AGE, COMMON.HALF]);
 
   logger.render("AgeText");
 

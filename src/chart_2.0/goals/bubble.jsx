@@ -14,7 +14,7 @@ import { logger } from "../../utils/logger";
 
 export const Bubble = ({ goal }) => {
   const { chart, scale, CONSTANTS, onGoalClick } = useContext(PropsContext);
-  const { BUBBLE, GOALS_TYPES, BUBBLE_SIZES, HALF } = CONSTANTS;
+  const { BUBBLE, GOALS_TYPES, BUBBLE_SIZES, COMMON } = CONSTANTS;
 
   const size = goal.isActive ? BUBBLE_SIZES.MEDIUM : BUBBLE_SIZES.SMALL;
 
@@ -92,18 +92,18 @@ export const Bubble = ({ goal }) => {
       ],
       [
         //topLeft
-        scale.x(goal.date) - BUBBLE[size].TAIL.WIDTH / HALF,
+        scale.x(goal.date) - BUBBLE[size].TAIL.WIDTH / COMMON.HALF,
         yCircleBottom
       ],
       [
         // topRight
-        scale.x(goal.date) + BUBBLE[size].TAIL.WIDTH / HALF,
+        scale.x(goal.date) + BUBBLE[size].TAIL.WIDTH / COMMON.HALF,
         yCircleBottom
       ]
     ];
 
     return line()(tailCoords);
-  }, [bubble, goal.date, scale, size, BUBBLE, HALF]);
+  }, [bubble, goal.date, scale, size, BUBBLE, COMMON.HALF]);
 
   const getBubbleColor = useCallback(
     (isActive) => {
@@ -183,8 +183,8 @@ export const Bubble = ({ goal }) => {
             xlinkHref={goal.icon}
             width={BUBBLE[size].ICON.WIDTH}
             height={BUBBLE[size].ICON.HEIGHT}
-            x={scale.x(goal.date) - BUBBLE[size].ICON.WIDTH / HALF}
-            y={bubble.cy - BUBBLE[size].ICON.HEIGHT / HALF}
+            x={scale.x(goal.date) - BUBBLE[size].ICON.WIDTH / COMMON.HALF}
+            y={bubble.cy - BUBBLE[size].ICON.HEIGHT / COMMON.HALF}
             style={{ transition: `${BUBBLE.DURATION}ms` }}
           />
         )}

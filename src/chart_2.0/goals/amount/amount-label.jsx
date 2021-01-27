@@ -8,7 +8,7 @@ import { logger } from "../../../utils/logger";
 
 export const AmountLabel = ({ goal, children }) => {
   const { chart, scale, portalRef, CONSTANTS } = useContext(PropsContext);
-  const { CHART, AMOUNT, HALF } = CONSTANTS;
+  const { CHART, AMOUNT, COMMON } = CONSTANTS;
   const amountRef = useRef(null);
   const [top, setTop] = useState(null);
   const [left, setLeft] = useState(null);
@@ -17,7 +17,9 @@ export const AmountLabel = ({ goal, children }) => {
     if (amountRef.current) {
       const rect = amountRef.current.getBoundingClientRect();
       const textTop =
-        CHART.MARGIN.TOP + scale.y(goal.amount.value) - rect.height / HALF;
+        CHART.MARGIN.TOP +
+        scale.y(goal.amount.value) -
+        rect.height / COMMON.HALF;
       const textLeft =
         CHART.MARGIN.LEFT +
         chart.width +
@@ -28,7 +30,7 @@ export const AmountLabel = ({ goal, children }) => {
       setTop(textTop);
       setLeft(textLeft);
     }
-  }, [scale, chart.width, goal.amount.value, CHART, AMOUNT, HALF]);
+  }, [scale, chart.width, goal.amount.value, CHART, AMOUNT, COMMON.HALF]);
 
   logger.render("AmountLabel");
 

@@ -7,7 +7,7 @@ export const UnsucceedTooltip = ({ goal, bubble }) => {
   const { portalRef, chart, scale, onGoalClick, CONSTANTS } = useContext(
     PropsContext
   );
-  const { CHART, BUBBLE, TOOLTIPS_TYPES, TOOLTIPS, HALF } = CONSTANTS;
+  const { CHART, BUBBLE, TOOLTIPS_TYPES, TOOLTIPS, COMMON } = CONSTANTS;
 
   const tooltipRef = useRef(null);
   const [top, setTop] = useState(null);
@@ -53,7 +53,7 @@ export const UnsucceedTooltip = ({ goal, bubble }) => {
 
     const tooltipTop = getTooltipTop();
     const tooltipLeft =
-      CHART.MARGIN.LEFT + scale.x(goal.date) - rect.width / HALF;
+      CHART.MARGIN.LEFT + scale.x(goal.date) - rect.width / COMMON.HALF;
 
     setTop(tooltipTop);
     setLeft(tooltipLeft);
@@ -66,7 +66,7 @@ export const UnsucceedTooltip = ({ goal, bubble }) => {
     BUBBLE,
     TOOLTIPS_TYPES,
     TOOLTIPS,
-    HALF
+    COMMON.HALF
   ]);
 
   return ReactDOM.createPortal(
