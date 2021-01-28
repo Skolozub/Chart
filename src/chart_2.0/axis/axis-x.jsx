@@ -18,14 +18,21 @@ export const AxisX = () => {
         new Date(max).getFullYear() - new Date(min).getFullYear();
       const ticksCount = chart.width / AXIS.X.WIDTH_BETWEEN_TICKS;
 
+      // one year difference, show months with years
       if (deltaYears === COMMON.TWO_YEARS) {
         return {
           tickTime: timeMonth,
-          tickFormatter: timeFormat("%b"),
+          tickFormatter: (date) => {
+            if (timeYear(date) < date) {
+              return timeFormat("%b")(date);
+            }
+            return timeFormat("%Y")(date);
+          },
           tickWeight: Math.ceil(COMMON.MONTHS_IN_YEAR / ticksCount)
         };
       }
 
+      // show only years, without months
       return {
         tickTime: timeYear,
         tickFormatter: timeFormat("%Y"),

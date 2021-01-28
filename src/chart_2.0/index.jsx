@@ -6,6 +6,7 @@ import * as DEFAULT_CONSTANTS from "./constants";
 
 // TODO: delete on prod
 import { logger } from "../utils/logger";
+import { ChartRangeSlider } from "../chart-range-slider";
 
 export const PropsContext = React.createContext();
 
@@ -78,6 +79,7 @@ export const PFPChart = ({
   return (
     <PropsContext.Provider value={props}>
       <S.Container ref={getControlRef}>{portalRef && <Chart />}</S.Container>
+      <ChartRangeSlider />
     </PropsContext.Provider>
   );
 };
