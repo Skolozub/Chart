@@ -6,7 +6,7 @@ export const Container = styled.div`
   min-height: 76px;
   top: ${(props) => props.top}px;
   left: ${(props) => props.left}px;
-  opacity: ${(props) => (!props.top || !props.left ? 0 : 1)};
+  opacity: ${(props) => Number(props.top !== null && props.left !== null)};
   padding: 16px;
   transition: 0.3s;
   background: #ffffff;

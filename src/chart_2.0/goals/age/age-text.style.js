@@ -4,7 +4,7 @@ export const Container = styled.div`
   position: absolute;
   top: ${(props) => `${props.top}px`};
   left: ${(props) => `${props.left}px`};
-  opacity: ${(props) => (!props.top || !props.left ? 0 : 1)};
+  opacity: ${(props) => Number(props.top !== null && props.left !== null)};
   background: #fff;
   padding: 0 5px;
 `;

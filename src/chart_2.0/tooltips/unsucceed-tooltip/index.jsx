@@ -1,24 +1,23 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import { PropsContext } from "../..";
+import { useBoundingClientRect } from "../../../useBoundingClientRect";
 import * as S from "./index.style";
 
 export const UnsucceedTooltip = ({ goal, bubble }) => {
-  const { portalRef, chart, scale, onGoalClick, CONSTANTS } = useContext(
-    PropsContext
-  );
+  const { portalRef, scale, onGoalClick, CONSTANTS } = useContext(PropsContext);
   const { CHART, BUBBLE, TOOLTIPS_TYPES, TOOLTIPS, COMMON } = CONSTANTS;
 
   const tooltipRef = useRef(null);
   const [top, setTop] = useState(null);
   const [left, setLeft] = useState(null);
 
+  const rect = useBoundingClientRect(tooltipRef);
+
   useEffect(() => {
-    if (!tooltipRef.current) {
+    if (!rect) {
       return void 0;
     }
-
-    const rect = tooltipRef.current.getBoundingClientRect();
 
     function getTooltipTop() {
       switch (bubble.type) {
@@ -52,14 +51,13 @@ export const UnsucceedTooltip = ({ goal, bubble }) => {
     }
 
     const tooltipTop = getTooltipTop();
-    const tooltipLeft =
-      CHART.MARGIN.LEFT + scale.x(goal.date) - rect.width / COMMON.HALF;
+    const tooltipLeft = scale.x(goal.date) - rect.width / COMMON.HALF;
 
     setTop(tooltipTop);
-    setLeft(tooltipLeft);
+    setLeft(tooltipLeft < 0 ? 0 : tooltipLeft);
   }, [
     scale,
-    chart.width,
+    rect,
     goal,
     bubble,
     CHART,

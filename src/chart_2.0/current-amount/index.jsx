@@ -19,25 +19,31 @@ export const CurrentAmount = ({ amount }) => {
 
   const left = useMemo(() => cx + CHART.MARGIN.LEFT, [cx, CHART]);
 
+  console.log("left", left);
+
   logger.render("CurrentAmount");
 
   return (
     <>
-      <g className="current-amount">
-        <circle
-          fill={CURRENT_AMOUNT.CIRCLE.OUTER.BACKGROUND_COLOR}
-          r={CURRENT_AMOUNT.CIRCLE.OUTER.RADIUS}
-          cx={cx}
-          cy={cy}
-        />
-        <circle
-          fill={CURRENT_AMOUNT.CIRCLE.INNER.BACKGROUND_COLOR}
-          r={CURRENT_AMOUNT.CIRCLE.INNER.RADIUS}
-          cx={cx}
-          cy={cy}
-        />
-      </g>
-      <AmountBalloon top={top} left={left} />
+      {left >= 0 && (
+        <>
+          <g className="current-amount">
+            <circle
+              fill={CURRENT_AMOUNT.CIRCLE.OUTER.BACKGROUND_COLOR}
+              r={CURRENT_AMOUNT.CIRCLE.OUTER.RADIUS}
+              cx={cx}
+              cy={cy}
+            />
+            <circle
+              fill={CURRENT_AMOUNT.CIRCLE.INNER.BACKGROUND_COLOR}
+              r={CURRENT_AMOUNT.CIRCLE.INNER.RADIUS}
+              cx={cx}
+              cy={cy}
+            />
+          </g>
+          <AmountBalloon top={top} left={left} />
+        </>
+      )}
     </>
   );
 };
