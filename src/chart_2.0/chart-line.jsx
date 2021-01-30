@@ -2,10 +2,7 @@ import React, { useRef, useContext, useMemo } from "react";
 import { line } from "d3";
 import { PropsContext } from ".";
 
-// TODO: delete on prod
-import { logger } from "../utils/logger";
-
-export const ChartLine = () => {
+const ChartLineComponent = () => {
   const { data, scale, CONSTANTS } = useContext(PropsContext);
   const { CHART } = CONSTANTS;
 
@@ -20,8 +17,6 @@ export const ChartLine = () => {
     return drawLine(data.chart);
   }, [data.chart, scale, CHART]);
 
-  logger.render("ChartLine");
-
   return (
     <path
       ref={chartRef}
@@ -33,3 +28,5 @@ export const ChartLine = () => {
     />
   );
 };
+
+export const ChartLine = React.memo(ChartLineComponent);

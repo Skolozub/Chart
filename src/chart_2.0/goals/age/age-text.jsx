@@ -3,9 +3,6 @@ import ReactDOM from "react-dom";
 import { PropsContext } from "../../index";
 import * as S from "./age-text.style";
 
-// TODO: delete on prod
-import { logger } from "../../../utils/logger";
-
 export const AgeText = ({ goal, children }) => {
   const { chart, scale, portalRef, CONSTANTS } = useContext(PropsContext);
   const { CHART, AGE, COMMON } = CONSTANTS;
@@ -25,8 +22,6 @@ export const AgeText = ({ goal, children }) => {
       setLeft(textLeft);
     }
   }, [scale, chart.height, goal.date, CHART, AGE, COMMON.HALF]);
-
-  logger.render("AgeText");
 
   return ReactDOM.createPortal(
     <S.Container className="age-text" left={left} top={top}>

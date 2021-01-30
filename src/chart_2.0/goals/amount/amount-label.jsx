@@ -3,9 +3,6 @@ import ReactDOM from "react-dom";
 import { PropsContext } from "../../index";
 import * as S from "./amount-label.style";
 
-// TODO: delete on prod
-import { logger } from "../../../utils/logger";
-
 export const AmountLabel = ({ goal, children }) => {
   const { chart, scale, portalRef, CONSTANTS } = useContext(PropsContext);
   const { CHART, AMOUNT, COMMON } = CONSTANTS;
@@ -31,8 +28,6 @@ export const AmountLabel = ({ goal, children }) => {
       setLeft(textLeft);
     }
   }, [scale, chart.width, goal.amount.value, CHART, AMOUNT, COMMON.HALF]);
-
-  logger.render("AmountLabel");
 
   return ReactDOM.createPortal(
     <S.Container

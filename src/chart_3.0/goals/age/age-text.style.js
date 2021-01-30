@@ -1,13 +1,15 @@
 import styled from "@emotion/styled";
+import { COMMON } from "../../constants";
 
 export const Container = styled.div`
   position: absolute;
   top: ${(props) => `${props.top}px`};
   left: ${(props) => `${props.left}px`};
-  opacity: ${(props) => Number(props.top !== null && props.left !== null)};
+  opacity: ${(props) => props.transparent};
   background: #fff;
   padding: 0 5px;
-  transition: 0.3s;
+  transition: left ${COMMON.TRANSITION_DURATION}ms,
+    opacity ${COMMON.TRANSITION_DURATION}ms;
 `;
 
 export const Text = styled.div`

@@ -1,22 +1,21 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { axisBottom, select, timeFormat, timeMonth, timeYear } from "d3";
 import { PropsContext } from "..";
+import { AXIS, COMMON } from "../constants";
 
-const AxisXComponent = () => {
+const AxisXComponent = ({ chart, xScale, xDomain }) => {
+  console.log("rerender AxisXComponent");
   const xAxisRef = useRef(null);
 
-  const { chart, scale, xDomain, CONSTANTS } = useContext(PropsContext);
-  const { AXIS, COMMON } = CONSTANTS;
-
   useEffect(() => {
-    function formatTicks() {
+    function getTickFormatData() {
       const [min, max] = xDomain;
       const deltaYears =
         new Date(max).getFullYear() - new Date(min).getFullYear();
       const ticksCount = chart.width / AXIS.X.WIDTH_BETWEEN_TICKS;
 
       // one year difference, show months with years
-      if (deltaYears === COMMON.TWO_YEARS) {
+      if (deltaYears === COMMON.ONE_YEAR) {
         return {
           tickTime: timeMonth,
           tickFormatter: (date) => {
@@ -37,9 +36,9 @@ const AxisXComponent = () => {
       };
     }
 
-    const { tickTime, tickFormatter, tickWeight } = formatTicks();
+    const { tickTime, tickFormatter, tickWeight } = getTickFormatData();
 
-    const xAxisCall = axisBottom(scale.x)
+    const xAxisCall = axisBottom(xScale)
       .tickPadding(AXIS.X.PADDING)
       .ticks(tickTime.every(tickWeight))
       .tickFormat(tickFormatter)
@@ -48,7 +47,7 @@ const AxisXComponent = () => {
     const xAxis = select(xAxisRef.current);
 
     // draw x axis
-    xAxis.transition().duration(300).call(xAxisCall);
+    xAxis.transition().duration(COMMON.TRANSITION_DURATION).call(xAxisCall);
 
     // add styles to domain line
     xAxis
@@ -68,7 +67,7 @@ const AxisXComponent = () => {
       .selectAll(".tick text")
       .attr("fill", AXIS.FONT_COLOR)
       .attr("font-size", AXIS.FONT_SIZE);
-  }, [chart.width, xDomain, scale.x, AXIS, COMMON]);
+  }, [chart.width, xDomain, xScale]);
 
   return (
     <g
@@ -79,4 +78,12 @@ const AxisXComponent = () => {
   );
 };
 
-export const AxisX = React.memo(AxisXComponent);
+const MemoizedAxisXComponent = React.memo(AxisXComponent);
+
+export const AxisX = () => {
+  const { chart, scale, xDomain } = useContext(PropsContext);
+
+  return (
+    <MemoizedAxisXComponent chart={chart} xScale={scale.x} xDomain={xDomain} />
+  );
+};

@@ -3,9 +3,6 @@ import { line } from "d3";
 import { AgeText } from "./age-text";
 import { PropsContext } from "../../index";
 
-// TODO: delete on prod
-import { logger } from "../../../utils/logger";
-
 export const Age = ({ goal, isFirst }) => {
   const { chart, scale, CONSTANTS } = useContext(PropsContext);
   const { AGE } = CONSTANTS;
@@ -18,8 +15,6 @@ export const Age = ({ goal, isFirst }) => {
 
     return line()(coords);
   }, [goal.date, chart.height, scale, AGE]);
-
-  logger.render("Age");
 
   return (
     <>

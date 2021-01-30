@@ -1,10 +1,9 @@
-import React, { useContext, useMemo } from "react";
-import { line } from "d3";
+import React, { useContext } from "react";
 import { PropsContext } from "..";
+import { CHART } from "../constants";
 
-const BordersComponent = () => {
-  const { chart, CONSTANTS } = useContext(PropsContext);
-  const { CHART } = CONSTANTS;
+const BordersComponent = ({ chart }) => {
+  console.log("rerender BordersComponent");
 
   return (
     <g className="borders">
@@ -28,4 +27,10 @@ const BordersComponent = () => {
   );
 };
 
-export const Borders = React.memo(BordersComponent);
+const MemoizedBordersComponent = React.memo(BordersComponent);
+
+export const Borders = () => {
+  const { chart } = useContext(PropsContext);
+
+  return <MemoizedBordersComponent chart={chart} />;
+};

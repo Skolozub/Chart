@@ -1,17 +1,16 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { axisRight, select } from "d3";
-import { formatAmount } from "../utils";
+import { axisRight, format, select } from "d3";
 import { PropsContext } from "..";
+import { CHART, AXIS, COMMON } from "../constants";
 
-const AxisYComponent = () => {
+const AxisYComponent = ({ chart, yScale }) => {
+  console.log("rerender AxisYComponent");
+
   const yAxisRef = useRef(null);
 
-  const { chart, scale, CONSTANTS } = useContext(PropsContext);
-  const { CHART, AXIS } = CONSTANTS;
-
   useEffect(() => {
-    const yAxisCall = axisRight(scale.y)
-      .tickFormat((d) => formatAmount(d))
+    const yAxisCall = axisRight(yScale)
+      .tickFormat((d) => format("$,")(d))
       .ticks(AXIS.Y.COUNT)
       .tickPadding(AXIS.Y.PADDING)
       .tickSize(chart.width);
@@ -19,7 +18,7 @@ const AxisYComponent = () => {
     const yAxis = select(yAxisRef.current);
 
     // draw axis
-    yAxis.transition().duration(300).call(yAxisCall);
+    yAxis.transition().duration(COMMON.TRANSITION_DURATION).call(yAxisCall);
 
     // change ticks lines style
     yAxis
@@ -37,9 +36,15 @@ const AxisYComponent = () => {
 
     // remove domain line
     yAxis.select(".domain").remove();
-  }, [chart.width, scale.y, AXIS, CHART]);
+  }, [chart.width, yScale]);
 
   return <g ref={yAxisRef} className="y"></g>;
 };
 
-export const AxisY = React.memo(AxisYComponent);
+const MemoizedAxisYComponent = React.memo(AxisYComponent);
+
+export const AxisY = () => {
+  const { chart, scale } = useContext(PropsContext);
+
+  return <MemoizedAxisYComponent chart={chart} yScale={scale.y} />;
+};

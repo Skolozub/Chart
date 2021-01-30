@@ -2,9 +2,6 @@ import React, { useContext, useMemo } from "react";
 import { PropsContext } from "../index";
 import { AmountBalloon } from "./amount-balloon";
 
-// TODO: delete on prod
-import { logger } from "../../utils/logger";
-
 export const CurrentAmount = ({ amount }) => {
   const { scale, CONSTANTS } = useContext(PropsContext);
   const { CHART, CURRENT_AMOUNT } = CONSTANTS;
@@ -18,10 +15,6 @@ export const CurrentAmount = ({ amount }) => {
   );
 
   const left = useMemo(() => cx + CHART.MARGIN.LEFT, [cx, CHART]);
-
-  console.log("left", left);
-
-  logger.render("CurrentAmount");
 
   return (
     <>

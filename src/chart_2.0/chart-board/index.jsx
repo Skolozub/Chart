@@ -1,7 +1,5 @@
 import React, { useRef, useContext, useEffect } from "react";
 import { PropsContext } from "../index";
-// TODO: delete on prod
-import { logger } from "../../utils/logger";
 
 import { extent, interpolateBasis, max, scaleLinear, select } from "d3";
 
@@ -34,8 +32,6 @@ export const ChartBoard = () => {
       select(circleRef.current).attr("cx", clickX).attr("cy", scale.y(y));
     });
   }, [data, interpolate, scale, chart.width]);
-
-  logger.render("Chart");
 
   return (
     <>

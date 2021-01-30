@@ -1,18 +1,14 @@
 import React, { useContext } from "react";
 import { PropsContext } from "../index";
-import { Amount } from "./amount";
 import { Age } from "./age";
 import { Bubble } from "./bubble";
 
-export const Goals = () => {
-  const { data } = useContext(PropsContext);
+const GoalsComponent = ({ goals }) => {
+  console.log("rerender GoalsComponent");
 
   return (
     <>
-      {data.goals.map((goal) => (
-        <Amount key={goal.code} goal={goal} />
-      ))}
-      {data.goals.map((goal, index) => (
+      {goals.map((goal, index) => (
         <g key={goal.code} className="goal">
           <Age goal={goal} isFirst={index === 0} />
           <Bubble goal={goal} />
@@ -20,4 +16,12 @@ export const Goals = () => {
       ))}
     </>
   );
+};
+
+const MemoizedGoalsComponent = React.memo(GoalsComponent);
+
+export const Goals = () => {
+  const { data } = useContext(PropsContext);
+
+  return <MemoizedGoalsComponent goals={data.goals} />;
 };

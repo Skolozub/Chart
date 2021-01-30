@@ -8,11 +8,9 @@ import React, {
 import { line, select } from "d3";
 import { PropsContext } from "../index";
 import { UnsucceedTooltip } from "../tooltips/unsucceed-tooltip";
+import { GOALS_TYPES, BUBBLE, BUBBLE_SIZES, COMMON } from "../constants";
 
-export const Bubble = ({ goal }) => {
-  const { chart, scale, CONSTANTS, onGoalClick } = useContext(PropsContext);
-  const { BUBBLE, GOALS_TYPES, BUBBLE_SIZES, COMMON } = CONSTANTS;
-
+const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
   const size = goal.isActive ? BUBBLE_SIZES.MEDIUM : BUBBLE_SIZES.SMALL;
 
   const bubble = useMemo(() => {
@@ -45,12 +43,12 @@ export const Bubble = ({ goal }) => {
 
     // if label y bottom coordinate more then text y top coordinate
     // recalculate circle y center coordinate
-    if (yBubbleBottom >= chart.height) {
+    if (yBubbleBottom >= chartHeight) {
       return {
         size,
         cx,
         cy:
-          chart.height -
+          chartHeight -
           BUBBLE[size].RADIUS -
           BUBBLE[size].TAIL.HEIGHT -
           BUBBLE.MARGIN.BOTTOM,
@@ -60,7 +58,7 @@ export const Bubble = ({ goal }) => {
     }
 
     return { size, cx, cy, isTailVisible: false, type: null };
-  }, [goal, scale, size, chart.height, BUBBLE]);
+  }, [goal, scale, size, chartHeight]);
 
   const tailPath = useMemo(() => {
     const { cy, type } = bubble;
@@ -100,13 +98,13 @@ export const Bubble = ({ goal }) => {
     ];
 
     return line()(tailCoords);
-  }, [bubble, goal.date, scale, size, BUBBLE, COMMON.HALF]);
+  }, [bubble, goal.date, scale, size]);
 
   const getBubbleColor = useCallback(
     (isActive) => {
       // succeed
       if (goal.succeed) {
-        if (isActive) {
+        if (goal.isActive) {
           return BUBBLE.BACKGROUNDS_COLOR[GOALS_TYPES.SUCCEED][0];
         }
 
@@ -114,13 +112,13 @@ export const Bubble = ({ goal }) => {
       }
 
       // unsucceed
-      if (isActive) {
+      if (goal.isActive) {
         return BUBBLE.BACKGROUNDS_COLOR[GOALS_TYPES.UNSUCCEED][0];
       }
 
       return BUBBLE.BACKGROUNDS_COLOR[GOALS_TYPES.UNSUCCEED][1];
     },
-    [goal.succeed, BUBBLE, GOALS_TYPES]
+    [goal.succeed, goal.isActive]
   );
 
   const bubbleRef = useRef(null);
@@ -148,19 +146,24 @@ export const Bubble = ({ goal }) => {
       });
   }, [goal.isActive, getBubbleColor]);
 
+  const onClickHandler = useCallback(() => onGoalClick(goal.code), [
+    onGoalClick,
+    goal.code
+  ]);
+
   return (
     <>
       <g
         className="bubble"
         ref={bubbleRef}
-        onClick={() => onGoalClick(goal.code)}
-        style={{ opacity: 0 }}
+        onClick={onClickHandler}
+        style={{ textAlign: "center", opacity: 0 }}
       >
         <path
           className="tail"
           d={tailPath}
           fill={bubbleColor}
-          style={{ transition: `${BUBBLE.DURATION}ms` }}
+          style={{ transition: `d ${COMMON.TRANSITION_DURATION}ms` }}
         />
 
         <circle
@@ -169,7 +172,9 @@ export const Bubble = ({ goal }) => {
           fill={bubbleColor}
           cx={bubble.cx}
           cy={bubble.cy}
-          style={{ transition: `${BUBBLE.DURATION}ms` }}
+          style={{
+            transition: `r ${COMMON.TRANSITION_DURATION}ms, cx ${COMMON.TRANSITION_DURATION}ms, cy ${COMMON.TRANSITION_DURATION}ms, fill ${COMMON.TRANSITION_DURATION}ms`
+          }}
         />
 
         {goal.icon && (
@@ -180,14 +185,31 @@ export const Bubble = ({ goal }) => {
             height={BUBBLE[size].ICON.HEIGHT}
             x={scale.x(goal.date) - BUBBLE[size].ICON.WIDTH / COMMON.HALF}
             y={bubble.cy - BUBBLE[size].ICON.HEIGHT / COMMON.HALF}
-            style={{ transition: `${BUBBLE.DURATION}ms` }}
+            style={{
+              transition: `width ${COMMON.TRANSITION_DURATION}ms, height ${COMMON.TRANSITION_DURATION}ms, x ${COMMON.TRANSITION_DURATION}ms, y ${COMMON.TRANSITION_DURATION}ms`
+            }}
           />
         )}
       </g>
 
       {!goal.succeed && goal.isActive && (
-        <UnsucceedTooltip goal={goal} bubble={bubble} />
+        <UnsucceedTooltip goal={goal} bubble={bubble} parentRef={bubbleRef} />
       )}
     </>
+  );
+};
+
+const MemoizedBubbleComponent = React.memo(BubbleComponent);
+
+export const Bubble = ({ goal }) => {
+  const { chart, scale, onGoalClick } = useContext(PropsContext);
+
+  return (
+    <MemoizedBubbleComponent
+      goal={goal}
+      scale={scale}
+      chartHeight={chart.height}
+      onGoalClick={onGoalClick}
+    />
   );
 };

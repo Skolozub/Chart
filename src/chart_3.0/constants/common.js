@@ -1,0 +1,6 @@
+export const COMMON = {
+  HALF: 2,
+  MONTHS_IN_YEAR: 12,
+  ONE_YEAR: 1,
+  TRANSITION_DURATION: 300
+};

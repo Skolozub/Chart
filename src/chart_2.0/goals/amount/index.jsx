@@ -4,9 +4,6 @@ import { PropsContext } from "../../index";
 import { AmountLabel } from "./amount-label";
 import { formatAmount } from "../../utils";
 
-// TODO: delete on prod
-import { logger } from "../../../utils/logger";
-
 export const Amount = ({ goal }) => {
   const { chart, scale, CONSTANTS } = useContext(PropsContext);
   const { CHART, AMOUNT } = CONSTANTS;
@@ -31,8 +28,6 @@ export const Amount = ({ goal }) => {
   if (!goal.isActive || yAmountCoord < 0 || yAmountCoord > chart.height) {
     return null;
   }
-
-  logger.render("Amount");
 
   return (
     <>

@@ -1,21 +1,19 @@
-import React, { useRef, useContext } from "react";
+import React, { useContext } from "react";
 import { PropsContext } from ".";
 import { ChartLine } from "./chart-line";
-import { AxisX } from "./axis/axis-x";
-import { AxisY } from "./axis/axis-y";
 import { Borders } from "./axis/borders";
+import { AxisY } from "./axis/axis-y";
+import { AxisX } from "./axis/axis-x";
+import { Amounts } from "./amounts";
 import { Goals } from "./goals";
-import { CurrentAmount } from "./current-amount";
+// import { CurrentAmount } from "./current-amount";
+import { SVG, CHART } from "./constants";
 
-export const Chart = () => {
-  const { svg, chart, className, CONSTANTS } = useContext(PropsContext);
-  const { SVG, CHART } = CONSTANTS;
+export const ChartComponent = ({ svg, chart, className }) => {
+  console.log("rerender ChartComponent");
 
-  const svgRef = useRef(null);
-  console.log("---rerender---");
   return (
     <svg
-      ref={svgRef}
       className={className}
       width={svg.width}
       height={svg.height}
@@ -28,19 +26,27 @@ export const Chart = () => {
         transform={`translate(${CHART.MARGIN.LEFT}, ${CHART.MARGIN.TOP})`}
       >
         <g className="chart" clipPath="url(#chart-clip)">
-          {/* TODO: delete on prod */}
-          {/* <ChartBoard /> */}
           <ChartLine />
         </g>
+
         <g className="axis">
           <Borders />
           <AxisY />
           <AxisX />
         </g>
+
+        <g className="amounts">
+          <Amounts />
+        </g>
+
         <g className="goals" clipPath="url(#chart-clip)">
           <Goals />
         </g>
-        <CurrentAmount amount={200000} />
+
+        <g className="current-amount">
+          {/*
+        <CurrentAmount amount={200000} /> */}
+        </g>
       </g>
 
       <defs>
@@ -49,5 +55,15 @@ export const Chart = () => {
         </clipPath>
       </defs>
     </svg>
+  );
+};
+
+const MemoizedChartComponent = React.memo(ChartComponent);
+
+export const Chart = () => {
+  const { svg, chart, className } = useContext(PropsContext);
+
+  return (
+    <MemoizedChartComponent svg={svg} chart={chart} className={className} />
   );
 };
