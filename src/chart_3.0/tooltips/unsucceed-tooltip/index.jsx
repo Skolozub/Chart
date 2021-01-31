@@ -2,7 +2,6 @@ import React, { useContext, useMemo, useRef } from "react";
 import ReactDOM from "react-dom";
 import { PropsContext } from "../..";
 import { useBoundingClientRect } from "../../../useBoundingClientRect";
-import { useOutsideRefClick } from "../../../useOutsideRefClick";
 import {
   CHART,
   BUBBLE,
@@ -12,22 +11,14 @@ import {
 } from "../../constants";
 import * as S from "./index.style";
 
-const UnsucceedTooltipComponent = ({
-  goalDate,
-  bubble,
-  xScale,
-  portalRef,
-  parentRef,
-  onGoalClick
-}) => {
+const UnsucceedTooltipComponent = ({ goalDate, bubble, xScale, portalRef }) => {
   console.log("rerender UnsucceedTooltipComponent");
-  useOutsideRefClick(parentRef, onGoalClick);
   const tooltipRef = useRef(null);
   const rect = useBoundingClientRect(tooltipRef);
 
   const top = useMemo(() => {
     if (!rect) {
-      return 0;
+      return null;
     }
     const positionMultiplier = bubble.type === BUBBLE.TYPES.TOP ? 1 : -1;
     return (
@@ -42,7 +33,7 @@ const UnsucceedTooltipComponent = ({
 
   const left = useMemo(() => {
     if (!rect) {
-      return 0;
+      return null;
     }
     const leftPosition =
       xScale(goalDate) - rect.width / COMMON.HALF + BUBBLE[bubble.size].RADIUS;
@@ -55,7 +46,6 @@ const UnsucceedTooltipComponent = ({
       className="unsucceed-tooltip"
       top={top}
       left={left}
-      onClick={onGoalClick}
     >
       <S.Title>Вы не достигаете цель в срок</S.Title>
       <S.Description>Попробуйте применить советы ниже</S.Description>
@@ -66,17 +56,15 @@ const UnsucceedTooltipComponent = ({
 
 const MemoizedUnsucceedTooltipComponent = React.memo(UnsucceedTooltipComponent);
 
-export const UnsucceedTooltip = ({ goal, bubble, parentRef }) => {
-  const { scale, portalRef, onGoalClick } = useContext(PropsContext);
+export const UnsucceedTooltip = ({ goal, bubble }) => {
+  const { scale, portalRef } = useContext(PropsContext);
 
   return (
     <MemoizedUnsucceedTooltipComponent
       goalDate={goal.date}
       bubble={bubble}
       xScale={scale.x}
-      parentRef={parentRef}
       portalRef={portalRef}
-      onGoalClick={onGoalClick}
     />
   );
 };

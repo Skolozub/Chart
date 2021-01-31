@@ -4,6 +4,7 @@ export const Container = styled.svg`
   width: ${(props) => `${props.svgWidth}px`};
   height: ${(props) => `${props.svgHeight}px`};
   background: ${(props) => props.background};
+  overflow: hidden;
 `;
 
 export const ChartGroup = styled.g`

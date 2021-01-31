@@ -163,7 +163,9 @@ const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
           className="tail"
           d={tailPath}
           fill={bubbleColor}
-          style={{ transition: `d ${COMMON.TRANSITION_DURATION}ms` }}
+          style={{
+            transition: `d ${COMMON.TRANSITION_DURATION}ms, fill ${COMMON.TRANSITION_DURATION}ms`
+          }}
         />
 
         <circle
@@ -193,7 +195,7 @@ const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
       </g>
 
       {!goal.succeed && goal.isActive && (
-        <UnsucceedTooltip goal={goal} bubble={bubble} parentRef={bubbleRef} />
+        <UnsucceedTooltip goal={goal} bubble={bubble} />
       )}
     </>
   );

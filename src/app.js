@@ -68,9 +68,11 @@ export default function App() {
     setGoals(nextGoals);
   };
 
-  const setActiveGoalHandler = useCallback(
-    (code, isActive) => {
-      const nextGoals = goals.map((it) => {
+  const setActiveGoalHandler = useCallback((code, isActive) => {
+    function change(g) {
+      return g.map((it) => {
+        console.log("code", code);
+
         if (it.code === code) {
           return {
             ...it,
@@ -82,11 +84,9 @@ export default function App() {
           isActive: false
         };
       });
-
-      setGoals(nextGoals);
-    },
-    [goals]
-  );
+    }
+    setGoals((g) => change(g));
+  }, []);
 
   const changeRangeHandler = useCallback((startYear, endYear) => {
     setStart(new Date(`${startYear - 1}-12-31`).getTime());
@@ -160,7 +160,7 @@ export default function App() {
         </div>
       </div>
 
-      <RangeSlider onChange={changeRangeHandler} />
+      {/* <RangeSlider onChange={changeRangeHandler} /> */}
 
       {/* <FullWidthWrapper>
         {(rect) => (
@@ -197,10 +197,14 @@ export default function App() {
               onGoalClick={setActiveGoalHandler}
               xDomain={xDomain}
             />
+            <ChartRangeSlider
+              goals={data.goals}
+              width={rect.width}
+              onChange={changeTrottled}
+            />
           </>
         )}
       </FullWidthWrapper>
-      <ChartRangeSlider width={800} onChange={changeTrottled} />
     </>
   );
 }

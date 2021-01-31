@@ -6,7 +6,7 @@ import { AxisY } from "./axis/axis-y";
 import { AxisX } from "./axis/axis-x";
 import { Amounts } from "./amounts";
 import { Goals } from "./goals";
-// import { CurrentAmount } from "./current-amount";
+import { CurrentAmount } from "./current-amount";
 import { SVG, CHART } from "./constants";
 
 export const ChartComponent = ({ svg, chart, className }) => {
@@ -27,6 +27,7 @@ export const ChartComponent = ({ svg, chart, className }) => {
       >
         <g className="chart" clipPath="url(#chart-clip)">
           <ChartLine />
+          <CurrentAmount amount={220000} date={1612049867115} />
         </g>
 
         <g className="axis">
@@ -41,11 +42,6 @@ export const ChartComponent = ({ svg, chart, className }) => {
 
         <g className="goals" clipPath="url(#chart-clip)">
           <Goals />
-        </g>
-
-        <g className="current-amount">
-          {/*
-        <CurrentAmount amount={200000} /> */}
         </g>
       </g>
 

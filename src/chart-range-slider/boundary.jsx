@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { COMMON } from "../chart_3.0/constants";
 
 const RADIUS = 6;
 const RADIUS_ACTIVE = 10;
@@ -41,13 +42,13 @@ const BoundaryComponent = ({ cxMin, cx, cxMax, onChange }) => {
   );
 
   useEffect(() => {
-    window.addEventListener("mouseup", endDragHandler);
-    return () => window.removeEventListener("mouseup", endDragHandler);
+    document.addEventListener("mouseup", endDragHandler);
+    return () => document.removeEventListener("mouseup", endDragHandler);
   }, [endDragHandler]);
 
   useEffect(() => {
-    window.addEventListener("mousemove", dragHandler);
-    return () => window.removeEventListener("mousemove", dragHandler);
+    document.addEventListener("mousemove", dragHandler);
+    return () => document.removeEventListener("mousemove", dragHandler);
   }, [dragHandler]);
 
   return (
@@ -59,10 +60,10 @@ const BoundaryComponent = ({ cxMin, cx, cxMax, onChange }) => {
       cx={cx}
       cy={0}
       onMouseDown={startDragHandler}
-      onMouseMove={dragHandler}
       onTouchStart={startDragHandler}
       onTouchMove={dragHandler}
       onTouchEnd={endDragHandler}
+      style={{ transition: `r ${COMMON.TRANSITION_DURATION}ms` }}
     />
   );
 };

@@ -1,13 +1,9 @@
 export const CURRENT_AMOUNT = {
   CIRCLE: {
-    INNER: {
-      RADIUS: 1,
-      BACKGROUND_COLOR: "#FFFFFF"
-    },
-    OUTER: {
-      RADIUS: 3,
-      BACKGROUND_COLOR: "#068441"
-    }
+    RADIUS: 2,
+    BACKGROUND_COLOR: "#FFFFFF",
+    STROKE: "#068441",
+    BORDER_WIDTH: 3
   },
   IMAGE: {
     WIDTH: 22,

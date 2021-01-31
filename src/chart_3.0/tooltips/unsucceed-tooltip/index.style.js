@@ -14,7 +14,8 @@ export const Container = styled.div`
   box-shadow: 0px 1px 2px rgba(38, 38, 38, 0.04),
     0px 12px 24px rgba(38, 38, 38, 0.16);
   border-radius: 12px;
-  transition: left ${COMMON.TRANSITION_DURATION}ms;
+  transition: left ${COMMON.TRANSITION_DURATION}ms,
+    top ${COMMON.TRANSITION_DURATION}ms, opacity ${COMMON.TRANSITION_DURATION}ms;
 `;
 
 export const Title = styled.div`
