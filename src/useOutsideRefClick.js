@@ -4,10 +4,6 @@ export const useOutsideRefClick = (ref, fn) => {
   useEffect(() => {
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
-        console.log(ref.current, event.target);
-
-        console.log(ref.current.contains(event.target));
-
         fn(event);
       }
     }

@@ -1,38 +1,31 @@
-import { selection } from "d3";
 import React from "react";
 import ReactDOM from "react-dom";
-
 import App from "./app";
+import mainpageJSON from "./data/person-mainpage.json";
+import chartmainJSON from "./data/person-chartmain.json";
+import chartmainEveryMonthJSON from "./data/chart-every-month.json";
+import chartmainEveryYearJSON from "./data/chart-every-year.json";
+import { parseMainPageResponse } from "./utils/parse-main-page-response";
+import { parseMainChartResponse } from "./utils/parse-main-chart-response";
 
-function initializeEnterExitUpdatePattern() {
-  selection.prototype.patternify = function (params) {
-    var container = this;
-    var selector = params.selector;
-    var elementTag = params.tag;
-    var data = params.data || [selector];
-
-    // Pattern in action
-    var selection = container.selectAll("." + selector).data(data, (d, i) => {
-      if (typeof d === "object") {
-        if (d.id) {
-          return d.id;
-        }
-      }
-      return i;
-    });
-    selection.exit().remove();
-    selection = selection.enter().append(elementTag).merge(selection);
-    selection.attr("class", selector);
-    return selection;
-  };
-}
-
-initializeEnterExitUpdatePattern();
+const parsedMainPageData = parseMainPageResponse(mainpageJSON.body);
+// const parsedMainChartData = parseMainChartResponse(chartmainJSON.body.chart);
+const parsedMainChartEveryMonthData = parseMainChartResponse(
+  chartmainEveryMonthJSON.body
+);
+// const parsedMainChartEveryYearData = parseMainChartResponse(
+//   chartmainEveryYearJSON.body
+// );
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      mainPage={parsedMainPageData}
+      // chart={parsedMainChartData}
+      chart={parsedMainChartEveryMonthData}
+      // chart={parsedMainChartEveryYearData}
+    />
   </React.StrictMode>,
   rootElement
 );

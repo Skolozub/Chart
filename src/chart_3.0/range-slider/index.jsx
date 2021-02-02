@@ -1,13 +1,15 @@
 import { axisBottom, scaleLinear, scaleTime, select, timeYear } from "d3";
 import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
-import { PropsContext } from "../chart_2.0";
-import { BUBBLE, COMMON, GOALS_TYPES } from "../chart_3.0/constants";
+import { BUBBLE, COMMON, GOALS_TYPES } from "../constants";
 import { Boundary } from "./boundary";
 
 const period = {
-  startDate: "2020-10-13",
-  endDate: "2028-10-13",
-  maxDate: "2069-10-13"
+  // startDate: "2020-10-13",
+  // endDate: "2028-10-13",
+  // maxDate: "2069-10-13"
+  startDate: "2021-03-01",
+  endDate: "2026-02-01",
+  maxDate: "2100-01-01"
 };
 const MARGINS = {
   LEFT: 20,
@@ -19,7 +21,7 @@ const maxDate = new Date(period.maxDate);
 
 const LINE = 4;
 
-const ChartRangeSliderComponent = ({ goals, onChange, width }) => {
+const RangeSliderComponent = ({ goals, scenario, onChange, width }) => {
   const xScale = useMemo(
     () =>
       scaleTime()
@@ -102,7 +104,7 @@ const ChartRangeSliderComponent = ({ goals, onChange, width }) => {
                   fill={isA ? "#068441" : "rgba(38, 38, 38, 0.55)"}
                   fontSize={10}
                   dy="0.71em"
-                  font-family="sans-serif"
+                  fontFamily="sans-serif"
                 >
                   {year}
                 </text>
@@ -113,19 +115,19 @@ const ChartRangeSliderComponent = ({ goals, onChange, width }) => {
       </g>
 
       <g transform={`translate(${MARGINS.LEFT}, 25)`}>
-        {goals.map(({ code, date, succeed }) => (
+        {Object.values(goals).map(({ code, date, succeed }) => (
           <g key={code} transform={`translate(${xScale(date) - 8.77}, 0)`}>
             <path
               d="M10.435 5C10.435 7.20914 6.04829 11 6.04829 11C6.04829 11 1.66162 7.20914 1.66162 5C1.66162 2.79086 3.6256 1 6.04829 1C8.47098 1 10.435 2.79086 10.435 5Z"
               fill={
-                BUBBLE.BACKGROUNDS_COLOR[
-                  succeed ? GOALS_TYPES.SUCCEED : GOALS_TYPES.UNSUCCEED
-                ][0]
+                succeed[scenario]
+                  ? BUBBLE.BACKGROUNDS_COLOR.SUCCEED_ACTIVE
+                  : BUBBLE.BACKGROUNDS_COLOR.UNSUCCEED_ACTIVE
               }
               stroke={
-                BUBBLE.BACKGROUNDS_COLOR[
-                  succeed ? GOALS_TYPES.SUCCEED : GOALS_TYPES.UNSUCCEED
-                ][0]
+                succeed[scenario]
+                  ? BUBBLE.BACKGROUNDS_COLOR.SUCCEED
+                  : BUBBLE.BACKGROUNDS_COLOR.UNSUCCEED
               }
               strokeOpacity="0.4"
             />
@@ -169,4 +171,4 @@ const ChartRangeSliderComponent = ({ goals, onChange, width }) => {
   );
 };
 
-export const ChartRangeSlider = React.memo(ChartRangeSliderComponent);
+export const RangeSlider = React.memo(RangeSliderComponent);

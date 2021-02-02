@@ -1,0 +1,4113 @@
+{
+  "body": {
+    "points": {
+      "positive": [
+        {
+          "date": "2022-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "130042.26"
+            },
+            {
+              "currency": "USD",
+              "amount": "9915722.15"
+            },
+            {
+              "currency": "EUR",
+              "amount": "12002900.39"
+            }
+          ]
+        },
+        {
+          "date": "2023-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "302360.39"
+            },
+            {
+              "currency": "USD",
+              "amount": "23054979.7"
+            },
+            {
+              "currency": "EUR",
+              "amount": "27907863.95"
+            }
+          ]
+        },
+        {
+          "date": "2024-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "507104.89"
+            },
+            {
+              "currency": "USD",
+              "amount": "38666747.84"
+            },
+            {
+              "currency": "EUR",
+              "amount": "46805781.32"
+            }
+          ]
+        },
+        {
+          "date": "2025-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "747561.53"
+            },
+            {
+              "currency": "USD",
+              "amount": "57001566.84"
+            },
+            {
+              "currency": "EUR",
+              "amount": "68999929.44"
+            }
+          ]
+        },
+        {
+          "date": "2026-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1028079.9"
+            },
+            {
+              "currency": "USD",
+              "amount": "78391092.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "94891774.56"
+            }
+          ]
+        },
+        {
+          "date": "2027-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1353869.08"
+            },
+            {
+              "currency": "USD",
+              "amount": "103232517.08"
+            },
+            {
+              "currency": "EUR",
+              "amount": "124962115.76"
+            }
+          ]
+        },
+        {
+          "date": "2028-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1730993.34"
+            },
+            {
+              "currency": "USD",
+              "amount": "131988242.27"
+            },
+            {
+              "currency": "EUR",
+              "amount": "159770685.4"
+            }
+          ]
+        },
+        {
+          "date": "2029-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2166433.06"
+            },
+            {
+              "currency": "USD",
+              "amount": "165190520.46"
+            },
+            {
+              "currency": "EUR",
+              "amount": "199961771.0"
+            }
+          ]
+        },
+        {
+          "date": "2030-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2668179.41"
+            },
+            {
+              "currency": "USD",
+              "amount": "203448680.21"
+            },
+            {
+              "currency": "EUR",
+              "amount": "246272959.78"
+            }
+          ]
+        },
+        {
+          "date": "2031-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3245353.73"
+            },
+            {
+              "currency": "USD",
+              "amount": "247458221.77"
+            },
+            {
+              "currency": "EUR",
+              "amount": "299546149.11"
+            }
+          ]
+        },
+        {
+          "date": "2032-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3908348.8"
+            },
+            {
+              "currency": "USD",
+              "amount": "298011596.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "360740594.48"
+            }
+          ]
+        },
+        {
+          "date": "2033-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4668992.58"
+            },
+            {
+              "currency": "USD",
+              "amount": "356010684.01"
+            },
+            {
+              "currency": "EUR",
+              "amount": "430948014.88"
+            }
+          ]
+        },
+        {
+          "date": "2034-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "5540735.62"
+            },
+            {
+              "currency": "USD",
+              "amount": "422481090.89"
+            },
+            {
+              "currency": "EUR",
+              "amount": "511409897.56"
+            }
+          ]
+        },
+        {
+          "date": "2035-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6538864.78"
+            },
+            {
+              "currency": "USD",
+              "amount": "498588439.84"
+            },
+            {
+              "currency": "EUR",
+              "amount": "603537219.64"
+            }
+          ]
+        },
+        {
+          "date": "2036-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "7680746.06"
+            },
+            {
+              "currency": "USD",
+              "amount": "585656887.45"
+            },
+            {
+              "currency": "EUR",
+              "amount": "708932861.79"
+            }
+          ]
+        },
+        {
+          "date": "2037-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "8986100.12"
+            },
+            {
+              "currency": "USD",
+              "amount": "685190134.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "829417041.26"
+            }
+          ]
+        },
+        {
+          "date": "2038-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "10477314.66"
+            },
+            {
+              "currency": "USD",
+              "amount": "798895243.15"
+            },
+            {
+              "currency": "EUR",
+              "amount": "967056143.51"
+            }
+          ]
+        },
+        {
+          "date": "2039-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "12179798.34"
+            },
+            {
+              "currency": "USD",
+              "amount": "928709623.26"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1124195386.59"
+            }
+          ]
+        },
+        {
+          "date": "2040-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "14122381.5"
+            },
+            {
+              "currency": "USD",
+              "amount": "1076831589.52"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1303495812.63"
+            }
+          ]
+        },
+        {
+          "date": "2041-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "16337769.96"
+            },
+            {
+              "currency": "USD",
+              "amount": "1245754959.48"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1507976167.34"
+            }
+          ]
+        },
+        {
+          "date": "2042-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "18863058.53"
+            },
+            {
+              "currency": "USD",
+              "amount": "1438308213.24"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1741060302.71"
+            }
+          ]
+        },
+        {
+          "date": "2043-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "21740312.26"
+            },
+            {
+              "currency": "USD",
+              "amount": "1657698810.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2006630821.93"
+            }
+          ]
+        },
+        {
+          "date": "2044-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "25017224.05"
+            },
+            {
+              "currency": "USD",
+              "amount": "1907563333.52"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2309089779.46"
+            }
+          ]
+        },
+        {
+          "date": "2045-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "28747858.67"
+            },
+            {
+              "currency": "USD",
+              "amount": "2192024223.69"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2653427355.36"
+            }
+          ]
+        },
+        {
+          "date": "2046-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "32993494.5"
+            },
+            {
+              "currency": "USD",
+              "amount": "2515753955.68"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3045299542.42"
+            }
+          ]
+        },
+        {
+          "date": "2047-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "37823575.51"
+            },
+            {
+              "currency": "USD",
+              "amount": "2884047632.81"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3491116019.79"
+            }
+          ]
+        },
+        {
+          "date": "2048-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "43316788.07"
+            },
+            {
+              "currency": "USD",
+              "amount": "3302905090.49"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3998139539.04"
+            }
+          ]
+        },
+        {
+          "date": "2049-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "49562278.66"
+            },
+            {
+              "currency": "USD",
+              "amount": "3779123747.96"
+            },
+            {
+              "currency": "EUR",
+              "amount": "4574598320.48"
+            }
+          ]
+        },
+        {
+          "date": "2050-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "56661030.89"
+            },
+            {
+              "currency": "USD",
+              "amount": "4320403605.68"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5229813151.53"
+            }
+          ]
+        },
+        {
+          "date": "2051-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "64727422.52"
+            },
+            {
+              "currency": "USD",
+              "amount": "4935465966.92"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5974341098.32"
+            }
+          ]
+        },
+        {
+          "date": "2052-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "73890985.79"
+            },
+            {
+              "currency": "USD",
+              "amount": "5634187666.57"
+            },
+            {
+              "currency": "EUR",
+              "amount": "6820137988.51"
+            }
+          ]
+        },
+        {
+          "date": "2053-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "84298397.65"
+            },
+            {
+              "currency": "USD",
+              "amount": "6427752820.55"
+            },
+            {
+              "currency": "EUR",
+              "amount": "7780742102.77"
+            }
+          ]
+        },
+        {
+          "date": "2054-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "96115729.44"
+            },
+            {
+              "currency": "USD",
+              "amount": "7328824369.66"
+            },
+            {
+              "currency": "EUR",
+              "amount": "8871481827.15"
+            }
+          ]
+        },
+        {
+          "date": "2055-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "109530989.97"
+            },
+            {
+              "currency": "USD",
+              "amount": "8351737985.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "10109710374.2"
+            }
+          ]
+        },
+        {
+          "date": "2056-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "124756999.81"
+            },
+            {
+              "currency": "USD",
+              "amount": "9512721235.33"
+            },
+            {
+              "currency": "EUR",
+              "amount": "11515071082.2"
+            }
+          ]
+        },
+        {
+          "date": "2057-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "142034639.81"
+            },
+            {
+              "currency": "USD",
+              "amount": "10830141285.4"
+            },
+            {
+              "currency": "EUR",
+              "amount": "13109797254.3"
+            }
+          ]
+        },
+        {
+          "date": "2058-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "161636522.32"
+            },
+            {
+              "currency": "USD",
+              "amount": "12324784827.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "14919051010.4"
+            }
+          ]
+        },
+        {
+          "date": "2059-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "183871139.8"
+            },
+            {
+              "currency": "USD",
+              "amount": "14020174409.5"
+            },
+            {
+              "currency": "EUR",
+              "amount": "16971306203.2"
+            }
+          ]
+        },
+        {
+          "date": "2060-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "209087552.51"
+            },
+            {
+              "currency": "USD",
+              "amount": "15942925878.9"
+            },
+            {
+              "currency": "EUR",
+              "amount": "19298781096.7"
+            }
+          ]
+        },
+        {
+          "date": "2061-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "237680685.21"
+            },
+            {
+              "currency": "USD",
+              "amount": "18123152247.5"
+            },
+            {
+              "currency": "EUR",
+              "amount": "21937927245.2"
+            }
+          ]
+        },
+        {
+          "date": "2062-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "270097311.31"
+            },
+            {
+              "currency": "USD",
+              "amount": "20594919987.7"
+            },
+            {
+              "currency": "EUR",
+              "amount": "24929981834.3"
+            }
+          ]
+        },
+        {
+          "date": "2063-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "306842813.49"
+            },
+            {
+              "currency": "USD",
+              "amount": "23396764528.5"
+            },
+            {
+              "currency": "EUR",
+              "amount": "28321591685.0"
+            }
+          ]
+        },
+        {
+          "date": "2064-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "348488820.94"
+            },
+            {
+              "currency": "USD",
+              "amount": "26572272596.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "32165518172.9"
+            }
+          ]
+        },
+        {
+          "date": "2065-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "395681836.5"
+            },
+            {
+              "currency": "USD",
+              "amount": "30170740033.0"
+            },
+            {
+              "currency": "EUR",
+              "amount": "36521433508.8"
+            }
+          ]
+        },
+        {
+          "date": "2066-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "449152981.21"
+            },
+            {
+              "currency": "USD",
+              "amount": "34247914817.4"
+            },
+            {
+              "currency": "EUR",
+              "amount": "41456820165.9"
+            }
+          ]
+        },
+        {
+          "date": "2067-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "509729000.62"
+            },
+            {
+              "currency": "USD",
+              "amount": "38866836297.0"
+            },
+            {
+              "currency": "EUR",
+              "amount": "47047986756.9"
+            }
+          ]
+        },
+        {
+          "date": "2068-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "578344695.25"
+            },
+            {
+              "currency": "USD",
+              "amount": "44098783012.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "53381215371.5"
+            }
+          ]
+        },
+        {
+          "date": "2069-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "656056958.96"
+            },
+            {
+              "currency": "USD",
+              "amount": "50024343120.7"
+            },
+            {
+              "currency": "EUR",
+              "amount": "60554057312.0"
+            }
+          ]
+        },
+        {
+          "date": "2070-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "744060632.09"
+            },
+            {
+              "currency": "USD",
+              "amount": "56734623196.7"
+            },
+            {
+              "currency": "EUR",
+              "amount": "68676796341.8"
+            }
+          ]
+        },
+        {
+          "date": "2071-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "843706403.15"
+            },
+            {
+              "currency": "USD",
+              "amount": "64332613240.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "77874101011.2"
+            }
+          ]
+        },
+        {
+          "date": "2072-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "956521022.69"
+            },
+            {
+              "currency": "USD",
+              "amount": "72934727979.9"
+            },
+            {
+              "currency": "EUR",
+              "amount": "88286890394.0"
+            }
+          ]
+        },
+        {
+          "date": "2073-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1084230126.61"
+            },
+            {
+              "currency": "USD",
+              "amount": "82672547154.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.00074440686e+11"
+            }
+          ]
+        },
+        {
+          "date": "2074-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1228784004.78"
+            },
+            {
+              "currency": "USD",
+              "amount": "93694780364.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.13416763642e+11"
+            }
+          ]
+        },
+        {
+          "date": "2075-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1392386693.17"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.06169485354e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.2851729178e+11"
+            }
+          ]
+        },
+        {
+          "date": "2076-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1577528816.79"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.2028657228e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.4560590979e+11"
+            }
+          ]
+        },
+        {
+          "date": "2077-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1787024665.15"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.36260630718e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.64942376593e+11"
+            }
+          ]
+        },
+        {
+          "date": "2078-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2024054043.51"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.54334120818e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.86820188216e+11"
+            }
+          ]
+        },
+        {
+          "date": "2079-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2292209513.08"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.74780975372e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.11570938057e+11"
+            }
+          ]
+        },
+        {
+          "date": "2080-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2595549711.37"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.97910665492e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.3956923836e+11"
+            }
+          ]
+        },
+        {
+          "date": "2081-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2938659532.64"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.24072789364e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.71238274863e+11"
+            }
+          ]
+        },
+        {
+          "date": "2082-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3326718047.84"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.53662251148e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3.07056075815e+11"
+            }
+          ]
+        },
+        {
+          "date": "2083-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3765575155.99"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.87125105644e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3.47562586898e+11"
+            }
+          ]
+        },
+        {
+          "date": "2084-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4261838085.77"
+            },
+            {
+              "currency": "USD",
+              "amount": "3.2496515404e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3.93367655316e+11"
+            }
+          ]
+        },
+        {
+          "date": "2085-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4822969008.64"
+            },
+            {
+              "currency": "USD",
+              "amount": "3.67751386908e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "4.45160039497e+11"
+            }
+          ]
+        },
+        {
+          "date": "2086-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "5457395186.4"
+            },
+            {
+              "currency": "USD",
+              "amount": "4.16126382963e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5.03717575705e+11"
+            }
+          ]
+        },
+        {
+          "date": "2087-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6174633257.34"
+            },
+            {
+              "currency": "USD",
+              "amount": "4.70815785872e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5.69918649652e+11"
+            }
+          ]
+        },
+        {
+          "date": "2088-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6985429469.93"
+            },
+            {
+              "currency": "USD",
+              "amount": "5.32638997082e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "6.44755140074e+11"
+            }
+          ]
+        },
+        {
+          "date": "2089-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "7901917904.09"
+            },
+            {
+              "currency": "USD",
+              "amount": "6.02521240187e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "7.29347022548e+11"
+            }
+          ]
+        },
+        {
+          "date": "2090-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "8937798979.84"
+            },
+            {
+              "currency": "USD",
+              "amount": "6.81507172213e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "8.24958845839e+11"
+            }
+          ]
+        },
+        {
+          "date": "2091-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "10108540846.7"
+            },
+            {
+              "currency": "USD",
+              "amount": "7.70776239563e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "9.33018320153e+11"
+            }
+          ]
+        },
+        {
+          "date": "2092-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "11431606578.0"
+            },
+            {
+              "currency": "USD",
+              "amount": "8.71660001572e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.05513728715e+12"
+            }
+          ]
+        },
+        {
+          "date": "2093-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "12926710465.8"
+            },
+            {
+              "currency": "USD",
+              "amount": "9.85661673018e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.19313537599e+12"
+            }
+          ]
+        },
+        {
+          "date": "2094-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "14616107134.5"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.114478169e+12"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.34906668851e+12"
+            }
+          ]
+        },
+        {
+          "date": "2095-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "16524917661.0"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.26002497165e+12"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.52524990011e+12"
+            }
+          ]
+        },
+        {
+          "date": "2096-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "18681497427.4"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.42446417884e+12"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.72430221255e+12"
+            }
+          ]
+        },
+        {
+          "date": "2097-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "21117851028.4"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.61023614091e+12"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.94917764992e+12"
+            }
+          ]
+        },
+        {
+          "date": "2098-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "23870100238.6"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.82009514319e+12"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.20321025202e+12"
+            }
+          ]
+        },
+        {
+          "date": "2099-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "26979011804.1"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.05714965006e+12"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.49016278952e+12"
+            }
+          ]
+        },
+        {
+          "date": "2100-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "30490592686.6"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.32490769235e+12"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.81428170497e+12"
+            }
+          ]
+        }
+      ],
+      "neutral": [
+        {
+          "date": "2022-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "116639.45"
+            },
+            {
+              "currency": "USD",
+              "amount": "8893758.23"
+            },
+            {
+              "currency": "EUR",
+              "amount": "10765821.44"
+            }
+          ]
+        },
+        {
+          "date": "2023-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "258371.61"
+            },
+            {
+              "currency": "USD",
+              "amount": "19700835.4"
+            },
+            {
+              "currency": "EUR",
+              "amount": "23847699.77"
+            }
+          ]
+        },
+        {
+          "date": "2024-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "416970.79"
+            },
+            {
+              "currency": "USD",
+              "amount": "31794022.7"
+            },
+            {
+              "currency": "EUR",
+              "amount": "38486403.87"
+            }
+          ]
+        },
+        {
+          "date": "2025-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "594444.27"
+            },
+            {
+              "currency": "USD",
+              "amount": "45326375.31"
+            },
+            {
+              "currency": "EUR",
+              "amount": "54867205.79"
+            }
+          ]
+        },
+        {
+          "date": "2026-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "793038.2"
+            },
+            {
+              "currency": "USD",
+              "amount": "60469162.96"
+            },
+            {
+              "currency": "EUR",
+              "amount": "73197426.12"
+            }
+          ]
+        },
+        {
+          "date": "2027-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1015266.07"
+            },
+            {
+              "currency": "USD",
+              "amount": "77414037.54"
+            },
+            {
+              "currency": "EUR",
+              "amount": "93709057.9"
+            }
+          ]
+        },
+        {
+          "date": "2028-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1263940.44"
+            },
+            {
+              "currency": "USD",
+              "amount": "96375458.72"
+            },
+            {
+              "currency": "EUR",
+              "amount": "116661702.82"
+            }
+          ]
+        },
+        {
+          "date": "2029-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1542208.63"
+            },
+            {
+              "currency": "USD",
+              "amount": "117593408.24"
+            },
+            {
+              "currency": "EUR",
+              "amount": "142345856.79"
+            }
+          ]
+        },
+        {
+          "date": "2030-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1853592.49"
+            },
+            {
+              "currency": "USD",
+              "amount": "141336427.13"
+            },
+            {
+              "currency": "EUR",
+              "amount": "171086586.55"
+            }
+          ]
+        },
+        {
+          "date": "2031-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2202032.98"
+            },
+            {
+              "currency": "USD",
+              "amount": "167905014.55"
+            },
+            {
+              "currency": "EUR",
+              "amount": "203247643.84"
+            }
+          ]
+        },
+        {
+          "date": "2032-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2591940.08"
+            },
+            {
+              "currency": "USD",
+              "amount": "197635430.89"
+            },
+            {
+              "currency": "EUR",
+              "amount": "239236069.14"
+            }
+          ]
+        },
+        {
+          "date": "2033-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3028248.57"
+            },
+            {
+              "currency": "USD",
+              "amount": "230903953.7"
+            },
+            {
+              "currency": "EUR",
+              "amount": "279507343.29"
+            }
+          ]
+        },
+        {
+          "date": "2034-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3516480.52"
+            },
+            {
+              "currency": "USD",
+              "amount": "268131639.87"
+            },
+            {
+              "currency": "EUR",
+              "amount": "324571152.26"
+            }
+          ]
+        },
+        {
+          "date": "2035-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4062815.14"
+            },
+            {
+              "currency": "USD",
+              "amount": "309789654.73"
+            },
+            {
+              "currency": "EUR",
+              "amount": "374997837.8"
+            }
+          ]
+        },
+        {
+          "date": "2036-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4674167.02"
+            },
+            {
+              "currency": "USD",
+              "amount": "356405235.27"
+            },
+            {
+              "currency": "EUR",
+              "amount": "431425615.94"
+            }
+          ]
+        },
+        {
+          "date": "2037-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "5358273.61"
+            },
+            {
+              "currency": "USD",
+              "amount": "408568362.95"
+            },
+            {
+              "currency": "EUR",
+              "amount": "494568654.43"
+            }
+          ]
+        },
+        {
+          "date": "2038-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6123793.19"
+            },
+            {
+              "currency": "USD",
+              "amount": "466939230.76"
+            },
+            {
+              "currency": "EUR",
+              "amount": "565226111.46"
+            }
+          ]
+        },
+        {
+          "date": "2039-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6980414.41"
+            },
+            {
+              "currency": "USD",
+              "amount": "532256598.81"
+            },
+            {
+              "currency": "EUR",
+              "amount": "644292250.1"
+            }
+          ]
+        },
+        {
+          "date": "2040-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "7938978.94"
+            },
+            {
+              "currency": "USD",
+              "amount": "605347144.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "732767756.31"
+            }
+          ]
+        },
+        {
+          "date": "2041-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "9011618.68"
+            },
+            {
+              "currency": "USD",
+              "amount": "687135924.21"
+            },
+            {
+              "currency": "EUR",
+              "amount": "831772403.99"
+            }
+          ]
+        },
+        {
+          "date": "2042-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "10211909.29"
+            },
+            {
+              "currency": "USD",
+              "amount": "778658083.11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "942559227.16"
+            }
+          ]
+        },
+        {
+          "date": "2043-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "11555042.02"
+            },
+            {
+              "currency": "USD",
+              "amount": "881071954.31"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1066530378.79"
+            }
+          ]
+        },
+        {
+          "date": "2044-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "13058016.0"
+            },
+            {
+              "currency": "USD",
+              "amount": "995673720.04"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1205254876.85"
+            }
+          ]
+        },
+        {
+          "date": "2045-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "14739853.33"
+            },
+            {
+              "currency": "USD",
+              "amount": "1123913816.37"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1360488462.31"
+            }
+          ]
+        },
+        {
+          "date": "2046-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "16621839.87"
+            },
+            {
+              "currency": "USD",
+              "amount": "1267415290.39"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1534195820.37"
+            }
+          ]
+        },
+        {
+          "date": "2047-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "18727794.65"
+            },
+            {
+              "currency": "USD",
+              "amount": "1427994341.99"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1728575446.1"
+            }
+          ]
+        },
+        {
+          "date": "2048-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "21084371.28"
+            },
+            {
+              "currency": "USD",
+              "amount": "1607683310.25"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1946087469.33"
+            }
+          ]
+        },
+        {
+          "date": "2049-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "23721395.35"
+            },
+            {
+              "currency": "USD",
+              "amount": "1808756395.41"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2189484790.77"
+            }
+          ]
+        },
+        {
+          "date": "2050-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "26672241.86"
+            },
+            {
+              "currency": "USD",
+              "amount": "2033758441.82"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2461847923.67"
+            }
+          ]
+        },
+        {
+          "date": "2051-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "29974257.66"
+            },
+            {
+              "currency": "USD",
+              "amount": "2285537146.29"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2766623981.67"
+            }
+          ]
+        },
+        {
+          "date": "2052-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "33669234.09"
+            },
+            {
+              "currency": "USD",
+              "amount": "2567279099.48"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3107670306.65"
+            }
+          ]
+        },
+        {
+          "date": "2053-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "37803935.95"
+            },
+            {
+              "currency": "USD",
+              "amount": "2882550116.36"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3489303288.39"
+            }
+          ]
+        },
+        {
+          "date": "2054-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "42430693.33"
+            },
+            {
+              "currency": "USD",
+              "amount": "3235340366.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3916352994.23"
+            }
+          ]
+        },
+        {
+          "date": "2055-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "47608063.92"
+            },
+            {
+              "currency": "USD",
+              "amount": "3630114873.92"
+            },
+            {
+              "currency": "EUR",
+              "amount": "4394224299.83"
+            }
+          ]
+        },
+        {
+          "date": "2056-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "53401574.16"
+            },
+            {
+              "currency": "USD",
+              "amount": "4071870029.81"
+            },
+            {
+              "currency": "EUR",
+              "amount": "4928965295.1"
+            }
+          ]
+        },
+        {
+          "date": "2057-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "59884548.54"
+            },
+            {
+              "currency": "USD",
+              "amount": "4566196826.49"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5527343830.62"
+            }
+          ]
+        },
+        {
+          "date": "2058-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "67139037.64"
+            },
+            {
+              "currency": "USD",
+              "amount": "5119351619.72"
+            },
+            {
+              "currency": "EUR",
+              "amount": "6196933173.77"
+            }
+          ]
+        },
+        {
+          "date": "2059-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "75256856.54"
+            },
+            {
+              "currency": "USD",
+              "amount": "5738335310.92"
+            },
+            {
+              "currency": "EUR",
+              "amount": "6946207858.33"
+            }
+          ]
+        },
+        {
+          "date": "2060-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "84340746.92"
+            },
+            {
+              "currency": "USD",
+              "amount": "6430981952.81"
+            },
+            {
+              "currency": "EUR",
+              "amount": "7784650940.91"
+            }
+          ]
+        },
+        {
+          "date": "2061-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "94505677.37"
+            },
+            {
+              "currency": "USD",
+              "amount": "7206057899.64"
+            },
+            {
+              "currency": "EUR",
+              "amount": "8722874021.46"
+            }
+          ]
+        },
+        {
+          "date": "2062-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "105880298.45"
+            },
+            {
+              "currency": "USD",
+              "amount": "8073372756.89"
+            },
+            {
+              "currency": "EUR",
+              "amount": "9772751547.03"
+            }
+          ]
+        },
+        {
+          "date": "2063-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "118608570.95"
+            },
+            {
+              "currency": "USD",
+              "amount": "9043903534.81"
+            },
+            {
+              "currency": "EUR",
+              "amount": "10947571098.5"
+            }
+          ]
+        },
+        {
+          "date": "2064-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "132851587.89"
+            },
+            {
+              "currency": "USD",
+              "amount": "10129933576.9"
+            },
+            {
+              "currency": "EUR",
+              "amount": "12262201562.5"
+            }
+          ]
+        },
+        {
+          "date": "2065-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "148789613.4"
+            },
+            {
+              "currency": "USD",
+              "amount": "11345208021.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "13733281316.6"
+            }
+          ]
+        },
+        {
+          "date": "2066-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "166624364.14"
+            },
+            {
+              "currency": "USD",
+              "amount": "12705107765.4"
+            },
+            {
+              "currency": "EUR",
+              "amount": "15379428809.8"
+            }
+          ]
+        },
+        {
+          "date": "2067-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "186581562.34"
+            },
+            {
+              "currency": "USD",
+              "amount": "14226844128.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "17221478203.7"
+            }
+          ]
+        },
+        {
+          "date": "2068-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "208913792.59"
+            },
+            {
+              "currency": "USD",
+              "amount": "15929676685.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "19282743056.2"
+            }
+          ]
+        },
+        {
+          "date": "2069-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "233903698.64"
+            },
+            {
+              "currency": "USD",
+              "amount": "17835157021.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "21589311384.8"
+            }
+          ]
+        },
+        {
+          "date": "2070-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "261867560.62"
+            },
+            {
+              "currency": "USD",
+              "amount": "19967401497.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "24170375845.6"
+            }
+          ]
+        },
+        {
+          "date": "2071-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "293159297.98"
+            },
+            {
+              "currency": "USD",
+              "amount": "22353396471.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "27058603203.9"
+            }
+          ]
+        },
+        {
+          "date": "2072-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "328174948.81"
+            },
+            {
+              "currency": "USD",
+              "amount": "25023339847.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "30290547775.5"
+            }
+          ]
+        },
+        {
+          "date": "2073-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "367357682.23"
+            },
+            {
+              "currency": "USD",
+              "amount": "28011023270.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "33907114069.8"
+            }
+          ]
+        },
+        {
+          "date": "2074-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "411203407.26"
+            },
+            {
+              "currency": "USD",
+              "amount": "31354259803.4"
+            },
+            {
+              "currency": "EUR",
+              "amount": "37954074489.9"
+            }
+          ]
+        },
+        {
+          "date": "2075-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "460267049.21"
+            },
+            {
+              "currency": "USD",
+              "amount": "35095362502.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "42482648642.4"
+            }
+          ]
+        },
+        {
+          "date": "2076-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "515169573.02"
+            },
+            {
+              "currency": "USD",
+              "amount": "39281679942.5"
+            },
+            {
+              "currency": "EUR",
+              "amount": "47550151589.4"
+            }
+          ]
+        },
+        {
+          "date": "2077-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "576605842.31"
+            },
+            {
+              "currency": "USD",
+              "amount": "43966195476.5"
+            },
+            {
+              "currency": "EUR",
+              "amount": "53220719245.6"
+            }
+          ]
+        },
+        {
+          "date": "2078-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "645353413.9"
+            },
+            {
+              "currency": "USD",
+              "amount": "49208197809.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "59566120102.7"
+            }
+          ]
+        },
+        {
+          "date": "2079-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "722282378.7"
+            },
+            {
+              "currency": "USD",
+              "amount": "55074031376.0"
+            },
+            {
+              "currency": "EUR",
+              "amount": "66666663554.1"
+            }
+          ]
+        },
+        {
+          "date": "2080-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "808366373.96"
+            },
+            {
+              "currency": "USD",
+              "amount": "61637936014.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "74612216316.1"
+            }
+          ]
+        },
+        {
+          "date": "2081-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "904694905.84"
+            },
+            {
+              "currency": "USD",
+              "amount": "68982986570.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "83503339809.0"
+            }
+          ]
+        },
+        {
+          "date": "2082-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1012487138.62"
+            },
+            {
+              "currency": "USD",
+              "amount": "77202144319.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "93452562894.4"
+            }
+          ]
+        },
+        {
+          "date": "2083-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1133107324.77"
+            },
+            {
+              "currency": "USD",
+              "amount": "86399433513.5"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.04585806076e+11"
+            }
+          ]
+        },
+        {
+          "date": "2084-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1268082071.38"
+            },
+            {
+              "currency": "USD",
+              "amount": "96691257943.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.17043975189e+11"
+            }
+          ]
+        },
+        {
+          "date": "2085-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1419119661.41"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.08207874183e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.30984744748e+11"
+            }
+          ]
+        },
+        {
+          "date": "2086-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1588131674.2"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.21095040158e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.46584553528e+11"
+            }
+          ]
+        },
+        {
+          "date": "2087-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1777257179.05"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.35515859903e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.64040837626e+11"
+            }
+          ]
+        },
+        {
+          "date": "2088-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1988889807.98"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.51652847859e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.83574529277e+11"
+            }
+          ]
+        },
+        {
+          "date": "2089-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2225708050.25"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.69710238832e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.05432853038e+11"
+            }
+          ]
+        },
+        {
+          "date": "2090-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2490709152.18"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.89916572854e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.29892454746e+11"
+            }
+          ]
+        },
+        {
+          "date": "2091-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2787247051.26"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.12527587658e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.57262902831e+11"
+            }
+          ]
+        },
+        {
+          "date": "2092-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3119074824.6"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.37829455376e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2.87890606311e+11"
+            }
+          ]
+        },
+        {
+          "date": "2093-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3490392189.11"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.6614240442e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3.22163199055e+11"
+            }
+          ]
+        },
+        {
+          "date": "2094-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3905898654.41"
+            },
+            {
+              "currency": "USD",
+              "amount": "2.97824772399e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3.60514445802e+11"
+            }
+          ]
+        },
+        {
+          "date": "2095-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4370853001.29"
+            },
+            {
+              "currency": "USD",
+              "amount": "3.33277541348e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "4.03429732019e+11"
+            }
+          ]
+        },
+        {
+          "date": "2096-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4891139838.53"
+            },
+            {
+              "currency": "USD",
+              "amount": "3.72949412688e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "4.51452207096e+11"
+            }
+          ]
+        },
+        {
+          "date": "2097-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "5473344080.35"
+            },
+            {
+              "currency": "USD",
+              "amount": "4.17342486126e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5.05189658616e+11"
+            }
+          ]
+        },
+        {
+          "date": "2098-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6124834287.15"
+            },
+            {
+              "currency": "USD",
+              "amount": "4.67018614396e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5.65322204704e+11"
+            }
+          ]
+        },
+        {
+          "date": "2099-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6853855924.37"
+            },
+            {
+              "currency": "USD",
+              "amount": "5.22606514233e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "6.3261090182e+11"
+            }
+          ]
+        },
+        {
+          "date": "2100-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "7669635719.65"
+            },
+            {
+              "currency": "USD",
+              "amount": "5.84809723623e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "7.07907376923e+11"
+            }
+          ]
+        }
+      ],
+      "negative": [
+        {
+          "date": "2022-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "104073.03"
+            },
+            {
+              "currency": "USD",
+              "amount": "7935568.72"
+            },
+            {
+              "currency": "EUR",
+              "amount": "9605940.89"
+            }
+          ]
+        },
+        {
+          "date": "2023-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "219950.61"
+            },
+            {
+              "currency": "USD",
+              "amount": "16771233.71"
+            },
+            {
+              "currency": "EUR",
+              "amount": "20301440.94"
+            }
+          ]
+        },
+        {
+          "date": "2024-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "342049.48"
+            },
+            {
+              "currency": "USD",
+              "amount": "26081272.86"
+            },
+            {
+              "currency": "EUR",
+              "amount": "31571167.02"
+            }
+          ]
+        },
+        {
+          "date": "2025-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "472223.05"
+            },
+            {
+              "currency": "USD",
+              "amount": "36007007.22"
+            },
+            {
+              "currency": "EUR",
+              "amount": "43586187.1"
+            }
+          ]
+        },
+        {
+          "date": "2026-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "611939.41"
+            },
+            {
+              "currency": "USD",
+              "amount": "46660379.74"
+            },
+            {
+              "currency": "EUR",
+              "amount": "56482007.21"
+            }
+          ]
+        },
+        {
+          "date": "2027-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "762574.73"
+            },
+            {
+              "currency": "USD",
+              "amount": "58146323.06"
+            },
+            {
+              "currency": "EUR",
+              "amount": "70385647.46"
+            }
+          ]
+        },
+        {
+          "date": "2028-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "925518.24"
+            },
+            {
+              "currency": "USD",
+              "amount": "70570765.64"
+            },
+            {
+              "currency": "EUR",
+              "amount": "85425333.36"
+            }
+          ]
+        },
+        {
+          "date": "2029-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1102225.12"
+            },
+            {
+              "currency": "USD",
+              "amount": "84044665.03"
+            },
+            {
+              "currency": "EUR",
+              "amount": "101735378.12"
+            }
+          ]
+        },
+        {
+          "date": "2030-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1294250.4"
+            },
+            {
+              "currency": "USD",
+              "amount": "98686592.95"
+            },
+            {
+              "currency": "EUR",
+              "amount": "119459311.86"
+            }
+          ]
+        },
+        {
+          "date": "2031-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1503275.11"
+            },
+            {
+              "currency": "USD",
+              "amount": "114624727.13"
+            },
+            {
+              "currency": "EUR",
+              "amount": "138752292.65"
+            }
+          ]
+        },
+        {
+          "date": "2032-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1731129.24"
+            },
+            {
+              "currency": "USD",
+              "amount": "131998604.21"
+            },
+            {
+              "currency": "EUR",
+              "amount": "159783228.44"
+            }
+          ]
+        },
+        {
+          "date": "2033-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1979813.83"
+            },
+            {
+              "currency": "USD",
+              "amount": "150960804.77"
+            },
+            {
+              "currency": "EUR",
+              "amount": "182736816.79"
+            }
+          ]
+        },
+        {
+          "date": "2034-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2251523.47"
+            },
+            {
+              "currency": "USD",
+              "amount": "171678664.86"
+            },
+            {
+              "currency": "EUR",
+              "amount": "207815616.62"
+            }
+          ]
+        },
+        {
+          "date": "2035-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2548669.81"
+            },
+            {
+              "currency": "USD",
+              "amount": "194336073.03"
+            },
+            {
+              "currency": "EUR",
+              "amount": "235242223.49"
+            }
+          ]
+        },
+        {
+          "date": "2036-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "2873906.82"
+            },
+            {
+              "currency": "USD",
+              "amount": "219135395.4"
+            },
+            {
+              "currency": "EUR",
+              "amount": "265261599.94"
+            }
+          ]
+        },
+        {
+          "date": "2037-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3230158.2"
+            },
+            {
+              "currency": "USD",
+              "amount": "246299562.89"
+            },
+            {
+              "currency": "EUR",
+              "amount": "298143602.03"
+            }
+          ]
+        },
+        {
+          "date": "2038-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "3620647.23"
+            },
+            {
+              "currency": "USD",
+              "amount": "276074351.16"
+            },
+            {
+              "currency": "EUR",
+              "amount": "334185739.17"
+            }
+          ]
+        },
+        {
+          "date": "2039-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4048929.61"
+            },
+            {
+              "currency": "USD",
+              "amount": "308730882.66"
+            },
+            {
+              "currency": "EUR",
+              "amount": "373716202.88"
+            }
+          ]
+        },
+        {
+          "date": "2040-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "4518929.58"
+            },
+            {
+              "currency": "USD",
+              "amount": "344568380.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "417097200.63"
+            }
+          ]
+        },
+        {
+          "date": "2041-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "5034979.77"
+            },
+            {
+              "currency": "USD",
+              "amount": "383917207.34"
+            },
+            {
+              "currency": "EUR",
+              "amount": "464728632.63"
+            }
+          ]
+        },
+        {
+          "date": "2042-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "5601865.14"
+            },
+            {
+              "currency": "USD",
+              "amount": "427142216.87"
+            },
+            {
+              "currency": "EUR",
+              "amount": "517052152.36"
+            }
+          ]
+        },
+        {
+          "date": "2043-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6224871.67"
+            },
+            {
+              "currency": "USD",
+              "amount": "474646464.53"
+            },
+            {
+              "currency": "EUR",
+              "amount": "574555654.77"
+            }
+          ]
+        },
+        {
+          "date": "2044-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "6909840.09"
+            },
+            {
+              "currency": "USD",
+              "amount": "526875306.95"
+            },
+            {
+              "currency": "EUR",
+              "amount": "637778240.41"
+            }
+          ]
+        },
+        {
+          "date": "2045-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "7663225.45"
+            },
+            {
+              "currency": "USD",
+              "amount": "584320940.22"
+            },
+            {
+              "currency": "EUR",
+              "amount": "707315708.62"
+            }
+          ]
+        },
+        {
+          "date": "2046-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "8492162.93"
+            },
+            {
+              "currency": "USD",
+              "amount": "647527423.03"
+            },
+            {
+              "currency": "EUR",
+              "amount": "783826637.98"
+            }
+          ]
+        },
+        {
+          "date": "2047-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "9404540.83"
+            },
+            {
+              "currency": "USD",
+              "amount": "717096238.43"
+            },
+            {
+              "currency": "EUR",
+              "amount": "868039118.79"
+            }
+          ]
+        },
+        {
+          "date": "2048-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "10409081.35"
+            },
+            {
+              "currency": "USD",
+              "amount": "793692453.18"
+            },
+            {
+              "currency": "EUR",
+              "amount": "960758208.9"
+            }
+          ]
+        },
+        {
+          "date": "2049-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "11515430.03"
+            },
+            {
+              "currency": "USD",
+              "amount": "878051539.98"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1062874192.0"
+            }
+          ]
+        },
+        {
+          "date": "2050-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "12734254.89"
+            },
+            {
+              "currency": "USD",
+              "amount": "970986935.0"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1175371725.9"
+            }
+          ]
+        },
+        {
+          "date": "2051-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "14077356.21"
+            },
+            {
+              "currency": "USD",
+              "amount": "1073398410.9"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1299339978.04"
+            }
+          ]
+        },
+        {
+          "date": "2052-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "15557788.25"
+            },
+            {
+              "currency": "USD",
+              "amount": "1186281354.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1435983855.76"
+            }
+          ]
+        },
+        {
+          "date": "2053-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "17189994.05"
+            },
+            {
+              "currency": "USD",
+              "amount": "1310737046.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1586636450.8"
+            }
+          ]
+        },
+        {
+          "date": "2054-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "18989954.82"
+            },
+            {
+              "currency": "USD",
+              "amount": "1447984055.4"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1752772830.33"
+            }
+          ]
+        },
+        {
+          "date": "2055-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "20975355.6"
+            },
+            {
+              "currency": "USD",
+              "amount": "1599370864.22"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1936025321.54"
+            }
+          ]
+        },
+        {
+          "date": "2056-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "23165768.72"
+            },
+            {
+              "currency": "USD",
+              "amount": "1766389864.59"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2138200452.48"
+            }
+          ]
+        },
+        {
+          "date": "2057-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "25582857.31"
+            },
+            {
+              "currency": "USD",
+              "amount": "1950692870.23"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2361297730.12"
+            }
+          ]
+        },
+        {
+          "date": "2058-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "28250600.82"
+            },
+            {
+              "currency": "USD",
+              "amount": "2154108312.88"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2607530456.12"
+            }
+          ]
+        },
+        {
+          "date": "2059-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "31195544.99"
+            },
+            {
+              "currency": "USD",
+              "amount": "2378660305.57"
+            },
+            {
+              "currency": "EUR",
+              "amount": "2879348802.68"
+            }
+          ]
+        },
+        {
+          "date": "2060-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "34447079.04"
+            },
+            {
+              "currency": "USD",
+              "amount": "2626589777.03"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3179465395.67"
+            }
+          ]
+        },
+        {
+          "date": "2061-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "38037743.0"
+            },
+            {
+              "currency": "USD",
+              "amount": "2900377903.65"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3510883678.78"
+            }
+          ]
+        },
+        {
+          "date": "2062-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "42003568.4"
+            },
+            {
+              "currency": "USD",
+              "amount": "3202772090.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "3876929362.96"
+            }
+          ]
+        },
+        {
+          "date": "2063-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "46384456.11"
+            },
+            {
+              "currency": "USD",
+              "amount": "3536814778.02"
+            },
+            {
+              "currency": "EUR",
+              "amount": "4281285298.5"
+            }
+          ]
+        },
+        {
+          "date": "2064-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "51224595.28"
+            },
+            {
+              "currency": "USD",
+              "amount": "3905875390.15"
+            },
+            {
+              "currency": "EUR",
+              "amount": "4728030144.4"
+            }
+          ]
+        },
+        {
+          "date": "2065-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "56572927.96"
+            },
+            {
+              "currency": "USD",
+              "amount": "4313685756.84"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5221681250.58"
+            }
+          ]
+        },
+        {
+          "date": "2066-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "62483664.3"
+            },
+            {
+              "currency": "USD",
+              "amount": "4764379402.55"
+            },
+            {
+              "currency": "EUR",
+              "amount": "5767242214.49"
+            }
+          ]
+        },
+        {
+          "date": "2067-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "69016854.0"
+            },
+            {
+              "currency": "USD",
+              "amount": "5262535117.48"
+            },
+            {
+              "currency": "EUR",
+              "amount": "6370255624.18"
+            }
+          ]
+        },
+        {
+          "date": "2068-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "76239020.11"
+            },
+            {
+              "currency": "USD",
+              "amount": "5813225283.48"
+            },
+            {
+              "currency": "EUR",
+              "amount": "7036861556.26"
+            }
+          ]
+        },
+        {
+          "date": "2069-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "84223861.97"
+            },
+            {
+              "currency": "USD",
+              "amount": "6422069475.32"
+            },
+            {
+              "currency": "EUR",
+              "amount": "7773862459.96"
+            }
+          ]
+        },
+        {
+          "date": "2070-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "93053034.97"
+            },
+            {
+              "currency": "USD",
+              "amount": "7095293916.41"
+            },
+            {
+              "currency": "EUR",
+              "amount": "8588795127.67"
+            }
+          ]
+        },
+        {
+          "date": "2071-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "102817015.49"
+            },
+            {
+              "currency": "USD",
+              "amount": "7839797431.15"
+            },
+            {
+              "currency": "EUR",
+              "amount": "9490010529.78"
+            }
+          ]
+        },
+        {
+          "date": "2072-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "113616060.42"
+            },
+            {
+              "currency": "USD",
+              "amount": "8663224607.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "10486762377.1"
+            }
+          ]
+        },
+        {
+          "date": "2073-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "125561271.61"
+            },
+            {
+              "currency": "USD",
+              "amount": "9574046960.14"
+            },
+            {
+              "currency": "EUR",
+              "amount": "11589305369.5"
+            }
+          ]
+        },
+        {
+          "date": "2074-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "138775776.76"
+            },
+            {
+              "currency": "USD",
+              "amount": "10581652977.7"
+            },
+            {
+              "currency": "EUR",
+              "amount": "12809004194.7"
+            }
+          ]
+        },
+        {
+          "date": "2075-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "153396039.65"
+            },
+            {
+              "currency": "USD",
+              "amount": "11696448023.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "14158454459.6"
+            }
+          ]
+        },
+        {
+          "date": "2076-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "169573313.81"
+            },
+            {
+              "currency": "USD",
+              "amount": "12929965178.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "15651616864.9"
+            }
+          ]
+        },
+        {
+          "date": "2077-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "187475255.48"
+            },
+            {
+              "currency": "USD",
+              "amount": "14294988230.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "17303966080.7"
+            }
+          ]
+        },
+        {
+          "date": "2078-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "207287713.33"
+            },
+            {
+              "currency": "USD",
+              "amount": "15805688141.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "19132655940.7"
+            }
+          ]
+        },
+        {
+          "date": "2079-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "229216714.52"
+            },
+            {
+              "currency": "USD",
+              "amount": "17477774482.0"
+            },
+            {
+              "currency": "EUR",
+              "amount": "21156702750.0"
+            }
+          ]
+        },
+        {
+          "date": "2080-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "253490668.51"
+            },
+            {
+              "currency": "USD",
+              "amount": "19328663473.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "23397188703.4"
+            }
+          ]
+        },
+        {
+          "date": "2081-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "280362812.85"
+            },
+            {
+              "currency": "USD",
+              "amount": "21377664480.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "25877487626.4"
+            }
+          ]
+        },
+        {
+          "date": "2082-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "310113927.43"
+            },
+            {
+              "currency": "USD",
+              "amount": "23646186966.5"
+            },
+            {
+              "currency": "EUR",
+              "amount": "28623515501.8"
+            }
+          ]
+        },
+        {
+          "date": "2083-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "343055346.81"
+            },
+            {
+              "currency": "USD",
+              "amount": "26157970194.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "31664008510.9"
+            }
+          ]
+        },
+        {
+          "date": "2084-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "379532303.64"
+            },
+            {
+              "currency": "USD",
+              "amount": "28939338152.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "35030831626.3"
+            }
+          ]
+        },
+        {
+          "date": "2085-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "419927639.47"
+            },
+            {
+              "currency": "USD",
+              "amount": "32019482509.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "38759321123.4"
+            }
+          ]
+        },
+        {
+          "date": "2086-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "464665923.67"
+            },
+            {
+              "currency": "USD",
+              "amount": "35430776680.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "42888664755.1"
+            }
+          ]
+        },
+        {
+          "date": "2087-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "514218025.42"
+            },
+            {
+              "currency": "USD",
+              "amount": "39209124438.1"
+            },
+            {
+              "currency": "EUR",
+              "amount": "47462323746.1"
+            }
+          ]
+        },
+        {
+          "date": "2088-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "569106188.78"
+            },
+            {
+              "currency": "USD",
+              "amount": "43394346894.5"
+            },
+            {
+              "currency": "EUR",
+              "amount": "52528501224.4"
+            }
+          ]
+        },
+        {
+          "date": "2089-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "629909666.5"
+            },
+            {
+              "currency": "USD",
+              "amount": "48030612070.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "58140662218.1"
+            }
+          ]
+        },
+        {
+          "date": "2090-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "697270974.17"
+            },
+            {
+              "currency": "USD",
+              "amount": "53166911780.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "64358110915.7"
+            }
+          ]
+        },
+        {
+          "date": "2091-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "771902833.34"
+            },
+            {
+              "currency": "USD",
+              "amount": "58857591042.2"
+            },
+            {
+              "currency": "EUR",
+              "amount": "71246631517.2"
+            }
+          ]
+        },
+        {
+          "date": "2092-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "854595879.83"
+            },
+            {
+              "currency": "USD",
+              "amount": "65162935836.7"
+            },
+            {
+              "currency": "EUR",
+              "amount": "78879199707.9"
+            }
+          ]
+        },
+        {
+          "date": "2093-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "946227221.68"
+            },
+            {
+              "currency": "USD",
+              "amount": "72149825653.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "87336772561.3"
+            }
+          ]
+        },
+        {
+          "date": "2094-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1047769940.97"
+            },
+            {
+              "currency": "USD",
+              "amount": "79892457998.6"
+            },
+            {
+              "currency": "EUR",
+              "amount": "96709165551.1"
+            }
+          ]
+        },
+        {
+          "date": "2095-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1160303643.63"
+            },
+            {
+              "currency": "USD",
+              "amount": "88473152826.8"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.07096026307e+11"
+            }
+          ]
+        },
+        {
+          "date": "2096-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1285026173.62"
+            },
+            {
+              "currency": "USD",
+              "amount": "97983245738.3"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.18607915825e+11"
+            }
+          ]
+        },
+        {
+          "date": "2097-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1423266620.0"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.08524079775e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.31367509026e+11"
+            }
+          ]
+        },
+        {
+          "date": "2098-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1576499760.42"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.20208106732e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.45510927887e+11"
+            }
+          ]
+        },
+        {
+          "date": "2099-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1746362099.88"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.33160110115e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.61189221818e+11"
+            }
+          ]
+        },
+        {
+          "date": "2100-01-01",
+          "sum": [
+            {
+              "currency": "RUB",
+              "amount": "1934669681.69"
+            },
+            {
+              "currency": "USD",
+              "amount": "1.47518563229e+11"
+            },
+            {
+              "currency": "EUR",
+              "amount": "1.7857001162e+11"
+            }
+          ]
+        }
+      ]
+    },
+    "goals": [
+      {
+        "code": "201",
+        "age": "35 лет",
+        "succeed": {
+          "neutral": true,
+          "positive": false,
+          "negative": true
+        }
+      },
+      {
+        "code": "202",
+        "age": "37 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      },
+      {
+        "code": "203",
+        "age": "39 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      },
+      {
+        "code": "204",
+        "age": "44 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": true
+        }
+      },
+      {
+        "code": "207",
+        "age": "50 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": true
+        }
+      },
+      {
+        "code": "208",
+        "age": "56 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": true
+        }
+      },
+      {
+        "code": "209",
+        "age": "61 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      }
+    ],
+    "type": "exponential",
+    "period": {
+      "startDate": "2021-02-01",
+      "endDate": "2026-02-01",
+      "maxDate": "2100-01-01"
+    }
+  },
+  "success": true
+}

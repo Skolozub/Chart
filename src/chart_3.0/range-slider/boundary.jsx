@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { COMMON } from "../chart_3.0/constants";
+import { COMMON } from "../constants";
 
 const RADIUS = 6;
 const RADIUS_ACTIVE = 10;
