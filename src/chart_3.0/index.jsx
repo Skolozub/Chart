@@ -1,13 +1,12 @@
 import React, { useCallback, useMemo, useState } from "react";
 import {
   formatDefaultLocale,
-  max,
   scaleLinear,
   scaleTime,
   timeFormatDefaultLocale
 } from "d3";
 import { Chart } from "./chart";
-import { LOCALE, SVG, CHART, AXIS } from "./constants";
+import { LOCALE, SVG, CHART } from "./constants";
 import * as S from "./index.style";
 
 export const PropsContext = React.createContext();
@@ -47,14 +46,6 @@ const PFPChartComponent = ({
     xDomain,
     chart.width
   ]);
-
-  // const yScaleMax = useMemo(() => {
-  //   const yMax = max(
-  //     data.points[data.scenario],
-  //     (point) => point.amounts[data.currency].value
-  //   );
-  //   return yMax + Math.round(yMax / AXIS.Y.COUNT);
-  // }, [data.points, data.scenario, data.currency]);
 
   const y = useMemo(
     () => scaleLinear().domain(yDomain).range([chart.height, 0]),

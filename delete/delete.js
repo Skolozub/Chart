@@ -57,3 +57,13 @@
 // function getBB(selection) {
 //     selection.each(function(d){d.bbox = this.getBBox();})
 // }
+
+// -----------------------------------------
+
+// const yScaleMax = useMemo(() => {
+//   const yMax = max(
+//     data.points[data.scenario],
+//     (point) => point.amounts[data.currency].value
+//   );
+//   return yMax + Math.round(yMax / AXIS.Y.COUNT);
+// }, [data.points, data.scenario, data.currency]);

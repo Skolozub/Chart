@@ -48368,6 +48368,69 @@
           "positive": false,
           "negative": false
         }
+      },
+      {
+        "code": "210",
+        "age": "61 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      },
+      {
+        "code": "211",
+        "age": "61 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      },
+      {
+        "code": "212",
+        "age": "61 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      },
+      {
+        "code": "213",
+        "age": "61 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      },
+      {
+        "code": "214",
+        "age": "61 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      },
+      {
+        "code": "215",
+        "age": "61 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
+      },
+      {
+        "code": "216",
+        "age": "61 лет",
+        "succeed": {
+          "neutral": false,
+          "positive": false,
+          "negative": false
+        }
       }
     ],
     "type": "exponential",

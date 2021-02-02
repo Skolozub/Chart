@@ -1,5 +1,5 @@
 import { SCENARIO } from "../constants";
-import { getTime } from "./common";
+import { getHashByDate, getTime } from "./common";
 
 const parsePeriod = ({ startDate, endDate, maxDate }) => {
   return {
@@ -9,12 +9,12 @@ const parsePeriod = ({ startDate, endDate, maxDate }) => {
   };
 };
 
-export const parseSum = ({ amount, currency }) => ({
+const parseSum = ({ amount, currency }) => ({
   value: Number(amount),
   currency: currency
 });
 
-export const parseSumArray = (sumArray) =>
+const parseSumArray = (sumArray) =>
   sumArray.reduce((result, sum) => {
     return {
       ...result,
@@ -23,10 +23,17 @@ export const parseSumArray = (sumArray) =>
   }, {});
 
 const parseScenario = (points) => {
-  return points.map(({ date, sum }) => ({
-    date: getTime(date),
-    amounts: parseSumArray(sum)
-  }));
+  return points.reduce(
+    (result, { date, sum }, index) => ({
+      ...result,
+      [getHashByDate(date)]: {
+        index,
+        date: getTime(date),
+        amounts: parseSumArray(sum)
+      }
+    }),
+    {}
+  );
 };
 
 const parsePoints = (points) => {
@@ -38,8 +45,6 @@ const parsePoints = (points) => {
 };
 
 const parseGoals = (goals) => {
-  console.log("goals", goals);
-
   return goals.reduce(
     (result, { code, age, succeed }) => ({
       ...result,

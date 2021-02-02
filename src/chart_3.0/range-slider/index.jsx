@@ -44,7 +44,6 @@ const RangeSliderComponent = ({ goals, scenario, onChange, width }) => {
   const cxMax = xScale(maxDate);
 
   useEffect(() => {
-    // onChange(x(xStart), x(xEnd));
     onChange(x(xStart).getTime(), x(xEnd).getTime());
   }, [onChange, x, xStart, xEnd]);
 

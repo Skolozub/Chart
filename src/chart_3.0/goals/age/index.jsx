@@ -6,7 +6,6 @@ import { AGE, COMMON } from "../../constants";
 
 const AgeComponent = ({ goalDate, goalAge, chart, xScale, isFirst }) => {
   console.log("rerender AgeComponent");
-
   const ageLinePath = useMemo(() => {
     const coords = [
       [xScale(goalDate), chart.height - AGE.LINE.HEIGHT.TOP],

@@ -5,7 +5,6 @@ import { CHART, COMMON } from "./constants";
 
 const ChartLineComponent = ({ data, scale, curveType, currency }) => {
   console.log("rerender ChartLineComponent");
-  console.log("curveType", curveType);
 
   const chartPath = useMemo(() => {
     const drawLine = line()
@@ -38,7 +37,7 @@ export const ChartLine = () => {
 
   return (
     <MemoizedChartLineComponent
-      data={data.points[data.scenario]}
+      data={data.points}
       scale={scale}
       curveType={data.curveType}
       currency={data.currency}

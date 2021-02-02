@@ -8,7 +8,7 @@ const parseGoals = (goals) => {
       [code]: {
         code,
         name,
-        icon: icons[index], // image,
+        icon: icons[index % 7], // image,
         date: getTime(date),
         amounts: parseAmounts(amount),
         accumulation: parseAmounts(accumulation)

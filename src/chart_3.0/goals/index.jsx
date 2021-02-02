@@ -5,7 +5,6 @@ import { Bubble } from "./bubble";
 
 const GoalsComponent = ({ goals }) => {
   console.log("rerender GoalsComponent");
-
   return (
     <>
       {Object.values(goals).map((goal, index) => (

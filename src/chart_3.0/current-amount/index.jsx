@@ -5,7 +5,6 @@ import { CHART, CURRENT_AMOUNT } from "../constants";
 
 const CurrentAmountComponent = ({ amount, date, scale }) => {
   console.log("rerender CurrentAmountComponent");
-
   const cx = useMemo(() => scale.x(date), [scale, date]);
   const cy = useMemo(() => scale.y(amount), [scale, amount]);
 
@@ -28,18 +27,6 @@ const CurrentAmountComponent = ({ amount, date, scale }) => {
             cx={cx}
             cy={cy}
           />
-          {/* <circle
-            fill={CURRENT_AMOUNT.CIRCLE.OUTER.BACKGROUND_COLOR}
-            r={CURRENT_AMOUNT.CIRCLE.OUTER.RADIUS}
-            cx={cx}
-            cy={cy}
-          />
-          <circle
-            fill={CURRENT_AMOUNT.CIRCLE.INNER.BACKGROUND_COLOR}
-            r={CURRENT_AMOUNT.CIRCLE.INNER.RADIUS}
-            cx={cx}
-            cy={cy}
-          /> */}
           {/* <AmountBalloon top={top} left={left} /> */}
         </g>
       )}
@@ -52,7 +39,7 @@ const MemoizedCurrentAmountComponent = React.memo(CurrentAmountComponent);
 export const CurrentAmount = () => {
   const { data, scale } = useContext(PropsContext);
 
-  const firstPoint = data.points[data.scenario][0];
+  const firstPoint = data.points[0];
   const amountDate = data.period.start;
   const amountValue = firstPoint.amounts[data.currency].value;
 
