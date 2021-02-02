@@ -25,16 +25,17 @@ export const ChartComponent = ({ svg, chart, className }) => {
         height={chart.height}
         transform={`translate(${CHART.MARGIN.LEFT}, ${CHART.MARGIN.TOP})`}
       >
-        <g className="chart" clipPath="url(#chart-clip)">
-          <ChartLine />
-          <CurrentAmount amount={220000} date={1612049867115} />
-        </g>
-
         <g className="axis">
           <Borders />
           <AxisY />
           <AxisX />
         </g>
+
+        <g className="chart" clipPath="url(#chart-clip)">
+          <ChartLine />
+        </g>
+
+        <CurrentAmount />
 
         <g className="amounts">
           <Amounts />

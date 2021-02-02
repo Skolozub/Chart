@@ -8,7 +8,7 @@ const GoalsComponent = ({ goals }) => {
 
   return (
     <>
-      {goals.map((goal, index) => (
+      {Object.values(goals).map((goal, index) => (
         <g key={goal.code} className="goal">
           <Age goal={goal} isFirst={index === 0} />
           <Bubble goal={goal} />

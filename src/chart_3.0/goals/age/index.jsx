@@ -1,22 +1,30 @@
 import React, { useContext, useMemo } from "react";
+import { line } from "d3";
 import { AgeText } from "./age-text";
 import { PropsContext } from "../../index";
-import { AGE } from "../../constants";
+import { AGE, COMMON } from "../../constants";
 
 const AgeComponent = ({ goalDate, goalAge, chart, xScale, isFirst }) => {
   console.log("rerender AgeComponent");
 
-  const x = useMemo(() => xScale(goalDate), [goalDate, xScale]);
+  const ageLinePath = useMemo(() => {
+    const coords = [
+      [xScale(goalDate), chart.height - AGE.LINE.HEIGHT.TOP],
+      [xScale(goalDate), chart.height + AGE.LINE.HEIGHT.BOTTOM]
+    ];
+
+    return line()(coords);
+  }, [goalDate, chart.height, xScale]);
 
   return (
     <>
-      <line
+      <path
         className="age-line"
-        x1={x}
-        y1={chart.height - AGE.LINE.HEIGHT.TOP}
-        x2={x}
-        y2={chart.height + AGE.LINE.HEIGHT.BOTTOM}
+        d={ageLinePath}
         stroke={AGE.LINE.COLOR}
+        style={{
+          transition: `d ${COMMON.TRANSITION_DURATION}ms`
+        }}
       />
       <AgeText goalDate={goalDate}>
         {`${isFirst ? AGE.VALUE.TEXT : ""} ${goalAge}`}

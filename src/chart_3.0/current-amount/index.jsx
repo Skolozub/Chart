@@ -49,10 +49,18 @@ const CurrentAmountComponent = ({ amount, date, scale }) => {
 
 const MemoizedCurrentAmountComponent = React.memo(CurrentAmountComponent);
 
-export const CurrentAmount = ({ amount, date }) => {
-  const { scale } = useContext(PropsContext);
+export const CurrentAmount = () => {
+  const { data, scale } = useContext(PropsContext);
+
+  const firstPoint = data.points[data.scenario][0];
+  const amountDate = data.period.start;
+  const amountValue = firstPoint.amounts[data.currency].value;
 
   return (
-    <MemoizedCurrentAmountComponent amount={amount} date={date} scale={scale} />
+    <MemoizedCurrentAmountComponent
+      amount={amountValue}
+      date={amountDate}
+      scale={scale}
+    />
   );
 };

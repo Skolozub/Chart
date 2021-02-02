@@ -13,11 +13,12 @@ import * as S from "./index.style";
 export const PropsContext = React.createContext();
 
 const PFPChartComponent = ({
+  className,
   data,
   width,
   height,
   xDomain,
-  className,
+  yDomain,
   onGoalClick
 }) => {
   const [portalRef, setPortalRef] = useState(null);
@@ -47,14 +48,17 @@ const PFPChartComponent = ({
     chart.width
   ]);
 
-  const yScaleMax = useMemo(() => {
-    const yMax = max(data.chart, (d) => d.value);
-    return yMax + Math.round(yMax / AXIS.Y.COUNT);
-  }, [data.chart]);
+  // const yScaleMax = useMemo(() => {
+  //   const yMax = max(
+  //     data.points[data.scenario],
+  //     (point) => point.amounts[data.currency].value
+  //   );
+  //   return yMax + Math.round(yMax / AXIS.Y.COUNT);
+  // }, [data.points, data.scenario, data.currency]);
 
   const y = useMemo(
-    () => scaleLinear().domain([0, yScaleMax]).range([chart.height, 0]),
-    [yScaleMax, chart.height]
+    () => scaleLinear().domain(yDomain).range([chart.height, 0]),
+    [yDomain, chart.height]
   );
 
   const scale = useMemo(() => ({ x, y }), [x, y]);

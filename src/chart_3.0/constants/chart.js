@@ -1,5 +1,3 @@
-import * as d3 from "d3";
-
 export const CHART = {
   WIDTH: 841,
   HEIGHT: 291,
@@ -19,8 +17,8 @@ export const CHART = {
   },
 
   CURVE_TYPE: {
-    EXPONENTIAL: d3.curveMonotoneX, //curveBasis
-    LINEAR: d3.curveLinear
+    EXPONENTIAL: "exponential",
+    LINEAR: "linear"
   },
 
   DURATION: 1500

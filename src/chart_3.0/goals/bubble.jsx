@@ -9,14 +9,23 @@ import { line, select } from "d3";
 import { PropsContext } from "../index";
 import { UnsucceedTooltip } from "../tooltips/unsucceed-tooltip";
 import { GOALS_TYPES, BUBBLE, BUBBLE_SIZES, COMMON } from "../constants";
+import { useOutsideRefClick } from "../../useOutsideRefClick";
 
-const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
-  const size = goal.isActive ? BUBBLE_SIZES.MEDIUM : BUBBLE_SIZES.SMALL;
+const BubbleComponent = ({
+  goal,
+  scale,
+  currency,
+  chartHeight,
+  onGoalClick,
+  isSucceed,
+  isActive
+}) => {
+  const size = isActive ? BUBBLE_SIZES.MEDIUM : BUBBLE_SIZES.SMALL;
 
   const bubble = useMemo(() => {
     // circle center coordinates
     const cx = scale.x(goal.date);
-    const cy = scale.y(goal.amount.value);
+    const cy = scale.y(goal.amounts[currency].value);
 
     // bubble y top coordinate
     const yBubbleTop =
@@ -58,7 +67,7 @@ const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
     }
 
     return { size, cx, cy, isTailVisible: false, type: null };
-  }, [goal, scale, size, chartHeight]);
+  }, [goal.date, goal.amounts, currency, scale, size, chartHeight]);
 
   const tailPath = useMemo(() => {
     const { cy, type } = bubble;
@@ -103,26 +112,22 @@ const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
   const getBubbleColor = useCallback(
     (isActive) => {
       // succeed
-      if (goal.succeed) {
-        if (goal.isActive) {
-          return BUBBLE.BACKGROUNDS_COLOR[GOALS_TYPES.SUCCEED][0];
-        }
-
-        return BUBBLE.BACKGROUNDS_COLOR[GOALS_TYPES.SUCCEED][1];
+      if (isSucceed) {
+        return isActive
+          ? BUBBLE.BACKGROUNDS_COLOR.SUCCEED_ACTIVE
+          : BUBBLE.BACKGROUNDS_COLOR.SUCCEED;
       }
 
       // unsucceed
-      if (goal.isActive) {
-        return BUBBLE.BACKGROUNDS_COLOR[GOALS_TYPES.UNSUCCEED][0];
-      }
-
-      return BUBBLE.BACKGROUNDS_COLOR[GOALS_TYPES.UNSUCCEED][1];
+      return isActive
+        ? BUBBLE.BACKGROUNDS_COLOR.UNSUCCEED_ACTIVE
+        : BUBBLE.BACKGROUNDS_COLOR.UNSUCCEED;
     },
-    [goal.succeed, goal.isActive]
+    [isSucceed]
   );
 
   const bubbleRef = useRef(null);
-  const bubbleColor = getBubbleColor(goal.isActive);
+  const bubbleColor = getBubbleColor(isActive);
 
   useEffect(() => {
     const bubbleSelection = select(bubbleRef.current);
@@ -141,22 +146,29 @@ const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
         tailSelection.attr("fill", getBubbleColor(true));
       })
       .on("mouseout", () => {
-        circleSelection.attr("fill", getBubbleColor(goal.isActive));
-        tailSelection.attr("fill", getBubbleColor(goal.isActive));
+        circleSelection.attr("fill", getBubbleColor(isActive));
+        tailSelection.attr("fill", getBubbleColor(isActive));
       });
-  }, [goal.isActive, getBubbleColor]);
+  }, [isActive, getBubbleColor]);
 
-  const onClickHandler = useCallback(() => onGoalClick(goal.code), [
+  const toggleHandler = useCallback(() => onGoalClick(goal.code), [
     onGoalClick,
     goal.code
   ]);
+
+  const closeHandler = useCallback(() => onGoalClick(goal.code, false), [
+    onGoalClick,
+    goal.code
+  ]);
+
+  useOutsideRefClick(bubbleRef, closeHandler);
 
   return (
     <>
       <g
         className="bubble"
         ref={bubbleRef}
-        onClick={onClickHandler}
+        onClick={toggleHandler}
         style={{ textAlign: "center", opacity: 0 }}
       >
         <path
@@ -194,7 +206,7 @@ const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
         )}
       </g>
 
-      {!goal.succeed && goal.isActive && (
+      {!isSucceed && isActive && (
         <UnsucceedTooltip goal={goal} bubble={bubble} />
       )}
     </>
@@ -204,13 +216,16 @@ const BubbleComponent = ({ goal, scale, chartHeight, onGoalClick }) => {
 const MemoizedBubbleComponent = React.memo(BubbleComponent);
 
 export const Bubble = ({ goal }) => {
-  const { chart, scale, onGoalClick } = useContext(PropsContext);
+  const { data, chart, scale, onGoalClick } = useContext(PropsContext);
 
   return (
     <MemoizedBubbleComponent
       goal={goal}
       scale={scale}
+      currency={data.currency}
       chartHeight={chart.height}
+      isSucceed={goal.succeed[data.scenario]}
+      isActive={goal.isActive}
       onGoalClick={onGoalClick}
     />
   );

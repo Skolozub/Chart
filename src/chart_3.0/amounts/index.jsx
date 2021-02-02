@@ -7,7 +7,7 @@ const AmountsComponent = ({ goals }) => {
 
   return (
     <>
-      {goals.map((goal) => (
+      {Object.values(goals).map((goal) => (
         <Amount key={goal.code} goal={goal} />
       ))}
     </>

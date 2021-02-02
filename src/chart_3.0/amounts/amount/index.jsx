@@ -5,10 +5,10 @@ import { AmountLabel } from "./amount-label";
 import { CHART, AMOUNT } from "../../constants";
 import * as S from "./index.style";
 
-const AmountComponent = ({ amount, chart, yScale, isActive }) => {
+const AmountComponent = ({ amountValue, chart, yScale, isActive }) => {
   console.log("rerender AmountComponent");
 
-  const y = useMemo(() => yScale(amount), [yScale, amount]);
+  const y = useMemo(() => yScale(amountValue), [yScale, amountValue]);
 
   const x = useMemo(
     () => chart.width + CHART.MARGIN.RIGHT - AMOUNT.VALUE.MARGIN.RIGHT,
@@ -33,8 +33,8 @@ const AmountComponent = ({ amount, chart, yScale, isActive }) => {
         stroke={AMOUNT.LINE.COLOR}
         strokeDasharray={`${AMOUNT.LINE.DASH_WIDTH}, ${AMOUNT.LINE.DASH_GAP}`}
       />
-      <AmountLabel amount={amount} opacity={opacity}>
-        {format("$,")(amount)}
+      <AmountLabel amount={amountValue} opacity={opacity}>
+        {format("$,")(amountValue)}
       </AmountLabel>
     </S.Container>
   );
@@ -43,11 +43,11 @@ const AmountComponent = ({ amount, chart, yScale, isActive }) => {
 const MemoizedAmountComponent = React.memo(AmountComponent);
 
 export const Amount = ({ goal }) => {
-  const { chart, scale } = useContext(PropsContext);
+  const { data, chart, scale } = useContext(PropsContext);
 
   return (
     <MemoizedAmountComponent
-      amount={goal.amount.value}
+      amountValue={goal.amounts[data.currency].value}
       chart={chart}
       yScale={scale.y}
       isActive={goal.isActive}

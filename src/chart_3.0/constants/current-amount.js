@@ -3,7 +3,7 @@ export const CURRENT_AMOUNT = {
     RADIUS: 2,
     BACKGROUND_COLOR: "#FFFFFF",
     STROKE: "#068441",
-    BORDER_WIDTH: 3
+    BORDER_WIDTH: 2
   },
   IMAGE: {
     WIDTH: 22,

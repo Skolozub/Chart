@@ -1,5 +1,3 @@
-import { GOALS_TYPES } from "./goals";
-
 export const BUBBLE_SIZES = {
   SMALL: "small",
   MEDIUM: "medium"
@@ -7,8 +5,10 @@ export const BUBBLE_SIZES = {
 
 export const BUBBLE = {
   BACKGROUNDS_COLOR: {
-    [GOALS_TYPES.SUCCEED]: ["#08A652", "#8BD8AA"],
-    [GOALS_TYPES.UNSUCCEED]: ["#F6650A", "#FFB992"]
+    SUCCEED: "#8BD8AA",
+    SUCCEED_ACTIVE: "#08A652",
+    UNSUCCEED: "#FFB992",
+    UNSUCCEED_ACTIVE: "#F6650A"
   },
 
   [BUBBLE_SIZES.SMALL]: {
