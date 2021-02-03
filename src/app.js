@@ -5,13 +5,12 @@ import React, {
   useRef,
   useState
 } from "react";
-import { debounce } from "lodash";
+import { debounce, findLast } from "lodash";
 import { FullWidthWrapper } from "./full-width-wrapper";
 import { PFPChart3 } from "./chart_3.0";
 import { RangeSlider } from "./chart_3.0/range-slider";
-import { mergeGoals, useCashedChartPoints } from "./utils/chart";
+import { mergeGoals } from "./utils/chart";
 import { SCENARIO, CURRENCY } from "./constants";
-import { getHashByDate } from "./utils/common";
 
 export default function App({ mainPage, chart }) {
   const [scenario, setScenario] = useState(SCENARIO.NEGATIVE);
@@ -59,12 +58,12 @@ export default function App({ mainPage, chart }) {
   const [startPeriod, endPeriod] = xDomain;
 
   const startPoint = useMemo(
-    () => chart.points[scenario][getHashByDate(startPeriod)],
+    () => chart.points[scenario].find((point) => point.date >= startPeriod),
     [chart.points, scenario, startPeriod]
   );
 
   const endPoint = useMemo(
-    () => chart.points[scenario][getHashByDate(endPeriod)],
+    () => findLast(chart.points[scenario], (point) => point.date <= endPeriod),
     [chart.points, scenario, endPeriod]
   );
 
@@ -76,28 +75,29 @@ export default function App({ mainPage, chart }) {
     [startPoint, endPoint]
   );
 
-  const currentScenarioPoints = useMemo(
-    () => Object.values(chart.points[scenario]),
-    [chart.points, scenario]
-  );
-
   // current chart points
-  const currentVisiblePoints = useCashedChartPoints(
-    currentScenarioPoints,
-    startPoint,
-    endPoint
-  );
+  const currentVisiblePoints = useMemo(() => {
+    return chart.points[scenario].slice(startPoint.index, endPoint.index + 1);
+  }, [chart.points, scenario, startPoint, endPoint]);
 
   const data = useMemo(
     () => ({
       points: currentVisiblePoints,
       period: chart.period,
       goals,
+      currentAmount: chart.currentAmounts[scenario],
       curveType: chart.curveType,
       scenario,
       currency: CURRENCY.RUB
     }),
-    [currentVisiblePoints, chart.period, chart.curveType, goals, scenario]
+    [
+      chart.currentAmounts,
+      currentVisiblePoints,
+      chart.period,
+      chart.curveType,
+      goals,
+      scenario
+    ]
   );
 
   // const [, setToggle] = useState(true);
@@ -137,6 +137,7 @@ export default function App({ mainPage, chart }) {
               onGoalClick={setActiveGoalHandler}
             />
             <RangeSlider
+              period={chart.period}
               goals={goals}
               scenario={scenario}
               width={rect.width}
