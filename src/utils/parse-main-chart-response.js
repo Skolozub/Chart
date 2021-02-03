@@ -1,5 +1,5 @@
 import { SCENARIO } from "../constants";
-import { getHashByDate, getTime } from "./common";
+import { getTime } from "./common";
 
 const parsePeriod = ({ startDate, endDate, maxDate }) => {
   return {
@@ -23,17 +23,11 @@ const parseSumArray = (sumArray) =>
   }, {});
 
 const parseScenario = (points) => {
-  return points.reduce(
-    (result, { date, sum }, index) => ({
-      ...result,
-      [getHashByDate(date)]: {
-        index,
-        date: getTime(date),
-        amounts: parseSumArray(sum)
-      }
-    }),
-    {}
-  );
+  return points.map(({ date, sum }, index) => ({
+    index,
+    date: getTime(date),
+    amounts: parseSumArray(sum)
+  }));
 };
 
 const parsePoints = (points) => {
@@ -41,6 +35,14 @@ const parsePoints = (points) => {
     [SCENARIO.NEGATIVE]: parseScenario(points[SCENARIO.NEGATIVE]),
     [SCENARIO.NEUTRAL]: parseScenario(points[SCENARIO.NEUTRAL]),
     [SCENARIO.POSITIVE]: parseScenario(points[SCENARIO.POSITIVE])
+  };
+};
+
+const parseCurrentAmounts = (points) => {
+  return {
+    [SCENARIO.NEGATIVE]: points[SCENARIO.NEGATIVE][0],
+    [SCENARIO.NEUTRAL]: points[SCENARIO.NEUTRAL][0],
+    [SCENARIO.POSITIVE]: points[SCENARIO.POSITIVE][0]
   };
 };
 
@@ -59,11 +61,14 @@ const parseGoals = (goals) => {
 };
 
 export const parseMainChartResponse = (raw) => {
+  const parsedPoints = parsePoints(raw.points);
+
   return {
     curveType: raw.type,
     suggestions: raw.suggestions,
     period: parsePeriod(raw.period),
-    points: parsePoints(raw.points),
-    goals: parseGoals(raw.goals)
+    points: parsedPoints,
+    goals: parseGoals(raw.goals),
+    currentAmounts: parseCurrentAmounts(parsedPoints)
   };
 };

@@ -6,3 +6,4 @@ export * from "./current-amount";
 export * from "./locale";
 export * from "./svg";
 export * from "./tooltips";
+export * from "./range-slider";

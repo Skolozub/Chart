@@ -3,11 +3,9 @@ import ReactDOM from "react-dom";
 import { PropsContext } from "../index";
 import avatar from "../../assets/person.jpg";
 import * as S from "./amount-balloon.style";
+import { COMMON, CURRENT_AMOUNT } from "../constants";
 
-export const AmountBalloon = ({ top, left }) => {
-  const { portalRef, CONSTANTS } = useContext(PropsContext);
-  const { CURRENT_AMOUNT, COMMON } = CONSTANTS;
-
+const AmountBalloonComponent = ({ portalRef, top, left }) => {
   return ReactDOM.createPortal(
     <S.Container
       className="amount-balloon"
@@ -21,5 +19,19 @@ export const AmountBalloon = ({ top, left }) => {
       />
     </S.Container>,
     portalRef
+  );
+};
+
+const MemoizedAmountBalloonComponent = React.memo(AmountBalloonComponent);
+
+export const AmountBalloon = ({ top, left }) => {
+  const { portalRef } = useContext(PropsContext);
+
+  return (
+    <MemoizedAmountBalloonComponent
+      portalRef={portalRef}
+      top={top}
+      left={left}
+    />
   );
 };

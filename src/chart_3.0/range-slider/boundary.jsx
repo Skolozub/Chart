@@ -27,7 +27,7 @@ const BoundaryComponent = ({ cxMin, cx, cxMax, onChange }) => {
 
       const { pageX } =
         event.type === "touchmove" ? event.targetTouches[0] : event;
-      // TODO: add constant
+      // TODO: add to constants
       const cxNext = pageX - 20 - RADIUS;
 
       if (cxNext <= cxMin) {
