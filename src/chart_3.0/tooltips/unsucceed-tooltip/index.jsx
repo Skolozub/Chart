@@ -11,7 +11,13 @@ import {
 } from "../../constants";
 import * as S from "./index.style";
 
-const UnsucceedTooltipComponent = ({ goalDate, bubble, xScale, portalRef }) => {
+const UnsucceedTooltipComponent = ({
+  goalDate,
+  bubble,
+  xScale,
+  svgWidth,
+  portalRef
+}) => {
   console.log("rerender UnsucceedTooltipComponent");
   const tooltipRef = useRef(null);
   const rect = useBoundingClientRect(tooltipRef);
@@ -20,25 +26,45 @@ const UnsucceedTooltipComponent = ({ goalDate, bubble, xScale, portalRef }) => {
     if (!rect) {
       return null;
     }
-    const positionMultiplier = bubble.type === BUBBLE.TYPES.TOP ? 1 : -1;
-    return (
-      CHART.MARGIN.TOP +
-      bubble.cy +
-      (BUBBLE[bubble.size].RADIUS +
+    console.log(bubble.type);
+
+    if (bubble.type === BUBBLE.TYPES.BOTTOM || bubble.type === null) {
+      return (
+        bubble.cy -
+        BUBBLE[bubble.size].RADIUS -
         rect.height +
-        TOOLTIPS[TOOLTIPS_TYPES.UNSUCCEED].MARGIN.BOTTOM) *
-        positionMultiplier
-    );
+        CHART.MARGIN.TOP -
+        TOOLTIPS[TOOLTIPS_TYPES.UNSUCCEED].MARGIN.BOTTOM
+      );
+    }
+
+    if (bubble.type === BUBBLE.TYPES.TOP) {
+      return (
+        bubble.cy +
+        BUBBLE[bubble.size].RADIUS +
+        CHART.MARGIN.TOP +
+        TOOLTIPS[TOOLTIPS_TYPES.UNSUCCEED].MARGIN.TOP
+      );
+    }
   }, [rect, bubble.type, bubble.size, bubble.cy]);
 
   const left = useMemo(() => {
     if (!rect) {
       return null;
     }
+
     const leftPosition =
       xScale(goalDate) - rect.width / COMMON.HALF + BUBBLE[bubble.size].RADIUS;
-    return leftPosition < 0 ? 0 : leftPosition;
-  }, [rect, xScale, bubble.size, goalDate]);
+    const rightPosition = leftPosition + rect.width;
+
+    if (leftPosition < 0) {
+      return 0;
+    }
+    if (rightPosition > svgWidth) {
+      return svgWidth - rect.width;
+    }
+    return leftPosition;
+  }, [rect, xScale, svgWidth, bubble.size, goalDate]);
 
   return ReactDOM.createPortal(
     <S.Container
@@ -57,13 +83,14 @@ const UnsucceedTooltipComponent = ({ goalDate, bubble, xScale, portalRef }) => {
 const MemoizedUnsucceedTooltipComponent = React.memo(UnsucceedTooltipComponent);
 
 export const UnsucceedTooltip = ({ goal, bubble }) => {
-  const { scale, portalRef } = useContext(PropsContext);
+  const { svg, scale, portalRef } = useContext(PropsContext);
 
   return (
     <MemoizedUnsucceedTooltipComponent
       goalDate={goal.date}
       bubble={bubble}
       xScale={scale.x}
+      svgWidth={svg.width}
       portalRef={portalRef}
     />
   );

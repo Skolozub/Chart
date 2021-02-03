@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "body": {
+    "budget": {
+      "income": {
+        "value": 70000,
+        "currency": "RUB"
+      },
+      "expense": {
+        "value": 30000,
+        "currency": "RUB"
+      },
+      "savings": {
+        "value": 40000,
+        "currency": "RUB"
+      }
+    },
+    "investProfile": {
+      "score": 2,
+      "name": "Осторожный",
+      "description": "Ориентир на доходность до уровня депозит +4%. Не готов нести потери выше 10% вложенных средств в стрессовых рыночных условиях. Ориентир на инструменты денежного рынка, высоконадежные облигации с возможным добавлением акций ведущих эмитентов.",
+      "planningHorizon": 999,
+      "expireDate": "2020-03-29T10:03:02",
+      "updateDate": "2019-03-29T10:03:02"
+    },
+    "goals": [
+      {
+        "code": "200",
+        "name": "На путешествие",
+        "image": null,
+        "date": "2023-08-01",
+        "amount": [
+          {
+            "value": "250000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "5714.00",
+            "currency": "USD"
+          },
+          {
+            "value": "4444.00",
+            "currency": "EUR"
+          }
+        ],
+        "accumulation": [
+          {
+            "value": "200000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "2857.00",
+            "currency": "USD"
+          },
+          {
+            "value": "2222.00",
+            "currency": "EUR"
+          }
+        ]
+      },
+      {
+        "code": "201",
+        "name": "На машину",
+        "image": null,
+        "date": "2031-01-01",
+        "amount": [
+          {
+            "value": "1500000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "5714.00",
+            "currency": "USD"
+          },
+          {
+            "value": "4444.00",
+            "currency": "EUR"
+          }
+        ],
+        "accumulation": [
+          {
+            "value": "200000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "2857.00",
+            "currency": "USD"
+          },
+          {
+            "value": "2222.00",
+            "currency": "EUR"
+          }
+        ]
+      },
+      {
+        "code": "202",
+        "name": "На дом",
+        "image": null,
+        "date": "2040-06-01",
+        "amount": [
+          {
+            "value": "20000000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "5714.00",
+            "currency": "USD"
+          },
+          {
+            "value": "4444.00",
+            "currency": "EUR"
+          }
+        ],
+        "accumulation": [
+          {
+            "value": "200000.00",
+            "currency": "RUB"
+          },
+          {
+            "value": "2857.00",
+            "currency": "USD"
+          },
+          {
+            "value": "2222.00",
+            "currency": "EUR"
+          }
+        ]
+      }
+    ]
+  }
+}

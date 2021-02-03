@@ -11,6 +11,7 @@ import { PFPChart3 } from "./chart_3.0";
 import { RangeSlider } from "./chart_3.0/range-slider";
 import { mergeGoals } from "./utils/chart";
 import { SCENARIO, CURRENCY } from "./constants";
+import { extent } from "d3";
 
 export default function App({ mainPage, chart }) {
   const [scenario, setScenario] = useState(SCENARIO.NEGATIVE);
@@ -54,7 +55,7 @@ export default function App({ mainPage, chart }) {
     setGoals(getNextActiveGoals);
   }, []);
 
-  // yDomain
+  // current chart points
   const [startPeriod, endPeriod] = xDomain;
 
   const startPoint = useMemo(
@@ -67,18 +68,19 @@ export default function App({ mainPage, chart }) {
     [chart.points, scenario, endPeriod]
   );
 
-  const yDomain = useMemo(
-    () => [
-      startPoint.amounts[CURRENCY.RUB].value,
-      endPoint.amounts[CURRENCY.RUB].value
-    ],
-    [startPoint, endPoint]
-  );
-
-  // current chart points
   const currentVisiblePoints = useMemo(() => {
     return chart.points[scenario].slice(startPoint.index, endPoint.index + 1);
   }, [chart.points, scenario, startPoint, endPoint]);
+
+  // yDomain
+  const yDomain = useMemo(
+    () =>
+      extent(
+        currentVisiblePoints,
+        (point) => point.amounts[CURRENCY.RUB].value
+      ),
+    [currentVisiblePoints]
+  );
 
   const data = useMemo(
     () => ({

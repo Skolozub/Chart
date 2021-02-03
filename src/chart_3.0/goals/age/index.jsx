@@ -4,7 +4,7 @@ import { AgeText } from "./age-text";
 import { PropsContext } from "../../index";
 import { AGE, COMMON } from "../../constants";
 
-const AgeComponent = ({ goalDate, goalAge, chart, xScale, isFirst }) => {
+const AgeComponent = ({ goalDate, goalAge, chart, xScale, isActive }) => {
   console.log("rerender AgeComponent");
   const ageLinePath = useMemo(() => {
     const coords = [
@@ -14,6 +14,10 @@ const AgeComponent = ({ goalDate, goalAge, chart, xScale, isFirst }) => {
 
     return line()(coords);
   }, [goalDate, chart.height, xScale]);
+
+  if (!isActive) {
+    return null;
+  }
 
   return (
     <>
@@ -25,16 +29,14 @@ const AgeComponent = ({ goalDate, goalAge, chart, xScale, isFirst }) => {
           transition: `d ${COMMON.TRANSITION_DURATION}ms`
         }}
       />
-      <AgeText goalDate={goalDate}>
-        {`${isFirst ? AGE.VALUE.TEXT : ""} ${goalAge}`}
-      </AgeText>
+      <AgeText goalDate={goalDate}>{`${AGE.VALUE.TEXT} ${goalAge}`}</AgeText>
     </>
   );
 };
 
 const MemoizedAgeComponent = React.memo(AgeComponent);
 
-export const Age = ({ goal, isFirst }) => {
+export const Age = ({ goal }) => {
   const { chart, scale } = useContext(PropsContext);
 
   return (
@@ -43,7 +45,7 @@ export const Age = ({ goal, isFirst }) => {
       goalAge={goal.age}
       chart={chart}
       xScale={scale.x}
-      isFirst={isFirst}
+      isActive={goal.isActive}
     />
   );
 };

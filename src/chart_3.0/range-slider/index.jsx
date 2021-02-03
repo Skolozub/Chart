@@ -37,6 +37,11 @@ const RangeSliderComponent = ({ period, goals, scenario, onChange, width }) => {
     onChange(invertX(xStart), invertX(xEnd));
   }, [onChange, invertX, xStart, xEnd]);
 
+  useEffect(() => {
+    setXStart((s) => xScale(invertX(s)));
+    setXEnd((e) => xScale(invertX(e)));
+  }, [period.start, period.end, invertX, xScale]);
+
   return (
     <svg
       width={width}
