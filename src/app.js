@@ -11,7 +11,8 @@ import { PFPChart3 } from "./chart_3.0";
 import { RangeSlider } from "./chart_3.0/range-slider";
 import { mergeGoals } from "./utils/chart";
 import { SCENARIO, CURRENCY } from "./constants";
-import { extent } from "d3";
+import { extent, max, min } from "d3";
+import { AXIS } from "./chart_3.0/constants";
 
 export default function App({ mainPage, chart }) {
   const [scenario, setScenario] = useState(SCENARIO.NEGATIVE);
@@ -30,12 +31,12 @@ export default function App({ mainPage, chart }) {
     .current;
 
   // goals
-  const [goals, setGoals] = useState(null);
+  const initialGoals = useMemo(() => mergeGoals(mainPage.goals, chart.goals), [
+    mainPage.goals,
+    chart.goals
+  ]);
 
-  useEffect(() => {
-    const mergedGoals = mergeGoals(mainPage.goals, chart.goals);
-    setGoals(mergedGoals);
-  }, [mainPage.goals, chart.goals]);
+  const [goals, setGoals] = useState(initialGoals);
 
   const setActiveGoalHandler = useCallback((code, isActive) => {
     const getNextActiveGoals = (prev) => {
@@ -55,6 +56,24 @@ export default function App({ mainPage, chart }) {
     setGoals(getNextActiveGoals);
   }, []);
 
+  // set visibility of goals
+  useEffect(() => {
+    const [startPeriod, endPeriod] = xDomain;
+
+    const getNextGoals = (prev) =>
+      Object.values(prev).reduce((result, goal) => {
+        return {
+          ...result,
+          [goal.code]: {
+            ...goal,
+            isVisible: goal.date >= startPeriod && goal.date <= endPeriod
+          }
+        };
+      }, {});
+
+    setGoals(getNextGoals);
+  }, [xDomain]);
+
   // current chart points
   const [startPeriod, endPeriod] = xDomain;
 
@@ -69,18 +88,28 @@ export default function App({ mainPage, chart }) {
   );
 
   const currentVisiblePoints = useMemo(() => {
-    return chart.points[scenario].slice(startPoint.index, endPoint.index + 1);
+    const from = startPoint.index > 0 ? startPoint.index - 1 : startPoint.index;
+    const to =
+      endPoint.index < chart.points[scenario].length
+        ? endPoint.index + 2
+        : endPoint.index + 1;
+
+    return chart.points[scenario].slice(from, to);
   }, [chart.points, scenario, startPoint, endPoint]);
 
   // yDomain
-  const yDomain = useMemo(
-    () =>
-      extent(
-        currentVisiblePoints,
-        (point) => point.amounts[CURRENCY.RUB].value
-      ),
-    [currentVisiblePoints]
-  );
+  const yDomain = useMemo(() => {
+    const data = [
+      ...currentVisiblePoints,
+      ...Object.values(goals).filter(({ isVisible }) => isVisible)
+    ];
+    const getValue = (point) => point.amounts[CURRENCY.RUB].value;
+
+    const yMax = max(data, getValue);
+    const yMin = min(data, getValue);
+
+    return [yMin, yMax + Math.round(yMax / AXIS.Y.COUNT)];
+  }, [goals, currentVisiblePoints]);
 
   const data = useMemo(
     () => ({
@@ -140,7 +169,7 @@ export default function App({ mainPage, chart }) {
             />
             <RangeSlider
               period={chart.period}
-              goals={goals}
+              goals={initialGoals}
               scenario={scenario}
               width={rect.width}
               onChange={changeTrottled}

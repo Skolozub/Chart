@@ -5,7 +5,8 @@ export const mergeGoals = (mainPageGoals, chartGoals) => {
       [code]: {
         ...mainPageGoals[code],
         ...chartGoals[code],
-        isActive: false
+        isActive: false,
+        isVisible: true
       }
     }),
     {}

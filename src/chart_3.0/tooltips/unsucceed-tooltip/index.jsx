@@ -26,7 +26,6 @@ const UnsucceedTooltipComponent = ({
     if (!rect) {
       return null;
     }
-    console.log(bubble.type);
 
     if (bubble.type === BUBBLE.TYPES.BOTTOM || bubble.type === null) {
       return (

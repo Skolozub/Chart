@@ -5,7 +5,7 @@ export const SCENARIO = {
 };
 
 export const CHART_TYPE = {
-  EXPONENTIAL: "exponential",
+  EXPONENTIAL: "exp",
   LINEAR: "linear"
 };
 

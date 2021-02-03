@@ -17,6 +17,7 @@ const parsedMainPageData = parseMainPageResponse(
 const parsedMainChartEveryMonthData = parseMainChartResponse(
   realChartEveryMonthJSON.body
 );
+
 // const parsedMainChartEveryYearData = parseMainChartResponse(
 //   chartmainEveryYearJSON.body
 // );

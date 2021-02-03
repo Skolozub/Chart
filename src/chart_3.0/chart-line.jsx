@@ -25,7 +25,6 @@ const ChartLineComponent = ({ data, scale, curveType, currency }) => {
       d={chartPath}
       stroke={CHART.LINE_COLOR}
       fill="none"
-      style={{ transition: `d ${COMMON.TRANSITION_DURATION}ms` }}
     />
   );
 };

@@ -4,4 +4,4 @@ import home from "./home.svg";
 import car from "./car.svg";
 import plane from "./plane.svg";
 
-export default [phone, home, car, birthday, plane, car, phone];
+export default [plane, car, home, car, phone, birthday, phone];
