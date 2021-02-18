@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { axisBottom, select, timeFormat, timeMonth, timeYear } from "d3";
-import { PropsContext } from "..";
+import { PropsContext } from "../provider";
 import { AXIS, COMMON } from "../constants";
 
 const AxisXComponent = ({ chart, xScale, xDomain }) => {

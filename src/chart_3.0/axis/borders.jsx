@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { PropsContext } from "..";
+import { PropsContext } from "../provider";
 import { CHART } from "../constants";
 
 const BordersComponent = ({ chart }) => {

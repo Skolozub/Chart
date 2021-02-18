@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { PropsContext } from ".";
+import { PropsContext } from "./provider";
 import { ChartLine } from "./chart-line";
 import { Borders } from "./axis/borders";
 import { AxisY } from "./axis/axis-y";

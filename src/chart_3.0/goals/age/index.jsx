@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from "react";
 import { line } from "d3";
 import { AgeText } from "./age-text";
-import { PropsContext } from "../../index";
+import { PropsContext } from "../../provider";
 import { AGE, COMMON } from "../../constants";
 
 const AgeComponent = ({ goalDate, goalAge, chart, xScale, isActive }) => {

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
 import ReactDOM from "react-dom";
-import { PropsContext } from "../../index";
+import { PropsContext } from "../../provider";
 import { CHART, AGE, COMMON } from "../../constants";
 import * as S from "./age-text.style";
 

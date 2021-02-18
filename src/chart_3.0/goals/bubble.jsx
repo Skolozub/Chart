@@ -6,7 +6,7 @@ import React, {
   useRef
 } from "react";
 import { line, select } from "d3";
-import { PropsContext } from "../index";
+import { PropsContext } from "../provider";
 import { UnsucceedTooltip } from "../tooltips/unsucceed-tooltip";
 import { BUBBLE, BUBBLE_SIZES, COMMON } from "../constants";
 import { useOutsideRefClick } from "../../useOutsideRefClick";

@@ -11,7 +11,7 @@ import { PFPChart3 } from "./chart_3.0";
 import { RangeSlider } from "./chart_3.0/range-slider";
 import { mergeGoals } from "./utils/chart";
 import { SCENARIO, CURRENCY } from "./constants";
-import { extent, max, min } from "d3";
+import { max, min } from "d3";
 import { AXIS } from "./chart_3.0/constants";
 
 export default function App({ mainPage, chart }) {

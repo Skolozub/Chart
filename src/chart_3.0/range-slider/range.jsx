@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useRef } from "react";
 import { getYear } from "../../utils/common";
 import { COMMON, RANGE_SLIDER } from "../constants";
 import { Boundary } from "./boundary";
@@ -31,11 +31,14 @@ const RangeComponent = ({
     return xScale(date);
   }, [invertX, xStart, xScale]);
 
+  const railsRef = useRef(null);
+
   return (
     <g
       transform={`translate(${RANGE_SLIDER.MARGIN.LEFT}, ${RANGE_SLIDER.RANGE.MARGIN_TOP})`}
     >
       <line
+        ref={railsRef}
         x1={xScale(startPeriod)}
         y1={RANGE_SLIDER.RANGE.ACTIVE_LINE.Y1}
         x2={xScale(maxPeriod)}
@@ -56,8 +59,15 @@ const RangeComponent = ({
         cx={xStart}
         cxMax={cxMax}
         onChange={onChangeLeft}
+        railsRef={railsRef}
       />
-      <Boundary cxMin={cxMin} cx={xEnd} cxMax={xMax} onChange={onChangeRight} />
+      <Boundary
+        cxMin={cxMin}
+        cx={xEnd}
+        cxMax={xMax}
+        onChange={onChangeRight}
+        railsRef={railsRef}
+      />
     </g>
   );
 };

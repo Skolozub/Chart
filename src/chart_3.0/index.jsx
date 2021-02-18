@@ -8,8 +8,7 @@ import {
 import { Chart } from "./chart";
 import { LOCALE, SVG, CHART } from "./constants";
 import * as S from "./index.style";
-
-export const PropsContext = React.createContext();
+import { Provider } from "./provider";
 
 const PFPChartComponent = ({
   className,
@@ -75,9 +74,9 @@ const PFPChartComponent = ({
   }, []);
 
   return (
-    <PropsContext.Provider value={props}>
+    <Provider value={props}>
       <S.Container ref={getControlRef}>{portalRef && <Chart />}</S.Container>
-    </PropsContext.Provider>
+    </Provider>
   );
 };
 

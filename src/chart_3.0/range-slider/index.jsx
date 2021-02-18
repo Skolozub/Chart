@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { scaleLinear, scaleTime } from "d3";
 import { RANGE_SLIDER } from "../constants";
 import { Axis } from "./axis";
@@ -6,41 +6,47 @@ import { Goals } from "./goals";
 import { Range } from "./range";
 
 const RangeSliderComponent = ({ period, goals, scenario, onChange, width }) => {
+  const rangeWidth = useMemo(
+    () => width - RANGE_SLIDER.MARGIN.LEFT - RANGE_SLIDER.MARGIN.RIGTH,
+    [width]
+  );
+
   const xScale = useMemo(
-    () =>
-      scaleTime()
-        .domain([period.start, period.max])
-        .range([
-          0,
-          width - RANGE_SLIDER.MARGIN.LEFT - RANGE_SLIDER.MARGIN.RIGTH
-        ]),
-    [width, period.start, period.max]
+    () => scaleTime().domain([period.start, period.max]).range([0, rangeWidth]),
+    [rangeWidth, period.start, period.max]
   );
 
   const invertX = useMemo(
     () =>
-      scaleLinear()
-        .domain([
-          0,
-          width - RANGE_SLIDER.MARGIN.LEFT - RANGE_SLIDER.MARGIN.RIGTH
-        ])
-        .range([period.start, period.max]),
-    [width, period.start, period.max]
+      scaleLinear().domain([0, rangeWidth]).range([period.start, period.max]),
+    [rangeWidth, period.start, period.max]
   );
 
-  const [xStart, setXStart] = useState(xScale(period.start));
-  const [xEnd, setXEnd] = useState(xScale(period.end));
+  const [timeStart, setTimeStart] = useState(period.start);
+  const [timeEnd, setTimeEnd] = useState(period.end);
+
+  const xStart = useMemo(() => xScale(timeStart), [xScale, timeStart]);
+  const xEnd = useMemo(() => xScale(timeEnd), [xScale, timeEnd]);
   const xMin = 0;
   const xMax = useMemo(() => xScale(period.max), [xScale, period.max]);
 
-  useEffect(() => {
-    onChange(invertX(xStart), invertX(xEnd));
-  }, [onChange, invertX, xStart, xEnd]);
+  const onChangeLeft = useCallback(
+    (next) => {
+      setTimeStart(invertX(next));
+    },
+    [invertX]
+  );
+
+  const onChangeRight = useCallback(
+    (next) => {
+      setTimeEnd(invertX(next));
+    },
+    [invertX]
+  );
 
   useEffect(() => {
-    setXStart((s) => xScale(invertX(s)));
-    setXEnd((e) => xScale(invertX(e)));
-  }, [period.start, period.end, invertX, xScale]);
+    onChange(timeStart, timeEnd);
+  }, [onChange, timeStart, timeEnd]);
 
   return (
     <svg
@@ -51,6 +57,7 @@ const RangeSliderComponent = ({ period, goals, scenario, onChange, width }) => {
       <Goals goals={goals} xScale={xScale} scenario={scenario} />
 
       <Axis
+        rangeWidth={rangeWidth}
         startPeriod={period.start}
         maxPeriod={period.max}
         xScale={xScale}
@@ -68,8 +75,8 @@ const RangeSliderComponent = ({ period, goals, scenario, onChange, width }) => {
         xEnd={xEnd}
         xMax={xMax}
         xMin={xMin}
-        onChangeLeft={setXStart}
-        onChangeRight={setXEnd}
+        onChangeLeft={onChangeLeft}
+        onChangeRight={onChangeRight}
       />
     </svg>
   );

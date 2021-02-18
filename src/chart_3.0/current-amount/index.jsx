@@ -1,5 +1,5 @@
 import React, { useContext, useMemo } from "react";
-import { PropsContext } from "../index";
+import { PropsContext } from "../provider";
 import { AmountBalloon } from "./amount-balloon";
 import { CHART, CURRENT_AMOUNT } from "../constants";
 

@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from "react";
 import { curveLinear, curveMonotoneX, line } from "d3";
-import { PropsContext } from ".";
-import { CHART, COMMON } from "./constants";
+import { PropsContext } from "./provider";
+import { CHART } from "./constants";
 
 const ChartLineComponent = ({ data, scale, curveType, currency }) => {
   console.log("rerender ChartLineComponent");

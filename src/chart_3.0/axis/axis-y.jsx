@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { axisRight, format, select } from "d3";
-import { PropsContext } from "..";
+import { PropsContext } from "../provider";
 import { CHART, AXIS, COMMON } from "../constants";
 
 const AxisYComponent = ({ chart, yScale }) => {

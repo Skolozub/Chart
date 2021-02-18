@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ReactDOM from "react-dom";
-import { PropsContext } from "../index";
+import { PropsContext } from "../provider";
 import avatar from "../../assets/person.jpg";
 import * as S from "./amount-balloon.style";
 import { COMMON, CURRENT_AMOUNT } from "../constants";

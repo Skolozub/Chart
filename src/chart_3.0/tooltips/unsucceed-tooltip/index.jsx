@@ -1,6 +1,6 @@
 import React, { useContext, useMemo, useRef } from "react";
 import ReactDOM from "react-dom";
-import { PropsContext } from "../..";
+import { PropsContext } from "../../provider";
 import { useBoundingClientRect } from "../../../useBoundingClientRect";
 import {
   CHART,

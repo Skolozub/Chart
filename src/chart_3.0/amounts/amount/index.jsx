@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from "react";
 import { format } from "d3";
-import { PropsContext } from "../../index";
+import { PropsContext } from "../../provider";
 import { AmountLabel } from "./amount-label";
 import { CHART, AMOUNT } from "../../constants";
 import * as S from "./index.style";

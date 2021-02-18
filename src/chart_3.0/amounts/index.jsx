@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { PropsContext } from "../index";
+import { PropsContext } from "../provider";
 import { Amount } from "./amount";
 
 const AmountsComponent = ({ goals }) => {
